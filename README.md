@@ -32,6 +32,8 @@ backend/
 │   └── ingestion/
 │       └── chunker.py
 ├── data/
+│   └── index/ 
+│   └── processed/ 
 │   └── raw/                    # Base de dados (PDFs)
 ├── requirements.txt
 └── pyproject.toml
