@@ -1,0 +1,7 @@
+numpy
+requests
+pymupdf4llm[ocr,layout]
+sentence_transformers
+faiss-cpu
+fastapi[standard]
+pydantic
