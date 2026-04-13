@@ -1,309 +1,364 @@
-import { useState, useRef, useEffect } from "react";
-import { MOCK_MESSAGES } from "./mock/mockMessages";
+import { useEffect, useRef, useState } from "react";
 
-function ScoreBar({ score }) {
-    return (
-        <div className="flex items-center gap-2 mt-2 w-full">
-            <div className="flex-1 h-1.5 bg-gray-200 rounded overflow-hidden">
-                <div
-                    className="h-full bg-blue-500 rounded transition-all duration-500"
-                    style={{ width: `${score * 100}%` }}
-                />
-            </div>
-        </div>
-    );
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000";
+const REQUEST_TIMEOUT_MS = 25000;
+const SUGGESTION_POOL = [
+    {
+        title: "AGEUNI",
+        description: "Entenda o programa e seus objetivos.",
+        prompt: "O que e o programa AGEUNI?",
+    },
+    {
+        title: "AGIPI",
+        description: "Veja o papel da agencia dentro da UEPG.",
+        prompt: "O que e AGIPI?",
+    },
+    {
+        title: "Registro de software",
+        description: "Saiba como funciona o fluxo institucional.",
+        prompt: "Como registrar um software?",
+    },
+    {
+        title: "Incubadora",
+        description: "Descubra como a incubacao funciona.",
+        prompt: "Qual o papel da incubadora da AGIPI?",
+    },
+    {
+        title: "NITs",
+        description: "Entenda o papel dos nucleos de inovacao.",
+        prompt: "O que sao NITs nas universidades?",
+    },
+    {
+        title: "Lei de Inovacao",
+        description: "Veja como ela se aplica nas universidades.",
+        prompt: "O que diz a Lei de Inovacao sobre NITs?",
+    },
+    {
+        title: "Universidade e empresa",
+        description: "Explore a cooperacao com o setor produtivo.",
+        prompt: "Como universidades interagem com empresas?",
+    },
+    {
+        title: "INPROTEC",
+        description: "Conheca a incubadora vinculada a AGIPI.",
+        prompt: "O que e o INPROTEC?",
+    },
+    {
+        title: "Startups",
+        description: "Veja como a universidade apoia novos negocios.",
+        prompt: "Como funciona o processo de incubacao?",
+    },
+    {
+        title: "Servicos da AGIPI",
+        description: "Confira os principais apoios oferecidos.",
+        prompt: "Quais sao os principais servicos oferecidos pela AGIPI?",
+    },
+];
+
+function formatScore(score) {
+    return `${Math.round(score * 100)}%`;
 }
 
-function DocCard({ doc }) {
-    const scoreClass = doc.score >= 0.9 ? "text-green-600 bg-green-50" : doc.score >= 0.8 ? "text-yellow-600 bg-yellow-50" : "text-gray-600 bg-gray-100";
-
+function SourceCard({ source }) {
     return (
-        <div className="border border-gray-300 rounded-lg p-3 bg-white hover:bg-gray-50 transition-colors">
-            <div className="flex justify-between items-start gap-3 mb-2">
-                <div className="font-semibold text-sm text-gray-800 break-all">{doc.source}</div>
-            </div>
-            <div className="w-25 bg-gray-100 border border-gray-200 px-1.5 rounded text-[10px]">
-                {doc.id}
-            </div>
-        </div>
-        // <div className="border border-gray-300 rounded-lg p-3 bg-white hover:bg-gray-50 transition-colors">
-        //     <div className="flex justify-between items-start gap-3 mb-2">
-        //         <div className="font-semibold text-sm text-gray-800">{doc.title}</div>
-        //         <div className={`text-xs font-medium px-2 py-1 rounded border border-transparent ${scoreClass}`}>
-        //             {(doc.score * 100).toFixed(0)}%
-        //         </div>
-        //     </div>
-
-        //     <div className="text-xs text-gray-600 border-l-2 border-gray-300 pl-2 mb-3">
-        //         "{doc.excerpt}"
-        //     </div>
-
-        //     <ScoreBar score={doc.score} />
-
-        //     <div className="flex flex-wrap gap-3 mt-3 text-xs text-gray-500">
-        //         <div className="flex items-center gap-1">
-        //             <svg className="w-3 h-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
-        //                 <rect x="2" y="1" width="12" height="14" rx="1.5" />
-        //                 <line x1="5" y1="5" x2="11" y2="5" />
-        //                 <line x1="5" y1="8" x2="11" y2="8" />
-        //                 <line x1="5" y1="11" x2="8" y2="11" />
-        //             </svg>
-        //             {doc.source}
-        //         </div>
-        //         <div className="flex items-center gap-1">
-        //             <svg className="w-3 h-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
-        //                 <path d="M8 2L10 6H14L11 9L12 13L8 11L4 13L5 9L2 6H6L8 2Z" />
-        //             </svg>
-        //             Pág. {doc.page}
-        //         </div>
-        //         <div className="flex items-center gap-1">
-        //             <svg className="w-3 h-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
-        //                 <rect x="2" y="3" width="12" height="10" rx="1.5" />
-        //                 <line x1="5" y1="6.5" x2="11" y2="6.5" />
-        //                 <line x1="5" y1="9.5" x2="9" y2="9.5" />
-        //             </svg>
-        //             {doc.tokens} tokens
-        //         </div>
-        //         <div className="bg-gray-100 border border-gray-200 px-1.5 rounded text-[10px]">
-        //             {doc.id}
-        //         </div>
-        //     </div>
-        // </div>
-    );
-}
-
-function Message({ msg, viewMode }) {
-    if (msg.role === "user") {
-        return (
-            <div className="flex justify-end">
-                <div className="bg-blue-50 border border-blue-100 rounded-2xl rounded-tr-sm p-3 max-w-[75%]">
-                    <div className="text-sm text-gray-800">{msg.content}</div>
-                    <div className="text-[10px] text-gray-400 mt-1 text-right">{msg.timestamp}</div>
+        <article className="rounded-2xl border border-slate-200 bg-white/90 p-4 shadow-sm">
+            <div className="mb-2 flex items-start justify-between gap-3">
+                <div>
+                    <p className="text-xs uppercase tracking-[0.18em] text-slate-400">Fonte</p>
+                    <h3 className="mt-1 text-sm font-semibold text-slate-900">{source.title || source.source}</h3>
                 </div>
+                <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700">
+                    {formatScore(source.score || 0)}
+                </span>
             </div>
-        );
+            <p className="text-sm leading-6 text-slate-600">{source.excerpt || "Trecho nao disponivel."}</p>
+            <p className="mt-3 break-all text-xs text-slate-400">{source.source}</p>
+        </article>
+    );
+}
+
+function AssistantMessage({ message, view }) {
+    const isError = message.role === "error";
+    const statusClass = isError
+        ? "border-rose-200 bg-rose-50 text-rose-700"
+        : "border-slate-200 bg-white text-slate-800";
+
+    return (
+        <div className="flex max-w-3xl gap-3">
+            <div className={`mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl text-xs font-bold ${isError ? "bg-rose-600 text-white" : "bg-slate-900 text-white"}`}>
+                {isError ? "!" : "AI"}
+            </div>
+            <div className="flex-1 space-y-3">
+                <div className="flex items-center gap-3 text-xs uppercase tracking-[0.18em] text-slate-400">
+                    <span>{isError ? "Falha" : "Assistente"}</span>
+                    <span>{message.timestamp}</span>
+                </div>
+                {view === "sources" && message.sources?.length > 0 && !isError ? (
+                    <div className="grid gap-3 md:grid-cols-2">
+                        {message.sources.map((source) => (
+                            <SourceCard key={source.id} source={source} />
+                        ))}
+                    </div>
+                ) : (
+                    <div className={`rounded-[1.75rem] rounded-tl-sm border p-5 shadow-sm ${statusClass}`}>
+                        <p className="whitespace-pre-wrap text-sm leading-7">{message.text}</p>
+                        {message.warnings?.length ? (
+                            <div className="mt-4 space-y-1 text-xs text-amber-700">
+                                {message.warnings.map((warning) => (
+                                    <p key={warning}>Aviso: {warning}</p>
+                                ))}
+                            </div>
+                        ) : null}
+                    </div>
+                )}
+            </div>
+        </div>
+    );
+}
+
+function UserMessage({ message }) {
+    return (
+        <div className="flex justify-end">
+            <div className="max-w-2xl rounded-[1.75rem] rounded-tr-sm border border-sky-100 bg-sky-50 px-5 py-4 shadow-sm">
+                <p className="text-sm leading-7 text-slate-800">{message.content}</p>
+                <p className="mt-2 text-right text-xs uppercase tracking-[0.18em] text-slate-400">{message.timestamp}</p>
+            </div>
+        </div>
+    );
+}
+
+function getRandomSuggestions(count = 5) {
+    const pool = [...SUGGESTION_POOL];
+    const selected = [];
+
+    while (pool.length > 0 && selected.length < count) {
+        const index = Math.floor(Math.random() * pool.length);
+        selected.push(pool.splice(index, 1)[0]);
     }
 
-    return (
-        <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-2">
-                <div className="w-6 h-6 rounded bg-gray-800 text-white flex items-center justify-center text-[10px] font-bold shrink-0">
-                    AI
-                </div>
-                <div className="text-[10px] text-gray-500 uppercase tracking-wider">
-                    IA · {msg.timestamp}
-                </div>
-            </div>
-
-            {viewMode === "text" ? (
-                <div className="bg-white border border-gray-200 rounded-2xl rounded-tl-sm p-4 max-w-[85%]">
-                    <div className="text-sm text-gray-800 leading-relaxed">{msg.text}</div>
-                </div>
-            ) : (
-                <div className="flex flex-col gap-3 max-w-[85%]">
-                    <div className="flex items-center gap-2 text-[10px] text-gray-500 uppercase tracking-wide">
-                        <span className="whitespace-nowrap">{msg.documents.length} documentos recuperados</span>
-                        <div className="flex-1 h-px bg-gray-200" />
-                    </div>
-                    {msg.documents.map((doc) => (
-                        <DocCard key={doc.id} doc={doc} />
-                    ))}
-                </div>
-            )}
-        </div>
-    );
+    return selected;
 }
 
-const App = () => {
+export default function App() {
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState("");
-    const [viewMode, setViewMode] = useState("text");
-    const [isTyping, setIsTyping] = useState(false);
+    const [view, setView] = useState("answer");
+    const [isSending, setIsSending] = useState(false);
+    const [suggestions] = useState(() => getRandomSuggestions());
 
     const textareaRef = useRef(null);
     const bottomRef = useRef(null);
 
     useEffect(() => {
         bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-    }, [messages, isTyping, viewMode]);
+    }, [messages, isSending, view]);
 
-    const autoResize = () => {
-        const ta = textareaRef.current;
-        if (!ta) return;
-        ta.style.height = "auto";
-        ta.style.height = Math.min(ta.scrollHeight, 120) + "px";
-    };
+    function resizeTextarea() {
+        const element = textareaRef.current;
+        if (!element) return;
+        element.style.height = "auto";
+        element.style.height = `${Math.min(element.scrollHeight, 180)}px`;
+    }
 
-    const handleSend = async () => {
+    function buildErrorMessage(error) {
+        if (error.name === "AbortError") {
+            return "A resposta demorou mais do que o esperado. Verifique se o backend esta ativo e se o indice ja terminou de carregar.";
+        }
+        return error.message || "Nao foi possivel completar a consulta.";
+    }
+
+    function buildHistoryPayload(currentMessages) {
+        return currentMessages
+            .filter((message) => message.role === "user" || message.role === "assistant")
+            .slice(-6)
+            .map((message) => ({
+                role: message.role,
+                content: message.role === "user" ? message.content : message.text,
+            }));
+    }
+
+    async function handleSend() {
         const trimmed = input.trim();
-        if (!trimmed) return;
+        if (!trimmed || isSending) return;
 
-        const userMsg = {
-            id: Date.now(),
+        const userMessage = {
+            id: `user-${Date.now()}`,
             role: "user",
             content: trimmed,
             timestamp: new Date().toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }),
         };
 
-        setMessages((prev) => [...prev, userMsg]);
+        const nextMessages = [...messages, userMessage];
+        setMessages(nextMessages);
         setInput("");
+        if (textareaRef.current) {
+            textareaRef.current.style.height = "auto";
+        }
+        setIsSending(true);
 
-        if (textareaRef.current) textareaRef.current.style.height = "auto";
-        setIsTyping(true);
+        const controller = new AbortController();
+        const timeoutId = window.setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
 
         try {
-            const response = await fetch("http://localhost:8000/chat", {
+            const response = await fetch(`${API_BASE_URL}/chat`, {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ "question": userMsg.content })
+                body: JSON.stringify({
+                    question: trimmed,
+                    history: buildHistoryPayload(nextMessages),
+                }),
+                signal: controller.signal,
             });
 
-            if (!response.ok) {
-                const errorData = await response.json();
-                console.error("Erro da API:", errorData);
-                throw new Error(`Erro na API: ${response.status}`);
-            }
-
             const data = await response.json();
-
-            let sources = [];
-            if (data && data.sources.length > 0) {
-                data.sources.map((source) => {
-                    sources.push({
-                        id: "[TESTE] doc_" + Math.floor(Math.random() * 999).toString().padStart(4, "0"),
-                        title: "[TESTE] Documento de exemplo — " + trimmed.slice(0, 30),
-                        source: source,
-                        score: 0.88 + Math.random() * 0.1,
-                        excerpt: "[TESTE] Trecho relevante do documento recuperado pelo índice FAISS para responder à consulta do usuário...",
-                        page: Math.floor(Math.random() * 200) + 1,
-                        tokens: Math.floor(Math.random() * 400) + 128,
-                    });
-                });
+            if (!response.ok) {
+                throw new Error(data?.detail || `Erro na API: ${response.status}`);
             }
-            const aiMsg = {
-                id: Date.now() + 1,
-                role: "assistant",
-                timestamp: new Date().toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }),
-                text: data?.answer || "Resposta indisponível",
-                documents: sources,
-            };
-            setMessages((prev) => [...prev, aiMsg]);
-        } catch (error) {
-            console.log(error);
-        } finally {
-            setIsTyping(false);
-        }
-    };
 
-    const handleKeyDown = (e) => {
-        if (e.key === "Enter" && !e.shiftKey) {
-            e.preventDefault();
+            const assistantMessage = {
+                id: `assistant-${Date.now()}`,
+                role: "assistant",
+                text: data.answer,
+                timestamp: new Date().toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }),
+                warnings: data.warnings || [],
+                sources: data.sources || [],
+            };
+
+            setMessages((current) => [...current, assistantMessage]);
+        } catch (error) {
+            setMessages((current) => [
+                ...current,
+                {
+                    id: `error-${Date.now()}`,
+                    role: "error",
+                    text: buildErrorMessage(error),
+                    timestamp: new Date().toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }),
+                    warnings: [],
+                    sources: [],
+                },
+            ]);
+        } finally {
+            window.clearTimeout(timeoutId);
+            setIsSending(false);
+        }
+    }
+
+    function handleKeyDown(event) {
+        if (event.key === "Enter" && !event.shiftKey) {
+            event.preventDefault();
             handleSend();
         }
-    };
-
-    const suggestions = ["O que é RAG?", "Como funciona FAISS?", "Explique embeddings"];
+    }
 
     return (
-        <div className="flex flex-col h-screen max-w-4xl mx-auto bg-gray-50 font-sans text-gray-900">
-            {/* Header */}
-            <header className="flex items-center justify-between p-4 bg-white border-b border-gray-200 shrink-0">
-                <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                    <div>
-                        <div className="font-bold text-sm uppercase tracking-wider text-gray-800">[TESTE] ASSISTENTE AGIPI</div>
-                        {/* <div className="text-[10px] text-gray-500 font-mono">FAISS INDEX · ACTIVE</div> */}
-                    </div>
-                </div>
-
-                <div className="flex bg-gray-100 border border-gray-200 rounded-lg p-1 gap-1">
-                    <button
-                        className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${viewMode === "text" ? "bg-white text-blue-600 shadow-sm border border-gray-200" : "text-gray-500 hover:text-gray-800"}`}
-                        onClick={() => setViewMode("text")}
-                    >
-                        Resposta
-                    </button>
-                    <button
-                        className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${viewMode === "docs" ? "bg-white text-blue-600 shadow-sm border border-gray-200" : "text-gray-500 hover:text-gray-800"}`}
-                        onClick={() => setViewMode("docs")}
-                    >
-                        Documentos
-                    </button>
-                </div>
-            </header>
-
-            {/* Area de Mensagens */}
-            <div className="flex-1 overflow-y-auto p-4 md:p-6 flex flex-col gap-6">
-                {messages.length === 0 ? (
-                    <div className="flex-1 flex flex-col items-center justify-center gap-4 text-center opacity-70">
-                        <div className="text-gray-400 mb-2">
-                            <svg className="w-12 h-12" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.5">
-                                <circle cx="24" cy="24" r="20" />
-                                <path d="M16 24 Q24 16 32 24 Q24 32 16 24Z" />
-                                <circle cx="24" cy="24" r="3" fill="currentColor" />
-                            </svg>
-                        </div>
-                        <div className="font-bold text-sm uppercase tracking-wide text-gray-600">Início da Sessão</div>
-                        <div className="text-xs text-gray-500 max-w-xs">Faça uma pergunta para testar a IA com recuperação por índice FAISS</div>
-                        <div className="flex flex-wrap justify-center gap-2 mt-4">
-                            {suggestions.map((s) => (
-                                <button key={s} className="px-3 py-1.5 rounded-full border border-gray-300 text-xs text-gray-600 hover:border-blue-500 hover:text-blue-600 hover:bg-blue-50 transition-colors" onClick={() => setInput(s)}>
-                                    {s}
+        <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.14),_transparent_28%),linear-gradient(180deg,_#f8fafc_0%,_#eef2ff_100%)] text-slate-900">
+            <div className="mx-auto min-h-screen max-w-6xl px-4 py-6 lg:px-8">
+                <main className="flex min-h-[88vh] flex-col overflow-hidden rounded-[2rem] border border-white/60 bg-white/70 shadow-[0_24px_80px_rgba(15,23,42,0.08)] backdrop-blur">
+                    <header className="border-b border-slate-200/80 px-6 py-5">
+                        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                            <div>
+                                <p className="text-xs uppercase tracking-[0.26em] text-sky-600">AGIPI knowledge assistant</p>
+                                <h1 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">Assistente documental rapido e pronto para publicacao</h1>
+                            </div>
+                            <div className="flex rounded-full border border-slate-200 bg-slate-100 p-1 text-sm">
+                                <button
+                                    className={`rounded-full px-4 py-2 transition ${view === "answer" ? "bg-white text-slate-900 shadow-sm" : "text-slate-500"}`}
+                                    onClick={() => setView("answer")}
+                                >
+                                    Resposta
                                 </button>
-                            ))}
+                                <button
+                                    className={`rounded-full px-4 py-2 transition ${view === "sources" ? "bg-white text-slate-900 shadow-sm" : "text-slate-500"}`}
+                                    onClick={() => setView("sources")}
+                                >
+                                    Fontes
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                ) : (
-                    <>
-                        {messages.map((msg) => (
-                            <Message key={msg.id} msg={msg} viewMode={viewMode} />
-                        ))}
-                        {isTyping && (
-                            <div className="flex items-center gap-2">
-                                <div className="w-6 h-6 rounded bg-gray-800 text-white flex items-center justify-center text-[10px] font-bold shrink-0">AI</div>
-                                <div className="flex gap-1 bg-white border border-gray-200 rounded-full px-3 py-2">
-                                    <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                                    <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                                    <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                    </header>
+
+                    <section className="flex-1 space-y-6 overflow-y-auto px-6 py-6">
+                        {messages.length === 0 ? (
+                            <div className="flex h-full flex-col items-center justify-center text-center">
+                                <div className="inline-flex rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-sky-700">
+                                    consulta guiada
+                                </div>
+                                <h2 className="mt-6 text-3xl font-semibold tracking-tight text-slate-950">Pergunte com base na sua base documental</h2>
+                                <p className="mt-4 max-w-xl text-sm leading-7 text-slate-500">
+                                    Pergunte sobre AGEUNI, AGIPI, EPITEC, inovacao universitaria, incubacao, NITs e documentos institucionais da UEPG.
+                                </p>
+                                <div className="mt-8 grid w-full max-w-4xl gap-3 md:grid-cols-2">
+                                    {suggestions.map((suggestion) => (
+                                        <button
+                                            key={suggestion.prompt}
+                                            className="rounded-[1.5rem] border border-slate-200 bg-white p-4 text-left shadow-sm transition hover:border-sky-300 hover:shadow-md"
+                                            onClick={() => setInput(suggestion.prompt)}
+                                        >
+                                            <p className="text-sm font-semibold text-slate-900">{suggestion.title}</p>
+                                            <p className="mt-1 text-sm leading-6 text-slate-500">{suggestion.description}</p>
+                                            <p className="mt-3 text-sm text-sky-700">{suggestion.prompt}</p>
+                                        </button>
+                                    ))}
                                 </div>
                             </div>
+                        ) : (
+                            messages.map((message) => (
+                                message.role === "user"
+                                    ? <UserMessage key={message.id} message={message} />
+                                    : <AssistantMessage key={message.id} message={message} view={view} />
+                            ))
                         )}
-                    </>
-                )}
-                <div ref={bottomRef} />
-            </div>
 
-            {/* Input */}
-            <div className="p-4 bg-white border-t border-gray-200 shrink-0">
-                <div className="flex items-end gap-2 bg-gray-50 border border-gray-300 rounded-xl p-2 focus-within:border-blue-400 focus-within:ring-1 focus-within:ring-blue-400 transition-all">
-                    <textarea
-                        ref={textareaRef}
-                        className="flex-1 bg-transparent border-none outline-none text-sm text-gray-800 resize-none max-h-32 overflow-y-auto px-2 py-1 placeholder-gray-400"
-                        placeholder="Faça uma pergunta para a IA…"
-                        value={input}
-                        onChange={(e) => { setInput(e.target.value); autoResize(); }}
-                        onKeyDown={handleKeyDown}
-                        rows={1}
-                    />
-                    <button
-                        className="w-8 h-8 flex items-center justify-center rounded-lg bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed shrink-0 transition-colors cursor-pointer"
-                        onClick={handleSend}
-                        disabled={!input.trim() || isTyping}
-                    >
-                        <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <line x1="2" y1="8" x2="13" y2="8" />
-                            <polyline points="9,4 13,8 9,12" />
-                        </svg>
-                    </button>
-                </div>
-                <div className="text-[10px] text-gray-400 mt-2 px-1 text-center">
-                    Enter para enviar · Shift+Enter para nova linha
-                </div>
+                        {isSending ? (
+                            <div className="flex max-w-3xl gap-3">
+                                <div className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl bg-slate-900 text-xs font-bold text-white">AI</div>
+                                <div className="rounded-[1.75rem] rounded-tl-sm border border-slate-200 bg-white px-5 py-4 shadow-sm">
+                                    <div className="flex gap-2">
+                                        <span className="h-2.5 w-2.5 animate-bounce rounded-full bg-sky-500 [animation-delay:-0.2s]" />
+                                        <span className="h-2.5 w-2.5 animate-bounce rounded-full bg-sky-500 [animation-delay:-0.1s]" />
+                                        <span className="h-2.5 w-2.5 animate-bounce rounded-full bg-sky-500" />
+                                    </div>
+                                </div>
+                            </div>
+                        ) : null}
+
+                        <div ref={bottomRef} />
+                    </section>
+
+                    <footer className="border-t border-slate-200/80 px-6 py-5">
+                        <div className="rounded-[1.75rem] border border-slate-200 bg-white p-3 shadow-sm">
+                            <div className="flex items-end gap-3">
+                                <textarea
+                                    ref={textareaRef}
+                                    className="min-h-[52px] flex-1 resize-none border-0 bg-transparent px-2 py-2 text-sm leading-6 text-slate-800 outline-none placeholder:text-slate-400"
+                                    placeholder="Digite sua pergunta sobre os documentos..."
+                                    rows={1}
+                                    value={input}
+                                    onChange={(event) => {
+                                        setInput(event.target.value);
+                                        resizeTextarea();
+                                    }}
+                                    onKeyDown={handleKeyDown}
+                                />
+                                <button
+                                    className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-900 text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:bg-slate-300"
+                                    disabled={!input.trim() || isSending}
+                                    onClick={handleSend}
+                                >
+                                    <svg className="h-4 w-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <line x1="2" y1="8" x2="13" y2="8" />
+                                        <polyline points="9,4 13,8 9,12" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <p className="mt-2 px-2 text-xs uppercase tracking-[0.18em] text-slate-400">Enter envia. Shift + Enter cria nova linha.</p>
+                        </div>
+                    </footer>
+                </main>
+
             </div>
         </div>
     );
 }
-
-export default App

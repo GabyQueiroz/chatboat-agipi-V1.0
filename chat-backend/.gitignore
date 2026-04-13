@@ -18,8 +18,15 @@ env
 docs_build
 site_build
 venv
+.venv
 docs.zip
 archive.zip
+data/index
+data/processed
+*.bin
+*.pkl
+!data/index/.gitkeep
+!data/processed/.gitkeep
 
 # vim temporary files
 *~

@@ -4,3 +4,6 @@ class LLMClient(ABC):
     @abstractmethod
     def generate_response(self, prompt: str) -> str:
         pass
+
+    def is_available(self) -> bool:
+        return True

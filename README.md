@@ -1,157 +1,71 @@
-# Chatbot RAG — AGIPI/UEPG
+# Assistente AGIPI
 
-Chatbot com pipeline RAG (Retrieval-Augmented Generation) usando FastAPI no backend e React + Vite no frontend.
+Aplicacao RAG com backend em FastAPI e frontend em React + Vite.
 
+## O que mudou
 
+- resposta rapida por padrao, com modo `extractive` sem depender da LLM
+- deteccao automatica de cache invalido para reindexar a base atual
+- endpoint de saude em `/health`
+- frontend preparado para apontar para uma API publica via variavel de ambiente
+- Ollama opcional no fluxo rapido e configurado para `phi3:mini`
 
-## Pré-requisitos
+## Estrutura
 
-- Python 3.10+
-- Node.js 18+
-- [Ollama](https://ollama.com) instalado e rodando localmente (ou outra LLM — veja a seção abaixo)
-
----
+```text
+chat-backend/
+chat-frontend/
+```
 
 ## Backend
 
-### 1. Estrutura esperada
-
-```
-backend/
-├── src/
-│   ├── api/
-│   │   └── main.py
-│   ├── core/
-│   │   └── rag_pipeline.py
-│   ├── llm/
-│   │   ├── llm_client.py       # Interface abstrata
-│   │   └── ollama_client.py    # Implementação Ollama
-│   ├── retrieval/
-│   │   ├── embeddings.py
-│   │   └── vector_db.py
-│   └── ingestion/
-│       └── chunker.py
-├── data/
-│   └── index/ 
-│   └── processed/ 
-│   └── raw/                    # Base de dados (PDFs)
-├── requirements.txt
-└── pyproject.toml
-```
-
-### 2. Criar e ativar ambiente virtual
-
-```bash
+```powershell
 cd chat-backend
 python -m venv .venv
-source .venv/bin/activate        # Linux/macOS
-# ou
-.venv\Scripts\activate           # Windows
+.venv\Scripts\activate
+python -m pip install -r requirements.txt
+python -m uvicorn src.api.main:app --reload
 ```
 
-### 3. Instalar dependências
+Para reconstruir totalmente o indice com FAQ + documentos externos:
 
-```bash
-pip install -r requirements.txt
+```powershell
+cd chat-backend
+.venv\Scripts\activate
+python rebuild_index.py
 ```
 
-### 4. Adicionar documentos
+Variaveis uteis:
 
-Coloque os arquivos PDF a serem indexados dentro de `data/raw/`. O sistema gera os embeddings e o índice FAISS automaticamente na primeira execução.
+- `RAG_RESPONSE_MODE=extractive` para resposta mais rapida
+- `RAG_RESPONSE_MODE=hybrid` para usar LLM quando ela estiver disponivel
+- `OLLAMA_MODEL=phi3:mini` para um modelo leve no Windows
+- `FAQ_XLSX_PATH` para apontar para a planilha FAQ
+- `RAW_SOURCE_DIRS` para apontar para uma ou mais pastas documentais
 
-### 5. Rodar o servidor
-
-```bash
-fastapi dev
-```
-
-O servidor ficará disponível em `http://localhost:8000`.
-
-> **Nota:** Na primeira execução, o processamento dos documentos e geração de embeddings pode levar alguns minutos. As execuções seguintes usam o índice em cache em `data/index/`.
-
----
+Ao subir, o backend valida se `data/raw` corresponde ao indice em cache. Se nao corresponder, ele reprocessa automaticamente.
 
 ## Frontend
 
-### 1. Instalar dependências
-
-```bash
+```powershell
 cd chat-frontend
 npm install
-```
-
-### 2. Rodar em modo de desenvolvimento
-
-```bash
 npm run dev
 ```
 
-A interface ficará disponível em `http://localhost:5173`.
+Se quiser apontar para outra API:
 
-> O frontend espera o backend em `http://localhost:8000`. Se necessário, ajuste a URL base no código do frontend.
-
----
-
-## Adicionando uma nova LLM
-
-O backend usa o padrão de interface abstrata (`LLMClient`) para desacoplar a lógica do pipeline da LLM utilizada. Para integrar uma nova LLM, siga os passos:
-
-### 1. Crie um novo arquivo em `src/llm/`
-
-```python
-# src/llm/minha_llm_client.py
-
-from src.llm.llm_client import LLMClient
-
-class MinhaLLMClient(LLMClient):
-    def __init__(self, api_key: str, model: str = "nome-do-modelo"):
-        self.api_key = api_key
-        self.model = model
-
-    def generate_response(self, prompt: str) -> str:
-        # Implemente aqui a chamada à API da sua LLM
-        # Deve retornar a resposta como string
-        ...
-        return resposta
+```powershell
+$env:VITE_API_BASE_URL="http://127.0.0.1:8000"
+npm run dev
 ```
 
-A única obrigação é implementar o método `generate_response(prompt: str) -> str`.
+## Publicacao
 
-### 2. Use o novo cliente em `main.py`
+- backend: configure as variaveis do arquivo `chat-backend/.env.example`
+- frontend: configure `VITE_API_BASE_URL` com a URL publica da API
+- monitore o backend por `GET /health`
 
-Substitua a instância do `OllamaClient`:
+## Observacao
 
-```python
-# Antes
-from src.llm.ollama_client import OllamaClient
-llm = OllamaClient(model="llama3")
-
-# Depois
-from src.llm.minha_llm_client import MinhaLLMClient
-llm = MinhaLLMClient(api_key="sua-chave", model="nome-do-modelo")
-```
-
-O `RAGPipeline` aceita qualquer objeto que implemente `LLMClient`, sem nenhuma outra alteração necessária.
-
-### Exemplos de integrações comuns
-
-| LLM | Biblioteca sugerida |
-|---|---|
-| OpenAI / GPT | `openai` |
-| Google Gemini | `google-generativeai` |
-| Anthropic Claude | `anthropic` |
-| Groq | `groq` |
-| Qualquer OpenAI-compatible | `openai` com `base_url` customizada |
-
-Instale a biblioteca correspondente e adicione-a ao `requirements.txt`.
-
----
-
-## Build de produção (frontend)
-
-```bash
-cd frontend
-npm run build
-```
-
-Os arquivos estáticos serão gerados em `frontend/dist/` e podem ser servidos por qualquer servidor web estático ou pelo próprio FastAPI com `StaticFiles`.
+O projeto ignora ambientes virtuais e caches gerados localmente. Se voce trocar os arquivos em `chat-backend/data/raw`, reinicie o backend para ele reconstruir o indice.
