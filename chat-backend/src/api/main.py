@@ -1,7 +1,11 @@
 import os
 import time
+import asyncio
+import traceback
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+from dotenv import load_dotenv
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -19,7 +23,9 @@ from src.ingestion.chunker import (
 from src.llm.ollama_client import OllamaClient
 from src.retrieval.embeddings import Embedder
 from src.retrieval.vector_db import VectorStore
+from src.api.store import save_session_log
 
+load_dotenv()
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT_DIR / "data"
@@ -30,9 +36,9 @@ MANIFEST_CACHE_PATH = DATA_DIR / "processed" / "source_manifest.pkl"
 
 DEFAULT_RAW_DIRS = [
     str(ROOT_DIR / "data" / "raw"),
-    r"C:\Users\gabri\OneDrive\Documentos\UEPG\IA_AGIPI\DOCUMENTOS EPITEC PROF. LIVIO-20260409T232820Z-3-001",
+    os.getenv('RAW_SOURCE_DIRS') or r"C:\Users\gabri\OneDrive\Documentos\UEPG\IA_AGIPI\DOCUMENTOS EPITEC PROF. LIVIO-20260409T232820Z-3-001",
 ]
-DEFAULT_FAQ_PATH = r"C:\Users\gabri\OneDrive\Documentos\UEPG\IA_AGIPI\faq_agipi_ageuni_documentos.xlsx"
+DEFAULT_FAQ_PATH = os.getenv('FAQ_XLSX_PATH') or r"C:\Users\gabri\OneDrive\Documentos\UEPG\IA_AGIPI\faq_agipi_ageuni_documentos.xlsx"
 
 RESPONSE_MODE = os.getenv("RAG_RESPONSE_MODE", "extractive").lower()
 EMBED_MODEL = os.getenv("EMBED_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
@@ -58,6 +64,8 @@ ALLOWED_ORIGINS = [
 class QuestionRequest(BaseModel):
     question: str = Field(min_length=2, max_length=1000)
     history: list[dict[str, str]] = Field(default_factory=list)
+    user_name: str
+    session_id: str
 
 
 class AppState:
@@ -176,14 +184,45 @@ async def health() -> dict[str, Any]:
 @app.post("/chat")
 async def chat_endpoint(request: QuestionRequest) -> dict[str, Any]:
     started_at = time.perf_counter()
+    request_ts = datetime.now(timezone.utc).isoformat()
+
+    user_name = request.user_name
+    session_id = request.session_id
 
     try:
         print(f"[CHAT] Pergunta recebida: {request.question}")
-        response = state.pipeline.ask(request.question, request.history)
+        response = await asyncio.to_thread(state.pipeline.ask, request.question, request.history)
         elapsed = time.perf_counter() - started_at
         print(f"[CHAT] Resposta gerada em {elapsed:.2f}s")
+
+        response_ts = datetime.now(timezone.utc).isoformat()
+        await asyncio.to_thread(
+            save_session_log,
+            session_id=session_id,
+            user_name=user_name,
+            request_ts=request_ts,
+            question=request.question,
+            response_ts=response_ts,
+            response=response,
+            error=None
+        )
+
         return response
     except Exception as exc:
         elapsed = time.perf_counter() - started_at
+        response_ts = datetime.now(timezone.utc).isoformat()
+        error_detail = traceback.format_exc()
         print(f"[CHAT] Falha apos {elapsed:.2f}s: {exc}")
+
+        await asyncio.to_thread(
+            save_session_log,
+            session_id=session_id,
+            user_name=user_name,
+            request_ts=request_ts,
+            question=request.question,
+            response_ts=response_ts,
+            response=None,
+            error=error_detail
+        )
+
         raise HTTPException(status_code=500, detail=str(exc))

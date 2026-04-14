@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import UserCard from "./components/UserCard"
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000";
 const REQUEST_TIMEOUT_MS = 25000;
@@ -145,9 +146,27 @@ export default function App() {
     const [view, setView] = useState("answer");
     const [isSending, setIsSending] = useState(false);
     const [suggestions] = useState(() => getRandomSuggestions());
+    const [sessionData, setSessionData] = useState(null);
 
     const textareaRef = useRef(null);
     const bottomRef = useRef(null);
+
+    useEffect(() => {
+        const savedSession = sessionStorage.getItem("app_session")
+        if (savedSession) {
+            setSessionData(JSON.parse(savedSession));
+        }
+    }, []);
+
+    const handleLogin = (userName) => {
+        const newSession = {
+            userName: userName.trim(),
+            sessionId: window.crypto && crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36) + Math.random().toString(36).substring(2),
+        };
+
+        setSessionData(newSession);
+        sessionStorage.setItem("app_session", JSON.stringify(newSession));
+    };
 
     useEffect(() => {
         bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -208,6 +227,8 @@ export default function App() {
                 body: JSON.stringify({
                     question: trimmed,
                     history: buildHistoryPayload(nextMessages),
+                    user_name: sessionData.userName,
+                    session_id: sessionData.sessionId,
                 }),
                 signal: controller.signal,
             });
@@ -255,6 +276,10 @@ export default function App() {
     return (
         <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.14),_transparent_28%),linear-gradient(180deg,_#f8fafc_0%,_#eef2ff_100%)] text-slate-900">
             <div className="mx-auto min-h-screen max-w-6xl px-4 py-6 lg:px-8">
+                {!sessionData && (
+                    <UserCard onLogin={handleLogin} />
+                )}
+
                 <main className="flex min-h-[88vh] flex-col overflow-hidden rounded-[2rem] border border-white/60 bg-white/70 shadow-[0_24px_80px_rgba(15,23,42,0.08)] backdrop-blur">
                     <header className="border-b border-slate-200/80 px-6 py-5">
                         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -327,7 +352,7 @@ export default function App() {
                         <div ref={bottomRef} />
                     </section>
 
-                    <footer className="border-t border-slate-200/80 px-6 py-5">
+                    <section className="border-t border-slate-200/80 px-6 py-5">
                         <div className="rounded-[1.75rem] border border-slate-200 bg-white p-3 shadow-sm">
                             <div className="flex items-end gap-3">
                                 <textarea
@@ -341,10 +366,11 @@ export default function App() {
                                         resizeTextarea();
                                     }}
                                     onKeyDown={handleKeyDown}
+                                    disabled={!sessionData || isSending}
                                 />
                                 <button
                                     className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-900 text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:bg-slate-300"
-                                    disabled={!input.trim() || isSending}
+                                    disabled={!sessionData || !input.trim() || isSending}
                                     onClick={handleSend}
                                 >
                                     <svg className="h-4 w-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -355,7 +381,7 @@ export default function App() {
                             </div>
                             <p className="mt-2 px-2 text-xs uppercase tracking-[0.18em] text-slate-400">Enter envia. Shift + Enter cria nova linha.</p>
                         </div>
-                    </footer>
+                    </section>
                 </main>
 
             </div>
