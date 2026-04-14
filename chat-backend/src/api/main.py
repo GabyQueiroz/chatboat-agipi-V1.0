@@ -21,6 +21,7 @@ from src.ingestion.chunker import (
     save_source_manifest,
 )
 from src.llm.ollama_client import OllamaClient
+from src.llm.groq_client import GroqClient
 from src.retrieval.embeddings import Embedder
 from src.retrieval.vector_db import VectorStore
 from src.api.store import save_session_log
@@ -42,9 +43,12 @@ DEFAULT_FAQ_PATH = os.getenv('FAQ_XLSX_PATH') or r"C:\Users\gabri\OneDrive\Docum
 
 RESPONSE_MODE = os.getenv("RAG_RESPONSE_MODE", "extractive").lower()
 EMBED_MODEL = os.getenv("EMBED_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
-OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434")
-OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "phi3:mini")
-OLLAMA_TIMEOUT = int(os.getenv("OLLAMA_TIMEOUT", "20"))
+# OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434")
+# OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "phi3:mini")
+# OLLAMA_TIMEOUT = int(os.getenv("OLLAMA_TIMEOUT", "20"))
+GROQ_MODEL = os.getenv("GROQ_MODEL", "llama3-8b-8192")
+GROQ_TIMEOUT = int(os.getenv("GROQ_TIMEOUT", "20"))
+
 FAQ_XLSX_PATH = os.getenv("FAQ_XLSX_PATH", DEFAULT_FAQ_PATH)
 RAW_SOURCE_DIRS = [
     item.strip()
@@ -73,9 +77,8 @@ class AppState:
         self.embedder = Embedder(model_name=EMBED_MODEL)
         self.vector_store = VectorStore(dimension=self.embedder.dimension)
         self.llm = OllamaClient(
-            base_url=OLLAMA_BASE_URL,
-            model=OLLAMA_MODEL,
-            timeout=OLLAMA_TIMEOUT,
+            model=GROQ_MODEL,
+            timeout=GROQ_TIMEOUT,
         )
         self.pipeline = RAGPipeline(
             embedder=self.embedder,
@@ -123,7 +126,7 @@ class AppState:
             "documents": self.vector_store.document_count,
             "sources": len(manifest),
             "response_mode": RESPONSE_MODE,
-            "llm_model": OLLAMA_MODEL,
+            "llm_model": GROQ_MODEL,
             "faq_entries": sum(1 for doc in documents if doc.get("doc_type") == "faq"),
             "document_chunks": sum(1 for doc in documents if doc.get("doc_type") == "document"),
         }
@@ -137,9 +140,8 @@ class AppState:
             "status": "ok" if self.index_ready else "starting",
             "response_mode": RESPONSE_MODE,
             "llm": {
-                "provider": "ollama",
-                "model": OLLAMA_MODEL,
-                "base_url": OLLAMA_BASE_URL,
+                "provider": "groq",
+                "model": GROQ_MODEL,
                 "available": self.llm.is_available(),
             },
             "index": {
