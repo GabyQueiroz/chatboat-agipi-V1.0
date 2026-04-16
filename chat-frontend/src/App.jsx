@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import UserCard from "./components/UserCard"
+import FeedbackBar from "./components/FeedbackBar"
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000";
 const REQUEST_TIMEOUT_MS = 25000;
@@ -78,7 +79,7 @@ function SourceCard({ source }) {
     );
 }
 
-function AssistantMessage({ message, view }) {
+function AssistantMessage({ message, view, sessionData }) {
     const isError = message.role === "error";
     const statusClass = isError
         ? "border-rose-200 bg-rose-50 text-rose-700"
@@ -111,6 +112,15 @@ function AssistantMessage({ message, view }) {
                             </div>
                         ) : null}
                     </div>
+                )}
+                {!isError && sessionData && (
+                    <FeedbackBar
+                        interactionId={message.interactionId}
+                        sessionId={sessionData.sessionId}
+                        onFeedbackUpdate={() => {
+                            // Handle feedback update if needed
+                        }}
+                    />
                 )}
             </div>
         </div>
@@ -200,10 +210,13 @@ export default function App() {
         const trimmed = input.trim();
         if (!trimmed || isSending) return;
 
+        const interactionId = window.crypto && crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36) + Math.random().toString(36).substring(2);
+
         const userMessage = {
             id: `user-${Date.now()}`,
             role: "user",
             content: trimmed,
+            interactionId: interactionId,
             timestamp: new Date().toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }),
         };
 
@@ -229,6 +242,7 @@ export default function App() {
                     history: buildHistoryPayload(nextMessages),
                     user_name: sessionData.userName,
                     session_id: sessionData.sessionId,
+                    interaction_id: interactionId,
                 }),
                 signal: controller.signal,
             });
@@ -242,6 +256,7 @@ export default function App() {
                 id: `assistant-${Date.now()}`,
                 role: "assistant",
                 text: data.answer,
+                interactionId: interactionId,
                 timestamp: new Date().toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }),
                 warnings: data.warnings || [],
                 sources: data.sources || [],
@@ -255,6 +270,7 @@ export default function App() {
                     id: `error-${Date.now()}`,
                     role: "error",
                     text: buildErrorMessage(error),
+                    interactionId: interactionId,
                     timestamp: new Date().toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }),
                     warnings: [],
                     sources: [],
@@ -332,7 +348,7 @@ export default function App() {
                             messages.map((message) => (
                                 message.role === "user"
                                     ? <UserMessage key={message.id} message={message} />
-                                    : <AssistantMessage key={message.id} message={message} view={view} />
+                                    : <AssistantMessage key={message.id} message={message} view={view} sessionData={sessionData} />
                             ))
                         )}
 

@@ -24,7 +24,7 @@ from src.llm.ollama_client import OllamaClient
 from src.llm.groq_client import GroqClient
 from src.retrieval.embeddings import Embedder
 from src.retrieval.vector_db import VectorStore
-from src.api.store import save_session_log
+from src.api.store import save_session_log, update_interaction_feedback
 
 load_dotenv()
 
@@ -70,6 +70,12 @@ class QuestionRequest(BaseModel):
     history: list[dict[str, str]] = Field(default_factory=list)
     user_name: str
     session_id: str
+    interaction_id: str = Field(description="Unique identifier for this interaction")
+
+
+class FeedbackRequest(BaseModel):
+    relevance: int = Field(description="Relevance score: -1 (dislike), 0 (neutral), 1 (like)")
+    comment: str = Field(default="", max_length=5000, description="Optional user comment")
 
 
 class AppState:
@@ -202,6 +208,7 @@ async def chat_endpoint(request: QuestionRequest) -> dict[str, Any]:
             save_session_log,
             session_id=session_id,
             user_name=user_name,
+            interaction_id=request.interaction_id,
             request_ts=request_ts,
             question=request.question,
             response_ts=response_ts,
@@ -209,6 +216,7 @@ async def chat_endpoint(request: QuestionRequest) -> dict[str, Any]:
             error=None
         )
 
+        response["interaction_id"] = request.interaction_id
         return response
     except Exception as exc:
         elapsed = time.perf_counter() - started_at
@@ -220,6 +228,7 @@ async def chat_endpoint(request: QuestionRequest) -> dict[str, Any]:
             save_session_log,
             session_id=session_id,
             user_name=user_name,
+            interaction_id=request.interaction_id,
             request_ts=request_ts,
             question=request.question,
             response_ts=response_ts,
@@ -228,3 +237,67 @@ async def chat_endpoint(request: QuestionRequest) -> dict[str, Any]:
         )
 
         raise HTTPException(status_code=500, detail=str(exc))
+
+
+@app.patch("/chat/{session_id}/{interaction_id}/feedback")
+async def update_feedback_endpoint(
+    session_id: str,
+    interaction_id: str,
+    request: FeedbackRequest,
+) -> dict[str, Any]:
+    """Update feedback (relevance and comment) for an interaction.
+    
+    Args:
+        session_id: Session ID
+        interaction_id: Interaction ID
+        request: Feedback data (relevance: -1/0/1, comment: string)
+    
+    Returns:
+        Updated feedback object
+    """
+    try:
+        # Validate relevance value
+        if request.relevance not in (-1, 0, 1):
+            raise HTTPException(
+                status_code=400,
+                detail="Relevance must be -1 (dislike), 0 (neutral), or 1 (like)"
+            )
+        
+        print(f"[FEEDBACK] Updating interaction {interaction_id} in session {session_id}")
+        
+        # Call update function from store
+        feedback = await asyncio.to_thread(
+            update_interaction_feedback,
+            session_id=session_id,
+            interaction_id=interaction_id,
+            relevance=request.relevance,
+            comment=request.comment,
+        )
+        
+        print(f"[FEEDBACK] Successfully updated feedback for interaction {interaction_id}")
+        
+        return {
+            "success": True,
+            "feedback": feedback,
+        }
+    
+    except FileNotFoundError as exc:
+        print(f"[FEEDBACK] Session not found: {session_id}")
+        raise HTTPException(
+            status_code=404,
+            detail=f"Session {session_id} not found"
+        )
+    
+    except ValueError as exc:
+        print(f"[FEEDBACK] Validation error: {exc}")
+        raise HTTPException(
+            status_code=400,
+            detail=str(exc)
+        )
+    
+    except Exception as exc:
+        print(f"[FEEDBACK] Unexpected error: {exc}")
+        raise HTTPException(
+            status_code=500,
+            detail="Failed to update feedback"
+        )
