@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { ThumbsUp, ThumbsDown, MessageSquareText } from "lucide-react";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000";
@@ -6,7 +7,7 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000
 function FeedbackModal({ isOpen, comment, onCommentChange, onSubmit, onClose, isLoading }) {
     if (!isOpen) return null;
 
-    return (
+    return createPortal(
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
             <div className="bg-white rounded-2xl shadow-xl max-w-md w-full p-6">
                 <h3 className="text-lg font-semibold text-slate-900 mb-4">Adicionar comentário</h3>
@@ -36,7 +37,8 @@ function FeedbackModal({ isOpen, comment, onCommentChange, onSubmit, onClose, is
                     </button>
                 </div>
             </div>
-        </div>
+        </div>,
+        document.body
     );
 }
 
@@ -108,8 +110,8 @@ export default function FeedbackBar({ interactionId, sessionId, onFeedbackUpdate
                     )}
                     <button
                         className={`inline-flex h-8 w-8 items-center justify-center rounded-lg transition cursor-pointer ${relevance === 1
-                                ? "bg-emerald-100 text-emerald-700"
-                                : "text-slate-400 hover:bg-slate-100"
+                            ? "bg-emerald-100 text-emerald-700"
+                            : "text-slate-400 hover:bg-slate-100"
                             } disabled:opacity-50`}
                         onClick={handleLike}
                         disabled={isLoading}
@@ -120,8 +122,8 @@ export default function FeedbackBar({ interactionId, sessionId, onFeedbackUpdate
 
                     <button
                         className={`inline-flex h-8 w-8 items-center justify-center rounded-lg transition cursor-pointer ${relevance === -1
-                                ? "bg-rose-100 text-rose-700"
-                                : "text-slate-400 hover:bg-slate-100"
+                            ? "bg-rose-100 text-rose-700"
+                            : "text-slate-400 hover:bg-slate-100"
                             } disabled:opacity-50`}
                         onClick={handleDislike}
                         disabled={isLoading}
