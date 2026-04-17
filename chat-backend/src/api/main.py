@@ -46,7 +46,7 @@ EMBED_MODEL = os.getenv("EMBED_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
 # OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434")
 # OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "phi3:mini")
 # OLLAMA_TIMEOUT = int(os.getenv("OLLAMA_TIMEOUT", "20"))
-GROQ_MODEL = os.getenv("GROQ_MODEL", "llama3-8b-8192")
+GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.1-8b-instant")
 GROQ_TIMEOUT = int(os.getenv("GROQ_TIMEOUT", "20"))
 
 FAQ_XLSX_PATH = os.getenv("FAQ_XLSX_PATH", DEFAULT_FAQ_PATH)
@@ -82,7 +82,7 @@ class AppState:
     def __init__(self) -> None:
         self.embedder = Embedder(model_name=EMBED_MODEL)
         self.vector_store = VectorStore(dimension=self.embedder.dimension)
-        self.llm = OllamaClient(
+        self.llm = GroqClient(
             model=GROQ_MODEL,
             timeout=GROQ_TIMEOUT,
         )
