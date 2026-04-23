@@ -235,6 +235,7 @@ export default function App() {
             const response = await fetch(`${API_BASE_URL}/chat`, {
                 method: "POST",
                 headers: {
+                    "Authorization": `Bearer ${import.meta.env.HF_TOKEN || ''}`,
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
