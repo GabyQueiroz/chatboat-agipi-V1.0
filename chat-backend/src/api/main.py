@@ -24,7 +24,7 @@ from src.llm.ollama_client import OllamaClient
 from src.llm.groq_client import GroqClient
 from src.retrieval.embeddings import Embedder
 from src.retrieval.vector_db import VectorStore
-from src.api.store import save_session_log
+from src.api.store import save_session_log, update_interaction_feedback, save_general_feedback
 
 load_dotenv()
 
@@ -46,7 +46,7 @@ EMBED_MODEL = os.getenv("EMBED_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
 # OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434")
 # OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "phi3:mini")
 # OLLAMA_TIMEOUT = int(os.getenv("OLLAMA_TIMEOUT", "20"))
-GROQ_MODEL = os.getenv("GROQ_MODEL", "llama3-8b-8192")
+GROQ_MODEL = os.getenv("GROQ_MODEL", "llama-3.1-8b-instant")
 GROQ_TIMEOUT = int(os.getenv("GROQ_TIMEOUT", "20"))
 
 FAQ_XLSX_PATH = os.getenv("FAQ_XLSX_PATH", DEFAULT_FAQ_PATH)
@@ -70,13 +70,25 @@ class QuestionRequest(BaseModel):
     history: list[dict[str, str]] = Field(default_factory=list)
     user_name: str
     session_id: str
+    interaction_id: str = Field(description="Unique identifier for this interaction")
+
+
+class FeedbackRequest(BaseModel):
+    relevance: int = Field(description="Relevance score: -1 (dislike), 0 (neutral), 1 (like)")
+    comment: str = Field(default="", max_length=5000, description="Optional user comment")
+
+
+class GeneralFeedbackRequest(BaseModel):
+    question1: str = Field(..., description="Avaliação da precisão (Obrigatório)")
+    question2: str | None = Field(None, description="Sugestões de interface (Opcional)")
+    question3: str | None = Field(None, description="Funcionalidades faltando (Opcional)")
 
 
 class AppState:
     def __init__(self) -> None:
         self.embedder = Embedder(model_name=EMBED_MODEL)
         self.vector_store = VectorStore(dimension=self.embedder.dimension)
-        self.llm = OllamaClient(
+        self.llm = GroqClient(
             model=GROQ_MODEL,
             timeout=GROQ_TIMEOUT,
         )
@@ -202,6 +214,7 @@ async def chat_endpoint(request: QuestionRequest) -> dict[str, Any]:
             save_session_log,
             session_id=session_id,
             user_name=user_name,
+            interaction_id=request.interaction_id,
             request_ts=request_ts,
             question=request.question,
             response_ts=response_ts,
@@ -209,6 +222,7 @@ async def chat_endpoint(request: QuestionRequest) -> dict[str, Any]:
             error=None
         )
 
+        response["interaction_id"] = request.interaction_id
         return response
     except Exception as exc:
         elapsed = time.perf_counter() - started_at
@@ -220,6 +234,7 @@ async def chat_endpoint(request: QuestionRequest) -> dict[str, Any]:
             save_session_log,
             session_id=session_id,
             user_name=user_name,
+            interaction_id=request.interaction_id,
             request_ts=request_ts,
             question=request.question,
             response_ts=response_ts,
@@ -227,4 +242,84 @@ async def chat_endpoint(request: QuestionRequest) -> dict[str, Any]:
             error=error_detail
         )
 
+        raise HTTPException(status_code=500, detail=str(exc))
+
+
+@app.patch("/chat/{session_id}/{interaction_id}/feedback")
+async def update_feedback_endpoint(
+    session_id: str,
+    interaction_id: str,
+    request: FeedbackRequest,
+) -> dict[str, Any]:
+    """Update feedback (relevance and comment) for an interaction.
+    
+    Args:
+        session_id: Session ID
+        interaction_id: Interaction ID
+        request: Feedback data (relevance: -1/0/1, comment: string)
+    
+    Returns:
+        Updated feedback object
+    """
+    try:
+        # Validate relevance value
+        if request.relevance not in (-1, 0, 1):
+            raise HTTPException(
+                status_code=400,
+                detail="Relevance must be -1 (dislike), 0 (neutral), or 1 (like)"
+            )
+        
+        print(f"[FEEDBACK] Updating interaction {interaction_id} in session {session_id}")
+        
+        # Call update function from store
+        feedback = await asyncio.to_thread(
+            update_interaction_feedback,
+            session_id=session_id,
+            interaction_id=interaction_id,
+            relevance=request.relevance,
+            comment=request.comment,
+        )
+        
+        print(f"[FEEDBACK] Successfully updated feedback for interaction {interaction_id}")
+        
+        return {
+            "success": True,
+            "feedback": feedback,
+        }
+    
+    except FileNotFoundError as exc:
+        print(f"[FEEDBACK] Session not found: {session_id}")
+        raise HTTPException(
+            status_code=404,
+            detail=f"Session {session_id} not found"
+        )
+    
+    except ValueError as exc:
+        print(f"[FEEDBACK] Validation error: {exc}")
+        raise HTTPException(
+            status_code=400,
+            detail=str(exc)
+        )
+    
+    except Exception as exc:
+        print(f"[FEEDBACK] Unexpected error: {exc}")
+        raise HTTPException(
+            status_code=500,
+            detail="Failed to update feedback"
+        )
+
+
+@app.post("/chat/{session_id}/feedback")
+async def create_general_feedback(session_id: str, request: GeneralFeedbackRequest):
+    try:
+        feedback_data = request.model_dump()
+        feedback_data["timestamp"] = datetime.now(timezone.utc).isoformat()
+        
+        await asyncio.to_thread(save_general_feedback, session_id, feedback_data)
+        
+        print(f"[FEEDBACK GERAL] Sessão {session_id} recebeu feedback.")
+        return {"success": True, "message": "Feedback enviado com sucesso!"}
+    except Exception as exc:
+        error_details = traceback.format_exc()
+        print(f"[FEEDBACK GERAL] Erro inesperado:\n{error_details}")
         raise HTTPException(status_code=500, detail=str(exc))
