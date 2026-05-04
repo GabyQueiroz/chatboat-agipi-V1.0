@@ -108,3 +108,21 @@ def update_interaction_feedback(
         json.dump(data, f, ensure_ascii=False, indent=2)
     
     return interaction["feedback"]
+
+
+def save_general_feedback(session_id: str, feedback_data: dict):
+    STORAGE_DIR.mkdir(parents=True, exist_ok=True)
+    session_file = STORAGE_DIR / f"{session_id}.json"
+
+    if not session_file.exists():
+        raise FileNotFoundError(f"Session {str(session_file)} not found")
+    
+    with session_file.open("r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    data["general_feedback"] = feedback_data
+
+    with session_file.open("w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    
+    return True

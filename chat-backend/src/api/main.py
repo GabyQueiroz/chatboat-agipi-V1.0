@@ -24,7 +24,7 @@ from src.llm.ollama_client import OllamaClient
 from src.llm.groq_client import GroqClient
 from src.retrieval.embeddings import Embedder
 from src.retrieval.vector_db import VectorStore
-from src.api.store import save_session_log, update_interaction_feedback
+from src.api.store import save_session_log, update_interaction_feedback, save_general_feedback
 
 load_dotenv()
 
@@ -76,6 +76,12 @@ class QuestionRequest(BaseModel):
 class FeedbackRequest(BaseModel):
     relevance: int = Field(description="Relevance score: -1 (dislike), 0 (neutral), 1 (like)")
     comment: str = Field(default="", max_length=5000, description="Optional user comment")
+
+
+class GeneralFeedbackRequest(BaseModel):
+    question1: str = Field(..., description="Avaliação da precisão (Obrigatório)")
+    question2: str | None = Field(None, description="Sugestões de interface (Opcional)")
+    question3: str | None = Field(None, description="Funcionalidades faltando (Opcional)")
 
 
 class AppState:
@@ -301,3 +307,19 @@ async def update_feedback_endpoint(
             status_code=500,
             detail="Failed to update feedback"
         )
+
+
+@app.post("/chat/{session_id}/feedback")
+async def create_general_feedback(session_id: str, request: GeneralFeedbackRequest):
+    try:
+        feedback_data = request.model_dump()
+        feedback_data["timestamp"] = datetime.now(timezone.utc).isoformat()
+        
+        await asyncio.to_thread(save_general_feedback, session_id, feedback_data)
+        
+        print(f"[FEEDBACK GERAL] Sessão {session_id} recebeu feedback.")
+        return {"success": True, "message": "Feedback enviado com sucesso!"}
+    except Exception as exc:
+        error_details = traceback.format_exc()
+        print(f"[FEEDBACK GERAL] Erro inesperado:\n{error_details}")
+        raise HTTPException(status_code=500, detail=str(exc))
