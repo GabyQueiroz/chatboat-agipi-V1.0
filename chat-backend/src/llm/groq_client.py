@@ -5,9 +5,9 @@ from src.llm.llm_client import LLMClient
 
 
 class GroqClient(LLMClient):
-    def __init__(self, api_key: str = None, model: str = "llama3-8b-8192", timeout: int = 20):
+    def __init__(self, api_key: str = None, model: str = "llama-3.1-8b-instant", timeout: int = 20):
         self.api_key = api_key or os.getenv("GROQ_API_KEY")
-        self.base_url = "https://api.groq.com/openai/v1"
+        self.base_url = os.getenv("GROQ_BASE_URL")
         self.model = model
         self.timeout = timeout
 
