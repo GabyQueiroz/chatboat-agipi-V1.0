@@ -1,0 +1,3878 @@
+[
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\FICHA DE TRAMITAÇÃO EPITEC.pdf",
+    "size": 230249,
+    "mtime": 1772783858
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\manual da marca uepg - 2207.pdf",
+    "size": 18303218,
+    "mtime": 1772783964
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\REGULAMENTO AGIPI..pdf",
+    "size": 55779,
+    "mtime": 1770967466
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\Resolucao-CEPE-020-2016-Regulamento-Geral-dos-PPG-Stricto-Sensu-da-UEPG.pdf",
+    "size": 79473,
+    "mtime": 1772784196
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\RESOLUÇÃO C.A 2021.239.pdf",
+    "size": 220503,
+    "mtime": 1772784704
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\RESOLUÇÃO UNIV. 36 DE 2008..pdf",
+    "size": 48044,
+    "mtime": 1772784194
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\Resuniv0311.2011.pdf",
+    "size": 55779,
+    "mtime": 1772784700
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS PARA PEDIDOS DE PATENTE\\DESENHOS.docx",
+    "size": 12332,
+    "mtime": 1772784082
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS PARA PEDIDOS DE PATENTE\\Estrutura do Pedido de Patente.docx",
+    "size": 10901,
+    "mtime": 1772784084
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS PARA PEDIDOS DE PATENTE\\Estrutura do Pedido de Patente.pdf",
+    "size": 110830,
+    "mtime": 1773069852
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS PARA PEDIDOS DE PATENTE\\REIVINDICAÇÕES.docx",
+    "size": 13521,
+    "mtime": 1772784084
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS PARA PEDIDOS DE PATENTE\\REIVINDICAÇÕES.pdf",
+    "size": 91954,
+    "mtime": 1773069878
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS PARA PEDIDOS DE PATENTE\\RELÁTORIO DESCRITIVO.docx",
+    "size": 14732,
+    "mtime": 1772784124
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS PARA PEDIDOS DE PATENTE\\RELÁTORIO DESCRITIVO.pdf",
+    "size": 104568,
+    "mtime": 1773069902
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS PARA PEDIDOS DE PATENTE\\RESUMO.docx",
+    "size": 10723,
+    "mtime": 1772784080
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS PARA PEDIDOS DE PATENTE\\RESUMO.pdf",
+    "size": 61747,
+    "mtime": 1773069930
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS PARA PEDIDOS DE PATENTE\\SITES BUSCAS DE ANTERIORIDADES..docx",
+    "size": 319585,
+    "mtime": 1772784040
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS PARA PEDIDOS DE PATENTE\\SITES BUSCAS DE ANTERIORIDADES.pdf",
+    "size": 47266,
+    "mtime": 1773069956
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\FORMULÁRIOS P.I AGIPI\\Formulario-de-Avaliacao-Preliminar-de-solicitacao-de-pedido-de-patente.docx",
+    "size": 396218,
+    "mtime": 1772783868
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\FORMULÁRIOS P.I AGIPI\\Formulario-de-Avaliacao-Preliminar-de-solicitacao-de-pedido-de-patente.pdf",
+    "size": 328892,
+    "mtime": 1773069630
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\FORMULÁRIOS P.I AGIPI\\Formulario-de-Avaliacao-Preliminar-de-solicitacao-de-Registro-de-Software.docx",
+    "size": 79445,
+    "mtime": 1772783872
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\FORMULÁRIOS P.I AGIPI\\Formulario-de-Avaliacao-Preliminar-de-solicitacao-de-Registro-de-Software.pdf",
+    "size": 324126,
+    "mtime": 1773069672
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\FORMULÁRIOS P.I AGIPI\\FORMULÁRIO DE PEDIDO DE REGISTRO DE DESENHO INDUSTRIAL..docx",
+    "size": 229481,
+    "mtime": 1772783902
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\FORMULÁRIOS P.I AGIPI\\FORMULÁRIO DE PEDIDO DE REGISTRO DE DESENHO INDUSTRIAL.pdf",
+    "size": 325659,
+    "mtime": 1773069604
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\FORMULÁRIOS P.I AGIPI\\Marca-Formulario-de-solicitacao-de-registro.docx",
+    "size": 96467,
+    "mtime": 1772783874
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\FORMULÁRIOS P.I AGIPI\\Marca-Formulario-de-solicitacao-de-registro.pdf",
+    "size": 412291,
+    "mtime": 1773069712
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\15.DOU_23.09.2016_Decreton8.854de22.09.2016_EstuturaRegimentalINPI.pdf",
+    "size": 332970,
+    "mtime": 1772788060
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2019-05-30-decreto-legislativo-no-49-de-2019.pdf",
+    "size": 625299,
+    "mtime": 1772787712
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2019-10-02-decreto-no-10-033-de-01-10-2019-promulga-o-protocolo-referente-ao-acordo-de-madri.pdf",
+    "size": 2733790,
+    "mtime": 1772787654
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\20190702i.pdf",
+    "size": 3637851,
+    "mtime": 1772787704
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-audit-01.pdf",
+    "size": 684047,
+    "mtime": 1772787452
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-in-pr-coger-117-dispoe-sobre-atividades-de-correicao-no-ambito-do-inpi.pdf",
+    "size": 263959,
+    "mtime": 1772787460
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-in-pr-dirpa-118-institui-a-nova-versao-das-diretrizes-de-exame-de-pedidos-de-patente-na-area-de-biotecnologia.pdf",
+    "size": 1166982,
+    "mtime": 1772787440
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-119-institui-ho-em-carater-excepcional.pdf",
+    "size": 166163,
+    "mtime": 1772787602
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-161-define-prorrogacao-do-ho-excepcional-e-da-suspensao-de-prazos-previstos-nas-portarias-119-e-120.pdf",
+    "size": 538441,
+    "mtime": 1772787594
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-164-institui-a-marca-comemorativa-dos-50-anos-inpi.pdf",
+    "size": 603909,
+    "mtime": 1772787590
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-166-define-prorrogacao-do-ho-excepcional-e-da-suspensao-de-prazos-previstos-nas-portarias-119-e-120.pdf",
+    "size": 86821,
+    "mtime": 1772787586
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-173-torna-publico-o-4o-relatorio-de-avaliacao-dos-resultados-do-teletrabalho-no-inpi.pdf",
+    "size": 603990,
+    "mtime": 1772787560
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-178-define-prorrogacao-do-ho-excepcional-prevista-na-portaria-119.pdf",
+    "size": 612075,
+    "mtime": 1772787556
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-179-define-prorrogacao-da-suspensao-de-prazos-previstos-na-portaria-120.pdf",
+    "size": 657986,
+    "mtime": 1772787554
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-230-define-prorrogacao-do-ho-excepcional-prevista-na-portaria-119.pdf",
+    "size": 596805,
+    "mtime": 1772787552
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-243-define-prorrogacao-do-ho-excepcional-prevista-na-portaria-119.pdf",
+    "size": 593787,
+    "mtime": 1772787548
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-245-aprova-o-regimento-interno-do-comite-gestor-do-sistema-eletronico-de-informacoes-cgsei-inpi.pdf",
+    "size": 607732,
+    "mtime": 1772787544
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-255-define-prorrogacao-do-ho-excepcional-e-da-suspensao-de-prazos-previstos-nas-portarias-119-e-120.pdf",
+    "size": 601696,
+    "mtime": 1772787540
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-260-institui-o-programa-de-desenvolvimento-em-propriedade-industrial-pdpi.pdf",
+    "size": 616242,
+    "mtime": 1772787538
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-290-define-prorrogacao-do-ho-excepcional-e-da-suspensao-de-prazos-previstos-nas-portarias-119-e-120.pdf",
+    "size": 599842,
+    "mtime": 1772787532
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-302-disciplina-os-procedimentos-relativos-a-solicitacao-do-desarquivamento-do-pedido-de-patente.pdf",
+    "size": 609615,
+    "mtime": 1772787528
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-321-define-os-indicadores-e-as-metas-de-desempenho-institucional-2020-gdapi-gdact.pdf",
+    "size": 618924,
+    "mtime": 1772787514
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-330-define-os-indicadores-e-as-metas-de-desempenho-institucional-2020-gdapi-gdact.pdf",
+    "size": 651132,
+    "mtime": 1772787510
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-335-da-publicidade-a-relacao-de-atos-normativos-inferiores-a-decreto-vigentes-no-inpi.pdf",
+    "size": 760419,
+    "mtime": 1772787508
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-336-define-prorrogacao-do-ho-excepcional-previsto-na-portaria-119.pdf",
+    "size": 601632,
+    "mtime": 1772787466
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-348-normatiza-os-procedimentos-relativos-ao-controle-de-pagamento-das-retribuicoes-anuais-de-patentes.pdf",
+    "size": 611029,
+    "mtime": 1772787464
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-352-define-prorrogacao-do-ho-excepcional-previsto-na-portaria-119.pdf",
+    "size": 607760,
+    "mtime": 1772787454
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-355-institui-o-programa-bem-aqui-no-inpi.pdf",
+    "size": 732107,
+    "mtime": 1772787450
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-356-define-os-indicadores-e-as-metas-de-desempenho-institucional-2020-gdapi-gdact.pdf",
+    "size": 630294,
+    "mtime": 1772787446
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2020-pr-412-disciplina-a-analise-de-pedido-de-patente-de-invencao-pendente-de-exame-sem-buscas-de-anterioridades.pdf",
+    "size": 679374,
+    "mtime": 1772787426
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021-12-01-decreto-no-10-877-de-30-11-2021-altera-o-decreto-no-8-854-de-2016-que-aprova-a-esrutura-regimental-do-inpi.pdf",
+    "size": 407942,
+    "mtime": 1772787158
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021-dirpa-001-estabelece-procedimentos-para-elaboracao-dos-pareceres-das-exigencias-preliminares-6-21-e-6-22.pdf",
+    "size": 605348,
+    "mtime": 1772787420
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021-pr-001-define-prorrogacao-do-ho-excepcional-previsto-na-portaria-119.pdf",
+    "size": 683279,
+    "mtime": 1772787424
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021dirma-08.pdf",
+    "size": 675389,
+    "mtime": 1772787178
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021dirpa-07.pdf",
+    "size": 676633,
+    "mtime": 1772787202
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-005-aprova-1o-relatorio-de-resultados-teletrabalho-trabalho-remoto-teletrabalho-boletim.pdf",
+    "size": 665751,
+    "mtime": 1772787340
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-006-aprova-2o-relatorio-de-resultados-teletrabalho-trabalho-remoto-teletrabalho-boletim.pdf",
+    "size": 663812,
+    "mtime": 1772787338
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-007-aprova-3o-relatorio-de-resultados-teletrabalho-trabalho-remoto-teletrabalho-boletim.pdf",
+    "size": 666747,
+    "mtime": 1772787334
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-008-indicadores-de-desempenho-institucional-para-fins-de-gdapi-e-gdact-no-ano-de-2020.pdf",
+    "size": 694603,
+    "mtime": 1772787332
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-012-aprova-resumo-executivo-do-1o-relatorio-de-resultados-teletrabalho-trabalho-remoto-teletrabalho-boletim.pdf",
+    "size": 667026,
+    "mtime": 1772787384
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-013-aprova-resumo-executivo-do-2o-relatorio-de-resultados-teletrabalho-trabalho-remoto-teletrabalho-boletim.pdf",
+    "size": 660911,
+    "mtime": 1772787378
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-014-aprova-resumo-executivo-do-3o-relatorio-de-resultados-teletrabalho-trabalho-remoto-teletrabalho-boletim.pdf",
+    "size": 667776,
+    "mtime": 1772787374
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-017-plano-de-acao-do-inpi.pdf",
+    "size": 671087,
+    "mtime": 1772787372
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-018-portaria-definindo-as-metas-de-desempenho-institucional.pdf",
+    "size": 700850,
+    "mtime": 1772787370
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-019-portaria-regulamentando-a-in-tcu-no-84-de-2020.pdf",
+    "size": 697943,
+    "mtime": 1772787366
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-020-prorroga-prazo-de-trabalho-temporario-em-regime-teletrabalho.pdf",
+    "size": 673312,
+    "mtime": 1772787360
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-021-disciplina-a-exigencia-preliminar-do-pedido-de-patente-de-invencao-depositado-em-2017.pdf",
+    "size": 683214,
+    "mtime": 1772787358
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-022-altera-os-artigos-1o-e-2o-da-resolucaoinpipr-no-253.pdf",
+    "size": 730871,
+    "mtime": 1772787354
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-025-aprova-o-estatuto-da-atividade-de-auditoria-interna-do-inpi.pdf",
+    "size": 727376,
+    "mtime": 1772787276
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-030-institui-a-politica-de-seguranca-da-informacao-posin.pdf",
+    "size": 1187844,
+    "mtime": 1772787264
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-032-formaliza-a-criacao-de-grupo-de-trabalho-para-a-preparacao-para-adesao-ao-acordo-de-haia.pdf",
+    "size": 679712,
+    "mtime": 1772787258
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-034-prorroga-o-prazo-de-vigencia-da-portaria-inpi-no-119.pdf",
+    "size": 669775,
+    "mtime": 1772787252
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-038-prorrogacao-do-teletrabalho-excepcional.pdf",
+    "size": 666612,
+    "mtime": 1772787244
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-039-disciplina-procedimentos-pct.pdf",
+    "size": 776818,
+    "mtime": 1772787240
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-048.pdf",
+    "size": 172668,
+    "mtime": 1772787174
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-26-prorrogacao-do-teletrabalho.pdf",
+    "size": 668920,
+    "mtime": 1772787274
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-27-2021.pdf",
+    "size": 682852,
+    "mtime": 1772787272
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-28.pdf",
+    "size": 736082,
+    "mtime": 1772787266
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-36-portaria-processo-judicial-suspensao-da-exoneracao-por-estagio-probatorio-do-dilnei-antunes-lessa.pdf",
+    "size": 666025,
+    "mtime": 1772787246
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-40.pdf",
+    "size": 598209,
+    "mtime": 1772787180
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-41-revisao-das-metas-previstas-na-portaria-inpipr-no-018-de-12022021.pdf",
+    "size": 684012,
+    "mtime": 1772787190
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-45.pdf",
+    "size": 5906351,
+    "mtime": 1772787186
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-47.pdf",
+    "size": 268032,
+    "mtime": 1772787184
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-50.pdf",
+    "size": 139342,
+    "mtime": 1772787152
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-51.pdf",
+    "size": 220887,
+    "mtime": 1772787148
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2021pr-52.pdf",
+    "size": 149724,
+    "mtime": 1772787142
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022-12-30-000352020cgpipfe-inpipgfagu_parecer-com-efeito-normativo.pdf",
+    "size": 4430672,
+    "mtime": 1772787444
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022-dirma-07.pdf",
+    "size": 154817,
+    "mtime": 1772787068
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022-dirma-08.pdf",
+    "size": 137791,
+    "mtime": 1772787066
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022-dirma-09.pdf",
+    "size": 136545,
+    "mtime": 1772787062
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022direx_01_aprova_novas_versoes_de_documentos_do_sgq_e_anexos.pdf",
+    "size": 3383908,
+    "mtime": 1772786876
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022direx_02_aprova_novas_versoes_de_documentos_do_sgq_e_anexos.pdf",
+    "size": 941697,
+    "mtime": 1772786872
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022dirpa-01-e-anexos.pdf",
+    "size": 3422221,
+    "mtime": 1772786858
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022dirpa-02-e-anexos.pdf",
+    "size": 3524112,
+    "mtime": 1772786854
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022dirpa-03-e-anexos.pdf",
+    "size": 1434501,
+    "mtime": 1772786852
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pfe-portaria-conjunta-01.pdf",
+    "size": 202937,
+    "mtime": 1772786860
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-011.pdf",
+    "size": 104373,
+    "mtime": 1772787052
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-02-aprova-resumo-executivo-do-4o-relatorio-de-resultados-teletrabalho-trabalho-remoto-teletrabalho-boletim.pdf",
+    "size": 678739,
+    "mtime": 1772787086
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-040-aprova-resumo-executivo-do-1o-relatorio-de-resultados-teletrabalho-trabalho-remoto-teletrabalho-boletim.pdf",
+    "size": 1023871,
+    "mtime": 1772786930
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-042-aprova-resumo-executivo-do-3o-relatorio-de-resultados-teletrabalho-trabalho-remoto-teletrabalho-boletim.pdf",
+    "size": 921374,
+    "mtime": 1772786882
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-043-aprova-resumo-executivo-do-4o-relatorio-de-resultados-teletrabalho-trabalho-remoto-teletrabalho-boletim.pdf",
+    "size": 993057,
+    "mtime": 1772786878
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-05-declara-a-revogacao-de-atos-normativos-e-o-exaurimento-de-atos-editados-pela-presidencia-do-inpi.pdf",
+    "size": 173122,
+    "mtime": 1772787080
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-052-aprova-resumo-executivo-do-1o-relatorio-de-resultados-teletrabalho-trabalho-remoto-teletrabalho-boletim.pdf",
+    "size": 654005,
+    "mtime": 1772786832
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-053-aprova-resumo-executivo-do-2o-relatorio-de-resultados-teletrabalho-trabalho-remoto-teletrabalho-boletim.pdf",
+    "size": 657590,
+    "mtime": 1772786828
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-054-aprova-resumo-executivo-do-3o-relatorio-de-resultados-teletrabalho-trabalho-remoto-teletrabalho-boletim.pdf",
+    "size": 659794,
+    "mtime": 1772786824
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-055-aprova-resumo-executivo-do-4o-relatorio-de-resultados-teletrabalho-trabalho-remoto-teletrabalho-boletim.pdf",
+    "size": 660445,
+    "mtime": 1772786822
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-06-estabelece-as-condicoes-para-o-registro-da-indicacao-geografica-cachaca.pdf",
+    "size": 142120,
+    "mtime": 1772787078
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-09-e-anexo.pdf",
+    "size": 158286,
+    "mtime": 1772787058
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-14.pdf",
+    "size": 159630,
+    "mtime": 1772787040
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-15.pdf",
+    "size": 119307,
+    "mtime": 1772787038
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-16.pdf",
+    "size": 120061,
+    "mtime": 1772787034
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-17.pdf",
+    "size": 132082,
+    "mtime": 1772786990
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-18.pdf",
+    "size": 113970,
+    "mtime": 1772786988
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-19.pdf",
+    "size": 159004,
+    "mtime": 1772786984
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-20.pdf",
+    "size": 2037046,
+    "mtime": 1772786982
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-22.pdf",
+    "size": 1018211,
+    "mtime": 1772786976
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-23.pdf",
+    "size": 417677,
+    "mtime": 1772786974
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-24-define-os-processos-de-nivel-1-macroprocessos-do-instituto-nacional-da-propriedade-industrial-inpi.pdf",
+    "size": 153807,
+    "mtime": 1772786958
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-25-institui-a-politica-da-qualidade-do-inpi.pdf",
+    "size": 1086565,
+    "mtime": 1772786970
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-27-inclui-o-coordenador-geral-do-protocolo-de-madri.pdf",
+    "size": 562112,
+    "mtime": 1772786964
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-28-institui-o-manual-de-gestao-de-riscos-do-instituto-nacional-da-propriedade-industrial-2013-inpi200b-com-anexo.pdf",
+    "size": 1250903,
+    "mtime": 1772786962
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-31-revoga-a-portaria-inpi-pr-no-121-de-20-de-marco-de-2019-e-a-portaria-inpi-pr-no-385-de-25-de-julho-de-2019.pdf",
+    "size": 130114,
+    "mtime": 1772786950
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-34-disciplina-a-exigencia-preliminar-do-pedido-de-patente.pdf",
+    "size": 1247125,
+    "mtime": 1772786944
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-44-altera-o-caput-do-artigo-25-da-portaria-no-30-de-15-de-junho-de-2021.pdf",
+    "size": 164010,
+    "mtime": 1772786866
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-46-de-2022-torna-publico-o-plano-de-acao-do-inpi-2022-e-anexo.pdf",
+    "size": 3159592,
+    "mtime": 1772786848
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-48-portaria-para-fins-de-atualizacao-da-portaria-inpi-pr-no-56-de-2021.pdf",
+    "size": 164232,
+    "mtime": 1772786842
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-50.pdf",
+    "size": 274896,
+    "mtime": 1772786838
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-51-portaria-que-atualiza-e-estende-a-vigencia-do-plano-estrategico-2018-2021.pdf",
+    "size": 4131345,
+    "mtime": 1772786834
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-59-portaria-para-revogacao-de-atos-da-cgpe (1).pdf",
+    "size": 155157,
+    "mtime": 1772786776
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-59-portaria-para-revogacao-de-atos-da-cgpe.pdf",
+    "size": 155157,
+    "mtime": 1772786774
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-60-portaria-para-revogacao-de-atos-da-cgrec.pdf",
+    "size": 158892,
+    "mtime": 1772786770
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-61portaria-para-revogacao-de-atos-da-cgti.pdf",
+    "size": 195123,
+    "mtime": 1772786768
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-62-declara-a-revogacao-de-atos-normativos-editados-pela-presidencia-do-inpi-e-ou-pela-dirpa.pdf",
+    "size": 191818,
+    "mtime": 1772786766
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-63-declara-a-revogacao-de-normas-de-execucao-editadas-pela-dirad.pdf",
+    "size": 191679,
+    "mtime": 1772786762
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-65-politica-de-seguranca-da-informacao.pdf",
+    "size": 295804,
+    "mtime": 1772786760
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-68-portaria-que-regulamenta-o-procedimento-de-apuracao-e-cobranca-administrativa-de-valores-devidos-ao-inpi.pdf",
+    "size": 243172,
+    "mtime": 1772786754
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-69-revoga-portaria-37-2022.pdf",
+    "size": 690393,
+    "mtime": 1772786752
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-70-aprova-o-plano-de-dados-abertos-do-instituto-nacional-da-propriedade-industrial-inpi-para-o-bienio-2022-2024.pdf",
+    "size": 1900439,
+    "mtime": 1772786740
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-71_dispoe_sobre_a_disp-_do_peticionamento_relativo_a_req-_de_pedidos_de_reg-_de_marca_de_posicaono_sistema_einpi.pdf",
+    "size": 150138,
+    "mtime": 1772786734
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-73-procedimentos-de-apuracao-e-cobranca-administrativa-de-valores-devidos-ao-inpi.pdf",
+    "size": 239953,
+    "mtime": 1772786730
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-75-revisa-as-metas-de-desempenho-institucional-de-que-trata-a-portaria-inpi-pr-no-47-de-2022.pdf",
+    "size": 132563,
+    "mtime": 1772786726
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-76-e-anexo_torna-publica-a-segunda-revisao-do-plano-de-acao-2022-do-inpi.pdf",
+    "size": 1350993,
+    "mtime": 1772786720
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-79-disciplina-o-tramite-prioritario-de-processos-de-patente-no-ambito-do-inpi.pdf",
+    "size": 226445,
+    "mtime": 1772786716
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr-80-revisa-as-metas-de-desempenho-institucional-de-que-trata-a-portaria-inpi-pr-no-47.pdf",
+    "size": 128353,
+    "mtime": 1772786714
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr_08_dispoe_sobre_a_recepcao_e_o_processamento_de_pedidos_e_peticoes_de_marca_e_sobre_o_manual_de_marcas_.pdf",
+    "size": 253969,
+    "mtime": 1772787072
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr_10_institui_a_politica_de_comunicacao_do_instituto_nacional_da_propriedade_industrial___inpi.pdf",
+    "size": 182726,
+    "mtime": 1772787050
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2022pr_21_declara_a_revogacao_de_atos_normativos.pdf",
+    "size": 133955,
+    "mtime": 1772786980
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023-instrucao-normativa-03.pdf",
+    "size": 166547,
+    "mtime": 1772786386
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023-instrucao-normativa-pfe-02.pdf",
+    "size": 112830,
+    "mtime": 1772786420
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\20231201i.pdf",
+    "size": 222406,
+    "mtime": 1772786206
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023audit-no-02-institui-o-plano-de-negocio-da-auditoria-interna-do-inpi-para-o-trienio-2023-2025-e-anexo.pdf",
+    "size": 657003,
+    "mtime": 1772786388
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023cgdi-01-e-anexo.pdf",
+    "size": 458105,
+    "mtime": 1772786374
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023cgrec-01-portaria_de_avaliacao_de_desempenho_2023.pdf",
+    "size": 216016,
+    "mtime": 1772786458
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023cqual_01_aprova_novas_versoes_de_documentos_do_sistema_de_gestao_da_qualidade_e_anexos.pdf",
+    "size": 1537535,
+    "mtime": 1772786394
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023direx_01_aprova_documentos_do_sistema_de_gestao_da_qualidade.pdf",
+    "size": 4999027,
+    "mtime": 1772786488
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023dirma-15-delega-competencia-a-servidores-lotados-na-difor-e-na-coins-sp.pdf",
+    "size": 113788,
+    "mtime": 1772786286
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023dirma-16.pdf",
+    "size": 136806,
+    "mtime": 1772786102
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023dirma-17.pdf",
+    "size": 139076,
+    "mtime": 1772786098
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023dirma-18.pdf",
+    "size": 139882,
+    "mtime": 1772786094
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023dirma-19.pdf",
+    "size": 140335,
+    "mtime": 1772786092
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023dirma-20.pdf",
+    "size": 140068,
+    "mtime": 1772786088
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023dirma-21.pdf",
+    "size": 139774,
+    "mtime": 1772786084
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023dirma-22.pdf",
+    "size": 137001,
+    "mtime": 1772786082
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023dirma-23.pdf",
+    "size": 136650,
+    "mtime": 1772786078
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023dirma-24.pdf",
+    "size": 144146,
+    "mtime": 1772786076
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023dirpa-04-alterar-grupo-trabalho-classificacao-patentes.pdf",
+    "size": 143455,
+    "mtime": 1772786298
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023in-04-instrucao-normativa-no-04.pdf",
+    "size": 113725,
+    "mtime": 1772786272
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023in-05-instrucao-normativa-inpi-pr.pdf",
+    "size": 140519,
+    "mtime": 1772786260
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023in-06.pdf",
+    "size": 135223,
+    "mtime": 1772786196
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023in-07.pdf",
+    "size": 135944,
+    "mtime": 1772786052
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-01-revoga-a-portaria-inpi-pr-no-47-1.pdf",
+    "size": 106088,
+    "mtime": 1772786520
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-02-alteracao-da-portaria-inpi-pr-no-67-de-6-de-setembro-de-2022.pdf",
+    "size": 103434,
+    "mtime": 1772786518
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-03-portaria-para-alteracao-da-regulacao-do-funcionamento-da-unidade-regional-do-inpi-em-sao-paulo-coins-sp.pdf",
+    "size": 137158,
+    "mtime": 1772786516
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-04-revogar-a-portaria-inpi-pr-no-11-de-2022_delegacao-de-competencia-direx.pdf",
+    "size": 106000,
+    "mtime": 1772786512
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-05-convalidar-atos-administrativos.pdf",
+    "size": 116564,
+    "mtime": 1772786508
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-06-e-anexo.pdf",
+    "size": 557971,
+    "mtime": 1772786504
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-07-realocar-a-coordenacao-geral-de-tecnologia-da-informacao-para-a-diretoria-de-administracao.pdf",
+    "size": 135273,
+    "mtime": 1772786502
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-08-realocar-a-coordenacao-geral-de-tecnologia-da-informacao-para-a-diretoria-de-administracao.pdf",
+    "size": 128674,
+    "mtime": 1772786498
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-09-aprova-resumo-executivo-do-4o-relatorio-de-resultados-teletrabalho-trabalho-remoto-teletrabalho-boletim.pdf",
+    "size": 309225,
+    "mtime": 1772786484
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-10-torna-publico-o-plano-estrategico-2023-2026-do-inpi.pdf",
+    "size": 1407622,
+    "mtime": 1772786482
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-11-relatorios-de-avaliacao-de-resultados-do-programa-de-gestao-do-inpi-areas-finalisticas-2022-boletim.pdf",
+    "size": 99090,
+    "mtime": 1772786478
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-14-tornar-publico-o-plano-estrategico-2023-2026-versao-2-0-do-instituto-nacional-da-propriedade-industrial.pdf",
+    "size": 6623561,
+    "mtime": 1772786452
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-15-torna-publico-o-plano-de-acao-do-instituto-nacional-da-propriedade-industrial-inpi-do-ano-de-2023.pdf",
+    "size": 106581,
+    "mtime": 1772786414
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-16-instituir-o-formulario-de-registro-de-acesso-a-coins-sp-e-anexo.pdf",
+    "size": 196955,
+    "mtime": 1772786410
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-18-portaria-para-definicao-de-metas-de-desempenho-institucional-para-fins-da-gdapi-gdact-ano-2023.pdf",
+    "size": 168468,
+    "mtime": 1772786406
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-19-portaria-que-institui-a-politica-de-gestao-de-pessoas-do-inpi_pgp-inpi.pdf",
+    "size": 131416,
+    "mtime": 1772786396
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-20-portaria-para-descontinuidade-da-plataforma-vitrine-de-pi.pdf",
+    "size": 123183,
+    "mtime": 1772786402
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-21-revogacao-da-resolucao-inpi-pr-no-207-de-27-de-setembro-de-2017.pdf",
+    "size": 105212,
+    "mtime": 1772786392
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-22-declara-a-revogacao-de-atos-normativos.pdf",
+    "size": 106749,
+    "mtime": 1772786382
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-24-realocar-a-secao-de-telefonia-setel-para-a-divisao-de-infraestrutura-e-suporte-diinf-cgti.pdf",
+    "size": 107752,
+    "mtime": 1772786376
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-25-dispoe-sobre-o-registro-de-desenho-industrial-no-ambito-do-acordo-de-haia.pdf",
+    "size": 180081,
+    "mtime": 1772786370
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-26.pdf",
+    "size": 156019,
+    "mtime": 1772786368
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-27-dispoe-sobre-as-diretrizes-de-exame-para-averbacao.pdf",
+    "size": 227726,
+    "mtime": 1772786364
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-28-alteracao-da-portaria-inpi-pr-no-8-de-2022.pdf",
+    "size": 132370,
+    "mtime": 1772786358
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-29-dispoe-sobre-os-mecanismos-de-controle-interno-e-de-governanca-das-acoes-da-enpi-no-ambito-do-inpi.pdf",
+    "size": 125469,
+    "mtime": 1772786356
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-30-relatorios-de-avaliacao-de-resultados-do-programa-de-gestao-do-inpi-1o-trimestre-2023-e-anexos.pdf",
+    "size": 2650738,
+    "mtime": 1772786352
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-31-aprova-o-regulamento-do-programa-piloto-de-mentoria-em-propriedade-industrial-pmpi-fase-2.pdf",
+    "size": 215288,
+    "mtime": 1772786308
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-34-revogacao-de-portarias-que-institui-e-prorroga-atividade-do-gt-dirma-cgrec.pdf",
+    "size": 132532,
+    "mtime": 1772786296
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-36-institui-a-segunda-edicao-do-manual-de-desenhos-industriais.pdf",
+    "size": 115145,
+    "mtime": 1772786280
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-38-relatorio-de-avaliacao-de-resultados-do-primeiro-trimestre-de-2023-do-programa-de-gestao-do-inpi-areas-finalisticas.pdf",
+    "size": 1482137,
+    "mtime": 1772786278
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-39-autorizacao-de-edicao-do-novo-regimento-interno-da-ce-inpi.pdf",
+    "size": 186053,
+    "mtime": 1772786274
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-41-relatorios-de-avaliacao-de-resultados-do-programa-de-gestao-do-inpi-2013-area-meio-2023-02-e-anexos.pdf",
+    "size": 3074599,
+    "mtime": 1772786266
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-43-relatorios-de-ambientacao-das-unidades-que-ingressaram-no-pgd-em-janeiro-de-2023-e-relatorios.pdf",
+    "size": 13968494,
+    "mtime": 1772786262
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-44-portaria-de-delegacao-de-competencia-para-o-cebraspe.pdf",
+    "size": 126237,
+    "mtime": 1772786256
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-45-torna-se-efeito-portaria-pr-no-42_23.pdf",
+    "size": 141558,
+    "mtime": 1772786252
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-47-torna-publica-a-segunda-revisao-do-plano-de-acao-do-inpi-2023.pdf",
+    "size": 1716059,
+    "mtime": 1772786218
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-48-institui-a-comissao-de-sustentabilidade-e-bioeconomia-cosbio-no-ambito-do-inpi.pdf",
+    "size": 162383,
+    "mtime": 1772786216
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-53-publicacao-do-regimento-interno-do-comite-de-genero-diversidade-e-inclusao.pdf",
+    "size": 156235,
+    "mtime": 1772786194
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-54-plano-anual-de-auditoria-interna-para-o-exercicio-de-2024-paint-2024.pdf",
+    "size": 120931,
+    "mtime": 1772786112
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-56-portaria-de-alteracao-da-fila-de-exame-tecnico.pdf",
+    "size": 129819,
+    "mtime": 1772786070
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-57-revoga-a-portaria-inpi-pr-no-09-de-10-de-janeiro-de-2020.pdf",
+    "size": 113437,
+    "mtime": 1772786068
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-58-declara-a-revogacao-e-torna-publica-a-listagem-de-atos-normativos.pdf",
+    "size": 525270,
+    "mtime": 1772786060
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-59-publicacao-do-plano-de-acao-2024-do-inpi-e-anexo.pdf",
+    "size": 1686518,
+    "mtime": 1772786058
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-61-institui-o-comite-gestor-de-inteligencia-artificial-do-inpi.pdf",
+    "size": 117461,
+    "mtime": 1772786048
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr-in-01_institui-politica-de-backup-e-restore-no-inpi.pdf",
+    "size": 624974,
+    "mtime": 1772786510
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2023pr_55_altera_a_portaria_inpi_n__67.pdf",
+    "size": 135477,
+    "mtime": 1772786074
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024_portaria-inpi-ndeg-10-diretrizes-diretrizes-de-instrucao-de-recursos-e-processos-administrativos-de-nulidade.pdf",
+    "size": 329013,
+    "mtime": 1772785874
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024cgdi-02-aprova-a-rota-anual-de-acoes-de-disseminacao-e-articulacao-irradiar-2024.pdf",
+    "size": 1259321,
+    "mtime": 1772785916
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024cgti_07_e_anexo.pdf",
+    "size": 721290,
+    "mtime": 1772785582
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024direx-03-publicacao-do-pdtic-2024-2026-versao-1-1.pdf",
+    "size": 1647759,
+    "mtime": 1772785766
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024direx-no-001-1.pdf",
+    "size": 112334,
+    "mtime": 1772785778
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024direx-no-001.pdf",
+    "size": 112334,
+    "mtime": 1772785898
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024direx-no-002-1.pdf",
+    "size": 113043,
+    "mtime": 1772785776
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024direx-no-002.pdf",
+    "size": 113043,
+    "mtime": 1772785894
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024direx-no-07-e-anexo-publicacao-do-plano-diretor-de-tecnologia-da-info-e-comunicacao-pdtic-para-2024-2026.pdf",
+    "size": 1312773,
+    "mtime": 1772785578
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024dirma-01-portaria-institui-o-gecad-republicacao (1).pdf",
+    "size": 125689,
+    "mtime": 1772785934
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024dirma-01-portaria-institui-o-gecad-republicacao.pdf",
+    "size": 125689,
+    "mtime": 1772785932
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024dirma-02.pdf",
+    "size": 143231,
+    "mtime": 1772785642
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024dirma-09.pdf",
+    "size": 327952,
+    "mtime": 1772785646
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024dirma-17.pdf",
+    "size": 135453,
+    "mtime": 1772785546
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024dirpa-21.pdf",
+    "size": 323562,
+    "mtime": 1772785648
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024dirpa-no-14.pdf",
+    "size": 421130,
+    "mtime": 1772785760
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024dirpa_20-transferencia-de-titularidade.pdf",
+    "size": 344194,
+    "mtime": 1772785662
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024in-01-instrucao-normativa-relacionada-a-gestao-e-analise-de-vulnerabilidades-do-parque-computacional.pdf",
+    "size": 153198,
+    "mtime": 1772785930
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024in-pr-no-06-instrucao-normativa.pdf",
+    "size": 150162,
+    "mtime": 1772785584
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-01-portaria-de-resultados-finais-da-avaliacao-de-desempenho-institucional-para-fins-de-gdapi-gdact-do-ano-de-2023.pdf",
+    "size": 177392,
+    "mtime": 1772786042
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-012-regulamenta-a-comissao-de-carreiras-e-cargos-do-inpi-ccinpi-e-estabelece-os-criterios-para-seu-funcionamento.pdf",
+    "size": 138217,
+    "mtime": 1772785918
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-013-portaria-confeccao-de-arte-grafica.pdf",
+    "size": 286769,
+    "mtime": 1772785922
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-02-suspende-os-prazos-para-apresentacao-de-documentos-de-prioridade-unionista-em-designacoes-do-acordo-de-haia.pdf",
+    "size": 126103,
+    "mtime": 1772785954
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-04-indicadores-e-metas-de-desempenho-institucional-para-fins-da-gdapi-e-gdact-ano-2024.pdf",
+    "size": 153795,
+    "mtime": 1772785906
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-047-institui-a-comissao-permanente-de-avaliacao-de-documenteos.pdf",
+    "size": 160742,
+    "mtime": 1772785576
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-08-define-os-terremotos-e-tsunamis-ocorridos-no (1).pdf",
+    "size": 555262,
+    "mtime": 1772785890
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-08-define-os-terremotos-e-tsunamis-ocorridos-no.pdf",
+    "size": 555262,
+    "mtime": 1772785886
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-09-aprova-o-regimento-interno-atualizado.pdf",
+    "size": 696882,
+    "mtime": 1772785880
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-11-divulga-os-dias-de-feriados-e-estabelece-os-dias-de-ponto-facultativo-regionais-no-ano-de-2024.pdf",
+    "size": 137872,
+    "mtime": 1772785926
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-14-portaria-sobre-flexibilizacao-de-vestimentas-no-ambito-do-inpi.pdf",
+    "size": 110291,
+    "mtime": 1772785910
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-15-suspende-os-prazos-para-apresentacao-de-pedidos-de-registros-divididos-de-desenhos-industriais-br-32.pdf",
+    "size": 110509,
+    "mtime": 1772785884
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-17.pdf",
+    "size": 124807,
+    "mtime": 1772785818
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-20-portaria-realocacao-de-fce-1-03-da-cgdi-para-coger.pdf",
+    "size": 107132,
+    "mtime": 1772785768
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-21-publicacao-do-pa-2024-1a-revisao-e-anexo.pdf",
+    "size": 1690721,
+    "mtime": 1772785812
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-22-aprova-relatorios-de-avaliacao-de-resultados-do-programa-de-gestao-do-inpi-4o-quarto-2023-boletim-dirad-direx-gab.pdf",
+    "size": 3155068,
+    "mtime": 1772785810
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-23-suspensao-de-prazos-depositantes-residentes-no-rio-grande-do-sul (1).pdf",
+    "size": 400564,
+    "mtime": 1772785808
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-23-suspensao-de-prazos-depositantes-residentes-no-rio-grande-do-sul.pdf",
+    "size": 400564,
+    "mtime": 1772785798
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-24-aprova_relatorio_de_avaliacao_de_resultados_do_pgd-inpi___areas_finalisticas___4o_trimestre_2023.pdf",
+    "size": 888461,
+    "mtime": 1772785802
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-25-portaria-inpi-pr-no-25-de-2024-plano-de-integridade-do-inpi-bienio-2024-25.pdf",
+    "size": 2263150,
+    "mtime": 1772785794
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-26-prorroga-a-suspensao-dos-prazos-para-apresentacao-de-pedidos-de-registros-divididos-de-desenhos-industriais (1).pdf",
+    "size": 397133,
+    "mtime": 1772785804
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-26-prorroga-a-suspensao-dos-prazos-para-apresentacao-de-pedidos-de-registros-divididos-de-desenhos-industriais.pdf",
+    "size": 397133,
+    "mtime": 1772785790
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-28-autorizacao_de_publicacao_do_plano_de_trabalho_da_ce-inpi___bienio_2024-2025_e_anexo.pdf",
+    "size": 715245,
+    "mtime": 1772785784
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-30-movimentacao-de-subunidades-da-cgti-conformidade-normativa.pdf",
+    "size": 401795,
+    "mtime": 1772785754
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-32-alteracoes-internas-acad.pdf",
+    "size": 440930,
+    "mtime": 1772785752
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-33-publicacao-do-plano-de-acao-2024-2a-revisao.pdf",
+    "size": 1819235,
+    "mtime": 1772785684
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-34-autorizacao-de-revisao-de-meta-institucional-registro-de-di.pdf",
+    "size": 286922,
+    "mtime": 1772785682
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-35-revogacao-de-portarias-61-de-2023-e-06-de-2024.pdf",
+    "size": 250394,
+    "mtime": 1772785678
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-36-greve-da-rede-federal-de-educacao-autorizacao-de-edicao-de-portaria-de-devolucao-de-prazos.pdf",
+    "size": 282250,
+    "mtime": 1772785676
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-37-aprovacao-do-plano-diretor-de-logistica-sustentavel-pls.pdf",
+    "size": 1245904,
+    "mtime": 1772785672
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-39-regimento-interno-do-inpi-competencias-ouvidoria-e-alteracao-de-divisoes.pdf",
+    "size": 515310,
+    "mtime": 1772785654
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-40-publicacao-da-portaria-que-define-a-unidade-setorial-do-sitai-no-ambito-do-inpi.pdf",
+    "size": 470106,
+    "mtime": 1772785652
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-41.pdf",
+    "size": 212972,
+    "mtime": 1772785378
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-42.pdf",
+    "size": 2572580,
+    "mtime": 1772785640
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-44-instituir-comite-de-governanca-interna-e-politica-de-gestao-de-riscos-do-inpi.pdf",
+    "size": 230183,
+    "mtime": 1772785634
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-45-e-anexo-i-aprova-a-politia-ambiental-do-inpi.pdf",
+    "size": 740584,
+    "mtime": 1772785588
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-48-institui-a-fase-v-do-projeto-pph-republicacao.pdf",
+    "size": 264299,
+    "mtime": 1772785570
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-49-aprova-o-paint-2025.pdf",
+    "size": 793656,
+    "mtime": 1772785566
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-50-portaria-que-institui-o-cgd-npi.pdf",
+    "size": 324453,
+    "mtime": 1772785564
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-51-atualizacao-da-portaria-inpi-pr-no-04-de-12-de-janeiro-de-2022.pdf",
+    "size": 154523,
+    "mtime": 1772785560
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-52-politica-de-uso-de-inteligencia-artificial-no-ambito-do-instituto-nacional-da-propriedade-industrial.pdf",
+    "size": 183138,
+    "mtime": 1772785558
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-53-realocacao-de-unidades-da-dirma.pdf",
+    "size": 198238,
+    "mtime": 1772785554
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-54-portaria-com-feriados-e-pontos-facultativos-regionais-em-2025.pdf",
+    "size": 177168,
+    "mtime": 1772785552
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2024pr-56-plano-de-acao-2025.pdf",
+    "size": 2932779,
+    "mtime": 1772785548
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025aud-01.pdf",
+    "size": 164365,
+    "mtime": 1772785340
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025cgdi-01-irradiar-225.pdf",
+    "size": 369835,
+    "mtime": 1772785438
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025cgtec-01.pdf",
+    "size": 149300,
+    "mtime": 1772785522
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025cgtec-02.pdf",
+    "size": 240797,
+    "mtime": 1772785434
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025cgtec-03.pdf",
+    "size": 243098,
+    "mtime": 1772785428
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025dirma-01.pdf",
+    "size": 134861,
+    "mtime": 1772785536
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025dirma-no-11.pdf",
+    "size": 161384,
+    "mtime": 1772785274
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025dirma-no-12.pdf",
+    "size": 133399,
+    "mtime": 1772785272
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025dirma-no-13.pdf",
+    "size": 150121,
+    "mtime": 1772785264
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025dirma-no-14.pdf",
+    "size": 135353,
+    "mtime": 1772785268
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025dirpa-07.pdf",
+    "size": 175193,
+    "mtime": 1772785344
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025dirpa-10.pdf",
+    "size": 388071,
+    "mtime": 1772785276
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025in-01-alteracao-de-normas-de-avaliacao-de-desempenho-in-no-54-2016.pdf",
+    "size": 131126,
+    "mtime": 1772785398
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025in-02-alteracao-de-normas-de-avaliacao-de-desempenho-in-no-55-2016.pdf",
+    "size": 130590,
+    "mtime": 1772785394
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025in_04_autorizacao_de_alteracao_da_norma_de_avaliacao_de_estagio_probatorio_republicacao.pdf",
+    "size": 311212,
+    "mtime": 1772785072
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-03-indicadores-e-metas-de-desempenho-institucional-para-fins-da-gdapi-e-gdact-ano-2025-republicado.pdf",
+    "size": 331376,
+    "mtime": 1772785518
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-04-plano-setorial-de-prevencao-e-combate-aos-assedios-e-discriminacao (1).pdf",
+    "size": 164230,
+    "mtime": 1772785466
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-04-plano-setorial-de-prevencao-e-combate-aos-assedios-e-discriminacao.pdf",
+    "size": 164230,
+    "mtime": 1772785448
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-05-altera-vinculacao-organizacional-e-denominacao-de-unidades-da-dirma.pdf",
+    "size": 177297,
+    "mtime": 1772785444
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-06-altera-a-vinculacao-organizacional-e-a-denominacao-de-unidades-da-cgtec.pdf",
+    "size": 148256,
+    "mtime": 1772785440
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-08-edicao-de-portaria-de-devolucao-de-prazo.pdf",
+    "size": 148624,
+    "mtime": 1772785392
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-09-portaria-que-atualiza-a-politica-de-seguranca-da-informacao-posin-inpi.pdf",
+    "size": 257436,
+    "mtime": 1772785388
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-10.pdf",
+    "size": 437898,
+    "mtime": 1772785382
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-11-institui-a-politica-de-relacionamento-e-transparencia-do-2013-inpi.pdf",
+    "size": 342159,
+    "mtime": 1772785374
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-12-alteracao-na-portaria-que-instituiu-o-pdpi.pdf",
+    "size": 164753,
+    "mtime": 1772785370
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-14-alteracao-da-portaria-de-instituicao-da-cosbio.pdf",
+    "size": 130034,
+    "mtime": 1772785362
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-15-portaria-da-distintividade-adquirida.pdf",
+    "size": 183011,
+    "mtime": 1772785354
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-16-realoca-transforma-cargos-e-altera-a-denominacao-e-vinculacao-de-unidades-do-inpi.pdf",
+    "size": 163313,
+    "mtime": 1772785348
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-18-aprova-o-regimento-interno-do-instituto-nacional-da-propriedade-industrial-inpi.pdf",
+    "size": 624943,
+    "mtime": 1772785282
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-19-autorizacao-de-edicao-do-normativo-que-atualiza-o-cpapd-de-marcas-di-e-ig.pdf",
+    "size": 135185,
+    "mtime": 1772785280
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-20-portaria-que-institui-o-programa-vita-no-inpi.pdf",
+    "size": 148165,
+    "mtime": 1772785256
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-21-prorrogacao-do-prazo-de-adequacao-sobre-o-uso-de-ia-no-inpi.pdf",
+    "size": 131224,
+    "mtime": 1772785246
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-25-alteracao-de-portaria-sobre-parametros-para-comprovacao-do-alto-renome.pdf",
+    "size": 165271,
+    "mtime": 1772785232
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-26-autorizacao-de-normatizacao-da-edicao-de-atos-normativos-do-inpi.pdf",
+    "size": 198943,
+    "mtime": 1772785228
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-28-dispoe-sobre-as-modalidades-do-projeto-piloto-de-tramite-prioritario-de-marcas-no-ambito-do-inpi.pdf",
+    "size": 172943,
+    "mtime": 1772785222
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-30-altera-a-sigla-da-coordenacao-geral-de-economia-e-inovacao.pdf",
+    "size": 154344,
+    "mtime": 1772785096
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-31-aprova-o-relatorio-de-impacto-a-protecao-de-dados-pessoais-ridp.pdf",
+    "size": 9278454,
+    "mtime": 1772785100
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-32-aprova-o-programa-de-governanca-em-privacidade-do-2013-inpi.pdf",
+    "size": 486240,
+    "mtime": 1772785104
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-33-institui-a-politica-de-genero-diversidade-e-inclusao-no-ambito-do-instituto-nacional-da-propriedade-industrial.pdf",
+    "size": 181175,
+    "mtime": 1772785214
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-34-dispoe-sobre-o-procedimento-administrativo-de-averbacao-republicacao.pdf",
+    "size": 175986,
+    "mtime": 1772785084
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-35-republicacao.pdf",
+    "size": 268896,
+    "mtime": 1772785080
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2025pr-36-portaria-sobre-a-criacao-de-novas-filas-de-exame-no-ambito-do-projeto-oposicao-2-0-para-marcas-republicacao.pdf",
+    "size": 171382,
+    "mtime": 1772785076
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\2159-70.pdf",
+    "size": 175720,
+    "mtime": 1772788638
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\apostila-pr-16.pdf",
+    "size": 142924,
+    "mtime": 1772785088
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\assessor-lai.pdf",
+    "size": 143613,
+    "mtime": 1772786840
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\bloco-ii-patenteabilidade-resolucao-169-2016.pdf",
+    "size": 460875,
+    "mtime": 1772788108
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\cgd-no-001.pdf",
+    "size": 145276,
+    "mtime": 1772785532
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\cgd-no-002.pdf",
+    "size": 145846,
+    "mtime": 1772785528
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\copy2_of_Resoluo2212018.pdf",
+    "size": 689231,
+    "mtime": 1772787812
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\copy_of_IN1082019.pdf",
+    "size": 593419,
+    "mtime": 1772787664
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\copy_of_IN782017.pdf",
+    "size": 1268477,
+    "mtime": 1772787912
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\copy_of_RES_172_2016.pdf",
+    "size": 62137,
+    "mtime": 1772788054
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\copy_of_Resolues001a0792013Documentonico.pdf",
+    "size": 21997287,
+    "mtime": 1772788544
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\copy_of_Resoluo1892017.pdf",
+    "size": 412105,
+    "mtime": 1772787990
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\copy_of_Resoluo1982017.pdf",
+    "size": 522157,
+    "mtime": 1772787968
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\copy_of_Resoluo2012017.pdf",
+    "size": 4744748,
+    "mtime": 1772787910
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\cpad-2017.pdf",
+    "size": 52339,
+    "mtime": 1772787924
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\cpads.pdf",
+    "size": 669473,
+    "mtime": 1772787596
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\cpat-pp-001_mudancadenatureza_portaria_01_2023.pdf",
+    "size": 3485805,
+    "mtime": 1772786408
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\D0635.pdf",
+    "size": 131445,
+    "mtime": 1772788678
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\D10886.pdf",
+    "size": 427259,
+    "mtime": 1772784282
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\D11207.pdf",
+    "size": 807695,
+    "mtime": 1772786748
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\D4195.pdf",
+    "size": 216470,
+    "mtime": 1772788634
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\D9283.pdf",
+    "size": 605702,
+    "mtime": 1772784316
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\decreto-174-de-2025.pdf",
+    "size": 117924,
+    "mtime": 1772785252
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\dirma-no-15.pdf",
+    "size": 133823,
+    "mtime": 1772785262
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\fala-ouvidoria.pdf",
+    "size": 112339,
+    "mtime": 1772787672
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\in-022-13-gratificalcao-gq.pdf",
+    "size": 191911,
+    "mtime": 1772788428
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\in-119-2021.pdf",
+    "size": 698595,
+    "mtime": 1772787268
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\in-120-instrucao-normativa.pdf",
+    "size": 169096,
+    "mtime": 1772786868
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\in-21-13-gratificacao-de-qualificacao-gq.pdf",
+    "size": 146601,
+    "mtime": 1772788452
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\in-23-13-090713_mediacao_marcas.pdf",
+    "size": 158718,
+    "mtime": 1772788422
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\in-29-13-alteracao-instrucao-normativa-08-13-sisgd.pdf",
+    "size": 801803,
+    "mtime": 1772788326
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\in-34-14-gdact_altera_in_32_2013.pdf",
+    "size": 197541,
+    "mtime": 1772788258
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\in-dirpa-003-2016.pdf",
+    "size": 291608,
+    "mtime": 1772785092
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\in-no-27-13-retribuicao-por-titulacao-compilada-com-alteracoes-ate-in-113-19.pdf",
+    "size": 553964,
+    "mtime": 1772788344
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\in-no-28-13-mediacao-casos-ompi.pdf",
+    "size": 165090,
+    "mtime": 1772788342
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\in-pfe-001-disciplina-os-fluxos-da-atividade-de-consultoria-e-assessoramento-juridico.pdf",
+    "size": 722235,
+    "mtime": 1772787364
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\in-pr-05-2026.pdf",
+    "size": 205349,
+    "mtime": 1772785048
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN0892018.pdf",
+    "size": 500655,
+    "mtime": 1772787762
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN0902018.pdf",
+    "size": 548796,
+    "mtime": 1772787760
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN0942018.pdf",
+    "size": 1783178,
+    "mtime": 1772787754
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN1022019.pdf",
+    "size": 137058,
+    "mtime": 1772787714
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN1042019.pdf",
+    "size": 2624812,
+    "mtime": 1772787710
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN1072019.pdf",
+    "size": 446842,
+    "mtime": 1772787696
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN1102019.pdf",
+    "size": 2117960,
+    "mtime": 1772787650
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN382015.pdf",
+    "size": 702644,
+    "mtime": 1772788218
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN402015.pdf",
+    "size": 260047,
+    "mtime": 1772788212
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN412015.pdf",
+    "size": 212444,
+    "mtime": 1772788208
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN432015.pdf",
+    "size": 1153256,
+    "mtime": 1772788206
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN462015.pdf",
+    "size": 1252213,
+    "mtime": 1772788200
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN472016.pdf",
+    "size": 460878,
+    "mtime": 1772788198
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN482016.pdf",
+    "size": 12734773,
+    "mtime": 1772788156
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN492016.pdf",
+    "size": 388317,
+    "mtime": 1772788144
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN512016.pdf",
+    "size": 320014,
+    "mtime": 1772788140
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN522016.pdf",
+    "size": 217293,
+    "mtime": 1772788136
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN532016.pdf",
+    "size": 755366,
+    "mtime": 1772788130
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN562016.pdf",
+    "size": 698145,
+    "mtime": 1772788112
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN582016.pdf",
+    "size": 289331,
+    "mtime": 1772788100
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN622016.pdf",
+    "size": 2086953,
+    "mtime": 1772788050
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN642017.pdf",
+    "size": 831047,
+    "mtime": 1772788044
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN662017.pdf",
+    "size": 526030,
+    "mtime": 1772788040
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN672016.pdf",
+    "size": 6773957,
+    "mtime": 1772788036
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN692017.pdf",
+    "size": 425881,
+    "mtime": 1772788032
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN702017.pdf",
+    "size": 1203618,
+    "mtime": 1772788006
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN722017.pdf",
+    "size": 1082726,
+    "mtime": 1772787978
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN742017.pdf",
+    "size": 2238715,
+    "mtime": 1772787922
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN772017.pdf",
+    "size": 744675,
+    "mtime": 1772787914
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN792017.pdf",
+    "size": 743965,
+    "mtime": 1772787906
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN802017.pdf",
+    "size": 219901,
+    "mtime": 1772787902
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN812017.pdf",
+    "size": 243352,
+    "mtime": 1772787900
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN832017.pdf",
+    "size": 1662203,
+    "mtime": 1772787886
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN842017.pdf",
+    "size": 869652,
+    "mtime": 1772787882
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN852017.pdf",
+    "size": 266366,
+    "mtime": 1772787832
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN862018.pdf",
+    "size": 523151,
+    "mtime": 1772787830
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN872018.pdf",
+    "size": 6965628,
+    "mtime": 1772787814
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN962019.pdf",
+    "size": 840167,
+    "mtime": 1772787742
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\IN992019.pdf",
+    "size": 2296354,
+    "mtime": 1772787718
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\in_dirma_06.pdf",
+    "size": 138799,
+    "mtime": 1772787160
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\in_pr_049_2016-1.pdf",
+    "size": 51365,
+    "mtime": 1772788150
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\in_pr_053_2016-1.pdf",
+    "size": 2373152,
+    "mtime": 1772788132
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\INDIRPA02_2017.pdf",
+    "size": 157373,
+    "mtime": 1772787980
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\ins-norm-109-30092019.pdf",
+    "size": 1936498,
+    "mtime": 1772787656
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao-normativa-inpi-no-03.pdf",
+    "size": 209516,
+    "mtime": 1772785384
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao-normativa-no-24-13-posic.pdf",
+    "size": 182957,
+    "mtime": 1772788412
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao-normativa-no-32-13_gdact.pdf",
+    "size": 304926,
+    "mtime": 1772788288
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao-normativa-no-54-compilada-com-in-58-in-120-e-in-04-2024.pdf",
+    "size": 1142561,
+    "mtime": 1772785670
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao-normativa-ouvid-no-1-de-15-de-dezembro-de-2023.pdf",
+    "size": 102919,
+    "mtime": 1772786192
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao-normativa-ouvid-no-10-de-15-de-dezembro-de-2023.pdf",
+    "size": 98481,
+    "mtime": 1772786158
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao-normativa-ouvid-no-11-de-15-de-dezembro-de-2023.pdf",
+    "size": 137300,
+    "mtime": 1772786118
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao-normativa-ouvid-no-12-de-15-de-dezembro-de-2023.pdf",
+    "size": 115703,
+    "mtime": 1772786116
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao-normativa-ouvid-no-2-de-15-de-dezembro-de-2023.pdf",
+    "size": 135435,
+    "mtime": 1772786188
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao-normativa-ouvid-no-3-de-15-de-dezembro-de-2023.pdf",
+    "size": 139115,
+    "mtime": 1772786186
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao-normativa-ouvid-no-4-de-15-de-dezembro-de-2023.pdf",
+    "size": 605858,
+    "mtime": 1772786182
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao-normativa-ouvid-no-5-de-15-de-dezembro-de-2023.pdf",
+    "size": 839513,
+    "mtime": 1772786178
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao-normativa-ouvid-no-6-de-15-de-dezembro-de-2023.pdf",
+    "size": 156793,
+    "mtime": 1772786172
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao-normativa-ouvid-no-7-de-15-de-dezembro-de-2023.pdf",
+    "size": 102425,
+    "mtime": 1772786170
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao-normativa-ouvid-no-8-de-15-de-dezembro-de-2023-republicada.pdf",
+    "size": 2075788,
+    "mtime": 1772786166
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao-normativa-ouvid-no-9-de-15-de-dezembro-de-2023.pdf",
+    "size": 121712,
+    "mtime": 1772786160
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao-normativa-ouvid-pr-no-1.pdf",
+    "size": 120909,
+    "mtime": 1772785872
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao-normativa-ouvid-pr-no-13.pdf",
+    "size": 128676,
+    "mtime": 1772786064
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao-normativa-pr-no-02.pdf",
+    "size": 177421,
+    "mtime": 1772785868
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao_normativa_cgti_no_1.pdf",
+    "size": 290698,
+    "mtime": 1772785772
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao_normativa_dirpa_01-2013.pdf",
+    "size": 20326,
+    "mtime": 1772788534
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\instrucao_normativa_inpi-pr_no03-de-02-de-julho-de-2024-procedimentos-coger.pdf",
+    "size": 378973,
+    "mtime": 1772785788
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\InstruoNormativa1132019.pdf",
+    "size": 554587,
+    "mtime": 1772787616
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\InstruoNormativa1142019.pdf",
+    "size": 903865,
+    "mtime": 1772787614
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\InstruoNormativa1152019.pdf",
+    "size": 588298,
+    "mtime": 1772787608
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\L10973compilado.pdf",
+    "size": 468326,
+    "mtime": 1772784306
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\L13243.pdf",
+    "size": 371389,
+    "mtime": 1772784296
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\L5648.pdf",
+    "size": 145876,
+    "mtime": 1772788682
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\L9279- LPI..pdf",
+    "size": 886862,
+    "mtime": 1772784170
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\L9279.pdf",
+    "size": 712296,
+    "mtime": 1772784272
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\L9610.pdf",
+    "size": 452665,
+    "mtime": 1772788662
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\lab-cid.pdf",
+    "size": 595456,
+    "mtime": 1772787644
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\nomeacao-ouvidor.pdf",
+    "size": 422293,
+    "mtime": 1772787706
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\norma-de-execucao-01-2018.pdf",
+    "size": 62693,
+    "mtime": 1772787838
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\norma_de_execucao_dirpa_01-2013.pdf",
+    "size": 18040,
+    "mtime": 1772788538
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\norma_de_execucao_dirpa_02-2013_0.pdf",
+    "size": 14261,
+    "mtime": 1772788532
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\norma_de_execucao_dirpa_03-2013.pdf",
+    "size": 14757,
+    "mtime": 1772788530
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\norma_de_execucao_dirpa_05-2013.pdf",
+    "size": 21651,
+    "mtime": 1772788526
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Normativa INPI 30..pdf",
+    "size": 63840,
+    "mtime": 1772784172
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Normativa INPI 31..pdf",
+    "size": 56663,
+    "mtime": 1772784172
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\ORDEMSERVIOn1jan2018.pdf",
+    "size": 36872,
+    "mtime": 1772787878
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\p-dirpa-17-2025.pdf",
+    "size": 722642,
+    "mtime": 1772785018
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\p-pr-37-2025.pdf",
+    "size": 160396,
+    "mtime": 1772785068
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\p-pr-38-2025.pdf",
+    "size": 3044152,
+    "mtime": 1772785064
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\p-pr-39-2025.pdf",
+    "size": 161916,
+    "mtime": 1772785060
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\p-pr-40-2025.pdf",
+    "size": 232610,
+    "mtime": 1772785056
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\p-pr-41-2025.pdf",
+    "size": 237071,
+    "mtime": 1772785052
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\p-pr-42-2025.pdf",
+    "size": 1091333,
+    "mtime": 1772785044
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\p-pr-43-2025.pdf",
+    "size": 192792,
+    "mtime": 1772785040
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\p-pr-44-2025.pdf",
+    "size": 190430,
+    "mtime": 1772785034
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\parecer-n-00043-2021-cgpi-pfe-inpi-pgf-agu-com-carater-normativo.pdf",
+    "size": 2225240,
+    "mtime": 1772787198
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\parecer-n-00047-2021-cgpi-pfe-inpi-pgf-agu-com-carater-normativo.pdf",
+    "size": 81785,
+    "mtime": 1772787164
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\parecer-referencial-protocolo-de-intencoes.pdf",
+    "size": 8201215,
+    "mtime": 1772786738
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\parecer_n_00003_2024_cgpi_proce_10705_2023_19.pdf",
+    "size": 261757,
+    "mtime": 1772785878
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\parecer_n_00019_2023_cgpi_proc_10705_2023_19.pdf",
+    "size": 262253,
+    "mtime": 1772786212
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\parecerprocn0009de2015.pdf",
+    "size": 1998327,
+    "mtime": 1772788222
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\parecerprocn001de1999.pdf",
+    "size": 91847,
+    "mtime": 1772788644
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\parecerprocn02de2008.pdf",
+    "size": 517126,
+    "mtime": 1772788584
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\parecerprocn057de2002.pdf",
+    "size": 338126,
+    "mtime": 1772788628
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\parecerprocn084de2005.pdf",
+    "size": 193778,
+    "mtime": 1772788618
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\parecerprocn135de2003.pdf",
+    "size": 1274079,
+    "mtime": 1772788626
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\parecerprocn1638de1999.pdf",
+    "size": 432389,
+    "mtime": 1772788642
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\parecerprocn301de2003.pdf",
+    "size": 130703,
+    "mtime": 1772788620
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\parecerprocn442de2006.pdf",
+    "size": 167603,
+    "mtime": 1772788616
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\parecerprocn4de2009.pdf",
+    "size": 2401401,
+    "mtime": 1772788580
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\plano-de-dados-abertos-do-inpi-bienio-2021-2022.pdf",
+    "size": 2999037,
+    "mtime": 1772787260
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-279-2020.pdf",
+    "size": 691490,
+    "mtime": 1772787534
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-40-de-2023-revogacao-das-ins-7-e-76-de-2017-gecc.pdf",
+    "size": 139988,
+    "mtime": 1772786268
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-52-2023.pdf",
+    "size": 608385,
+    "mtime": 1772786200
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-cgdi_no2_manual-diepi.pdf",
+    "size": 3149383,
+    "mtime": 1772787140
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-cgdi_no3_cooperacao-tecnica.pdf",
+    "size": 2161956,
+    "mtime": 1772787136
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-cgdi_no4_estagio-pos-doutoral.pdf",
+    "size": 1745966,
+    "mtime": 1772787096
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-cgdi_no5_docs-coart.pdf",
+    "size": 4633032,
+    "mtime": 1772787094
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-cgdi_no7_docs-serac.pdf",
+    "size": 5700842,
+    "mtime": 1772787092
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-cgti-02-2023.pdf",
+    "size": 474598,
+    "mtime": 1772786108
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-cgti-03-e-anexos.pdf",
+    "size": 529536,
+    "mtime": 1772785912
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-cgti-no-04-de-25-de-abril-de-2024.pdf",
+    "size": 1374275,
+    "mtime": 1772785822
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-cqual-03-de-04-de-dezembro-de-2021-aprova-it-do-agatha.pdf",
+    "size": 1674980,
+    "mtime": 1772787146
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-cqual-04-de-30-de-novembro-de-2022-aprova-documentos-do-sgq.pdf",
+    "size": 3792403,
+    "mtime": 1772786722
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-dirpa-24-2024.pdf",
+    "size": 3013763,
+    "mtime": 1772785572
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-dirpa.pdf",
+    "size": 155337,
+    "mtime": 1772785408
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-dirpa_04_2025_procedimento-de-continuacao-do-exame-tecnico-apos-provimento-de-recurso.pdf",
+    "size": 3027014,
+    "mtime": 1772785250
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-inpi-dirpa-no-16.pdf",
+    "size": 631956,
+    "mtime": 1772785666
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-inpi-n-02-de-21-de-janeiro-de-2025.pdf",
+    "size": 346684,
+    "mtime": 1772785538
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-inpi-pr-dirpa-002-29-05-2023-metrica-dos-pedidos-dirpa.pdf",
+    "size": 134755,
+    "mtime": 1772786400
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-inpi-pr-no-049-de-03-de-dezembro-de-2021.pdf",
+    "size": 294612,
+    "mtime": 1772787154
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-inpi-pr-no-324-de-22-de-outubro-de-2020.pdf",
+    "size": 787822,
+    "mtime": 1772787458
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-inpip-r-n-01-de-05-de-fevereiro-de-2025.pdf",
+    "size": 144344,
+    "mtime": 1772785542
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-no-30_2022_estagio-doutoral.pdf",
+    "size": 180874,
+    "mtime": 1772786952
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-ouvid-no-10-de-21-de-dezembro-de-2023.pdf",
+    "size": 107562,
+    "mtime": 1772786104
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria-ouvid-no-9-de-15-de-dezembro-de-2023-republicada.pdf",
+    "size": 130962,
+    "mtime": 1772786164
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria_01_2023_cgti.pdf",
+    "size": 1528427,
+    "mtime": 1772786210
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria_06_2024_direx.pdf",
+    "size": 767655,
+    "mtime": 1772785656
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria_08_2024_cgti.pdf",
+    "size": 1180644,
+    "mtime": 1772785660
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria_09_2024_cgti.pdf",
+    "size": 915736,
+    "mtime": 1772785638
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria_32_01_abril_2022.pdf",
+    "size": 1210213,
+    "mtime": 1772786946
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria_cgdi_no-08-de-03-de-marco-de-2022_irradiar-2022.pdf",
+    "size": 883611,
+    "mtime": 1772787044
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Portaria_INPI_14-2024.pdf",
+    "size": 421130,
+    "mtime": 1772784176
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria_inpi_67_compilada_portaria_55_2023.pdf",
+    "size": 243997,
+    "mtime": 1772786758
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria_inpi_dirad_cgof_n_01__de_28_de_janeiro_de_2022_suprimento_de_fundos_e_seus_anexos.pdf",
+    "size": 12468161,
+    "mtime": 1772787056
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria_inpi_direx-n-004-de-23-de-julho-de-2024.pdf",
+    "size": 171087,
+    "mtime": 1772785762
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria_inpi_direx-n-005-de-23-de-agosto-de-2024.pdf",
+    "size": 147874,
+    "mtime": 1772785756
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portaria_inpi_n__001__de_19_de_julho_de_2021_formulario_de_solicitacao_de_reprogramacao_orcamentaria.pdf",
+    "size": 1218910,
+    "mtime": 1772787250
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\PortariaINPI92020_ComprovantespagamentoretribuicoesDIRPA_17082020.pdf",
+    "size": 873682,
+    "mtime": 1772787526
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\PortariaINPIPR3652020_InovaSimplesINPI_17112020.pdf",
+    "size": 1235336,
+    "mtime": 1772787438
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\portariainpipr4112020_dirpainvenesimplementadasemcomputador_05012021.pdf",
+    "size": 1547106,
+    "mtime": 1772787430
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\pr-072_2016-aprovar-o-manual-de-gerenciamento-de-projetos-do-inpi.pdf",
+    "size": 3895511,
+    "mtime": 1772788154
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\pr-185_2018-instituir-o-plano-estrategico-do-inpi-para-o-quadrienio-2018-2021.pdf",
+    "size": 567726,
+    "mtime": 1772787750
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\pr_357_2019.pdf",
+    "size": 1442766,
+    "mtime": 1772787698
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\pro_inovar_portaria_inpi_pr_no12_22fev2022.pdf",
+    "size": 639320,
+    "mtime": 1772787048
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\procedimento-que-disciplina-o-tramite-de-prioritario.pdf",
+    "size": 5698437,
+    "mtime": 1772785422
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\procedimentos-ouvid.pdf",
+    "size": 1271411,
+    "mtime": 1772787192
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\r-cgd-07-2025.pdf",
+    "size": 887127,
+    "mtime": 1772785030
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\r-cgd-08-2025.pdf",
+    "size": 907296,
+    "mtime": 1772785026
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\r-cgd-09-2025.pdf",
+    "size": 279441,
+    "mtime": 1772785022
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\r-cgd10-2025.pdf",
+    "size": 1275276,
+    "mtime": 1772785014
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\rede-agir.pdf",
+    "size": 874638,
+    "mtime": 1772787648
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\res-106-13-politica-da-internet-sem-fio.pdf",
+    "size": 243402,
+    "mtime": 1772788366
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao-105-politica-de-uso_internet.pdf",
+    "size": 174580,
+    "mtime": 1772788372
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao-115-13-controle-de-acesso-ed-a-noite.pdf",
+    "size": 314518,
+    "mtime": 1772788348
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao-126-de-06-de-marco-de-2014.pdf",
+    "size": 178294,
+    "mtime": 1772788284
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao-137-2014-certificado-digital-marcas.pdf",
+    "size": 91795,
+    "mtime": 1772788270
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao-139_2014-pct-retribuicao-por-meio-eletronico-entrada-em-vigor.pdf",
+    "size": 147411,
+    "mtime": 1772788268
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao-90-2013-manual-de-elaboracao.pdf",
+    "size": 145967,
+    "mtime": 1772788446
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao-96_2013-utilizacao-gararem-do-ed-sao-bento-ultima-versao-25-06-2013.pdf",
+    "size": 464514,
+    "mtime": 1772788432
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao-cgd-no-003.pdf",
+    "size": 1358689,
+    "mtime": 1772785526
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao-cgd-no-004.pdf",
+    "size": 1326933,
+    "mtime": 1772785404
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao-cgd-no05.pdf",
+    "size": 1376862,
+    "mtime": 1772785260
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao-n-039-2013_remocao.pdf",
+    "size": 206781,
+    "mtime": 1772788496
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao-no-132-14-_supressao-tabelaimpressos.pdf",
+    "size": 146676,
+    "mtime": 1772788278
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao-no-140-14.pdf",
+    "size": 198314,
+    "mtime": 1772788264
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao-no-142-14-institui-o-manual-de-marcas.pdf",
+    "size": 91782,
+    "mtime": 1772788256
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao-pr-no-117_2013-avaliacao-desempenho-institucional-2013_2014-1.pdf",
+    "size": 102110,
+    "mtime": 1772788338
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao114_2013-agenda-estrategica-v2.pdf",
+    "size": 15172,
+    "mtime": 1772788350
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao_01-2013_-_cadastramento_da_producao__siscap_.pdf",
+    "size": 38891,
+    "mtime": 1772788540
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao_120-2013.pdf",
+    "size": 204037,
+    "mtime": 1772788328
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao_123_2013_opiniao_preliminar_1.pdf",
+    "size": 152363,
+    "mtime": 1772784828
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao_129.pdf",
+    "size": 591390,
+    "mtime": 1772788280
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao_132013CARTAPATENTE.pdf",
+    "size": 19155,
+    "mtime": 1772788522
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao_141-14_-_suspencao_dos_atos_dos_ag-propriedade_ind-1_0.pdf",
+    "size": 68990,
+    "mtime": 1772788262
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resolucao_156_2015.pdf",
+    "size": 486475,
+    "mtime": 1772788202
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resolucao_1622016.pdf",
+    "size": 199705,
+    "mtime": 1772788142
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao_6-cgd-e-anexo.pdf",
+    "size": 1322812,
+    "mtime": 1772785286
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao_62-2013.pdf",
+    "size": 56917,
+    "mtime": 1772788492
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao_63-2013.pdf",
+    "size": 12004,
+    "mtime": 1772788490
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao_69-2013.pdf",
+    "size": 16961,
+    "mtime": 1772788486
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao_84-2013_-_regulamento_mediacao_final_0.pdf",
+    "size": 61600,
+    "mtime": 1772788460
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao_87-2013_-_exclusao_tabela_impressos.pdf",
+    "size": 27844,
+    "mtime": 1772788450
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao_94-13_-_pagamento_do_pedido_de_exame_de_patente.pdf",
+    "size": 15667,
+    "mtime": 1772788438
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao_98_arquivo.pdf",
+    "size": 16063,
+    "mtime": 1772788424
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\resolucao_n_135-14__numeracao_unica_contratos-dicig.pdf",
+    "size": 23264,
+    "mtime": 1772788272
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo0852013 (1).pdf",
+    "size": 2710757,
+    "mtime": 1772788482
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo0852013.pdf",
+    "size": 2710757,
+    "mtime": 1772788462
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo0862013.pdf",
+    "size": 393273,
+    "mtime": 1772788456
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo0922013.pdf",
+    "size": 213714,
+    "mtime": 1772788444
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo0932013.pdf",
+    "size": 7095534,
+    "mtime": 1772788440
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo0952013.pdf",
+    "size": 258762,
+    "mtime": 1772788434
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo0992013.pdf",
+    "size": 1767912,
+    "mtime": 1772788418
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo1072013.pdf",
+    "size": 1660585,
+    "mtime": 1772788360
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo1102013.pdf",
+    "size": 878337,
+    "mtime": 1772788358
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo1132013.pdf",
+    "size": 763496,
+    "mtime": 1772788354
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo1182013.pdf",
+    "size": 772457,
+    "mtime": 1772788336
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo1232013.pdf",
+    "size": 2364535,
+    "mtime": 1772788322
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo1252013.pdf",
+    "size": 297497,
+    "mtime": 1772788286
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo1432015PerfilCGREC.pdf",
+    "size": 816285,
+    "mtime": 1772788250
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo1642016Marcas.pdf",
+    "size": 158936,
+    "mtime": 1772788126
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo1652016Desconcentrao.pdf",
+    "size": 385019,
+    "mtime": 1772788124
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo1682016TecnologiadaInformao.pdf",
+    "size": 2112829,
+    "mtime": 1772788120
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo1702016PeticionamentoEletrnicodoSistemaeCONTRATOS.pdf",
+    "size": 15905,
+    "mtime": 1772788106
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo1712016Marcas.pdf",
+    "size": 2930492,
+    "mtime": 1772788056
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo1732016Marcas.pdf",
+    "size": 364344,
+    "mtime": 1772788048
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo1772017Marcas.pdf",
+    "size": 217763,
+    "mtime": 1772788042
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo1862017.pdf",
+    "size": 157364,
+    "mtime": 1772788002
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo1882017.pdf",
+    "size": 373655,
+    "mtime": 1772787992
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo1902017.pdf",
+    "size": 1942830,
+    "mtime": 1772787986
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo1922017.pdf",
+    "size": 141639,
+    "mtime": 1772787984
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo1942017.pdf",
+    "size": 1134642,
+    "mtime": 1772787974
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo1972017.pdf",
+    "size": 1258434,
+    "mtime": 1772787970
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo1992017.pdf",
+    "size": 6723757,
+    "mtime": 1772787964
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo2002017.pdf",
+    "size": 348927,
+    "mtime": 1772787918
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo20132018.pdf",
+    "size": 589275,
+    "mtime": 1772787828
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo2042017.pdf",
+    "size": 1789652,
+    "mtime": 1772787898
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo2052017.pdf",
+    "size": 854712,
+    "mtime": 1772787894
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo2062017.pdf",
+    "size": 482051,
+    "mtime": 1772787892
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo2082017.pdf",
+    "size": 9026655,
+    "mtime": 1772787888
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo2192018.pdf",
+    "size": 1587342,
+    "mtime": 1772787818
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo2252018.pdf",
+    "size": 293528,
+    "mtime": 1772787768
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo2262018.pdf",
+    "size": 365629,
+    "mtime": 1772787766
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo2282018.pdf",
+    "size": 1340651,
+    "mtime": 1772787756
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo2302018.pdf",
+    "size": 1066427,
+    "mtime": 1772787746
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo2412019.pdf",
+    "size": 744118,
+    "mtime": 1772787702
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo2462019.pdf",
+    "size": 529700,
+    "mtime": 1772787670
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo2472019.pdf",
+    "size": 2987960,
+    "mtime": 1772787666
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo2502019.pdf",
+    "size": 10289435,
+    "mtime": 1772787660
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo2532019.pdf",
+    "size": 297217,
+    "mtime": 1772787620
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo2542019.pdf",
+    "size": 1667099,
+    "mtime": 1772787606
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Resoluo2552019.pdf",
+    "size": 624703,
+    "mtime": 1772787612
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Legislação e Atos Normativos Internos INPI\\Trips_ptbr.pdf",
+    "size": 142150,
+    "mtime": 1772788674
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\D10886.pdf",
+    "size": 427358,
+    "mtime": 1773056990
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\D9283.pdf",
+    "size": 605786,
+    "mtime": 1773057014
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\decreto-10769-EX_2022-04-12.pdf",
+    "size": 331248,
+    "mtime": 1773068758
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\Edital de Fluxo Continuo 2024 - Incubacao.pdf",
+    "size": 554486,
+    "mtime": 1774442866
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\Formulario - edital fluxo continuo.pdf",
+    "size": 309194,
+    "mtime": 1774442896
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\L10973compilado.pdf",
+    "size": 468398,
+    "mtime": 1773057006
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\L13243.pdf",
+    "size": 371442,
+    "mtime": 1773056998
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\L9279.pdf",
+    "size": 712331,
+    "mtime": 1773056978
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\L9609.pdf",
+    "size": 1596363,
+    "mtime": 1774341746
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\legislacao.pr.gov.br_legislacao_pesquisarAto.do_action=exibir&codAto=246927&indice=1&totalRegistros=1&dt=20.11.2022.9.20.15.743.pdf",
+    "size": 288120,
+    "mtime": 1773057032
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\legislacao.pr.gov.br_legislacao_pesquisarAto.do_action=exibir&codAto=246931&indice=1&totalRegistros=1&dt=20.11.2022.9.17.52.639.pdf",
+    "size": 423636,
+    "mtime": 1773057022
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\legislacao.pr.gov.br_legislacao_pesquisarAto.do_action=exibir&codAto=253287&indice=1&totalRegistros=1&dt=20.11.2022.9.21.13.850.pdf",
+    "size": 271254,
+    "mtime": 1773057040
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\apresentacao_ageuni_seti_ocr.pdf",
+    "size": 1981560,
+    "mtime": 1774345024
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\Classificação de patentes — Instituto Nacional da Propriedade Industrial.pdf",
+    "size": 174060,
+    "mtime": 1772784904
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\Esclaredimentossobreanuidades2106.pdf",
+    "size": 889547,
+    "mtime": 1772784810
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\Guia Prático para Buscas de Patentes — Instituto Nacional da Propriedade Industrial.pdf",
+    "size": 293036,
+    "mtime": 1772784886
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\Guia_basico_de_transferencia_de_tecnologia_ocr.pdf",
+    "size": 970947,
+    "mtime": 1774345178
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\guia_usuario__opiniao_preliminar_sobre_a_patenteabilidade__divulgacao__dezembro_2013_1.pdf",
+    "size": 45769,
+    "mtime": 1772784852
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\Manual de Desenhos Industriais - Manual de Desenhos Industriais.pdf",
+    "size": 354509,
+    "mtime": 1772783976
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\Manual de Marcas - Manual de Marcas.pdf",
+    "size": 354283,
+    "mtime": 1772783950
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\manual-e-software-2022.pdf",
+    "size": 1245497,
+    "mtime": 1774341310
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\ManualdePatentes20210706.pdf",
+    "size": 3835594,
+    "mtime": 1772784804
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\ManualPesquisaWebVerso22019.pdf",
+    "size": 5801196,
+    "mtime": 1774340890
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\Opinião Preliminar — Instituto Nacional da Propriedade Industrial.pdf",
+    "size": 142436,
+    "mtime": 1772784846
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\Programa de computador - Manuais e Vídeo — Instituto Nacional da Propriedade Industrial.pdf",
+    "size": 143272,
+    "mtime": 1772783986
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\RelatorioExecutivo_Classificao2024.pdf",
+    "size": 936225,
+    "mtime": 1772784912
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\Seja bem-vindo(a) ao tutorial de depósito de pedidos de patente no INPI! — Instituto Nacional da Propriedade Industrial.pdf",
+    "size": 696982,
+    "mtime": 1772784864
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\Trâmite prioritário — Instituto Nacional da Propriedade Industrial.pdf",
+    "size": 155996,
+    "mtime": 1772784818
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\PROCESSOS SEI P.I\\PARECERES SOBRE P.I\\SEI_25.000071178_0.pdf",
+    "size": 9588288,
+    "mtime": 1773055940
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\PROCESSOS SEI P.I\\REGISTRO DE DESENHO INDUSTRIAL\\SEI_24.000066486_5.pdf",
+    "size": 7827355,
+    "mtime": 1773055814
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\PROCESSOS SEI P.I\\REGISTRO DE MARCA\\SEI_25.000003248_3.pdf",
+    "size": 9171462,
+    "mtime": 1773055738
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\PROCESSOS SEI P.I\\REGISTRO DE PATENTE\\SEI_24.000062120_1.pdf",
+    "size": 1926250,
+    "mtime": 1773055664
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\PROCESSOS SEI P.I\\REGISTRO DE SOFTWARE\\SEI_25.000009937_5.pdf",
+    "size": 1091868,
+    "mtime": 1773055426
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\PROCESSOS SEI P.I\\REGISTRO DE SOFTWARE\\SEI_25.000084491_7.pdf",
+    "size": 3185540,
+    "mtime": 1773055396
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\RELATÓRIOS ANUAIS AGIPI\\Relatorio-Anual-AGIPI-2022.pdf",
+    "size": 7794415,
+    "mtime": 1772784522
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\RELATÓRIOS ANUAIS AGIPI\\Relatorio-Anual-AGIPI-2023.pdf",
+    "size": 5990874,
+    "mtime": 1772784528
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\RELATÓRIOS ANUAIS AGIPI\\Relatorio-atualizado-2025-Agipi.pdf",
+    "size": 13885761,
+    "mtime": 1772784552
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\RELATÓRIOS ANUAIS AGIPI\\Relatório Anual - Agência de Inovação e Propriedade Intelectual da UEPG -  Agipi 2024.pdf",
+    "size": 12623345,
+    "mtime": 1772784542
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\TCC ALINE DEFESA INOVAÇÃO\\ALINE_STAUT_CARNEIRO_PFC-0.pdf",
+    "size": 7396637,
+    "mtime": 1772783284
+  },
+  {
+    "kind": "faq",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\processed\\faq_agipi_ageuni_documentos.xlsx",
+    "size": 60771,
+    "mtime": 1777916177
+  }
+]
