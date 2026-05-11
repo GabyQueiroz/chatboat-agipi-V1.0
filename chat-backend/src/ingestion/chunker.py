@@ -9,17 +9,17 @@ from docx import Document
 from openpyxl import load_workbook
 
 
-def chunk_text(text: str, chunk_size: int = 900, overlap: int = 120) -> list[str]:
-    chunks = []
-    start = 0
-    text = normalize_text(text)
-    while start < len(text):
-        end = start + chunk_size
-        chunk = text[start:end].strip()
-        if chunk:
-            chunks.append(chunk)
-        start += max(chunk_size - overlap, 1)
-    return chunks
+# def chunk_text(text: str, chunk_size: int = 900, overlap: int = 120) -> list[str]:
+#     chunks = []
+#     start = 0
+#     text = normalize_text(text)
+#     while start < len(text):
+#         end = start + chunk_size
+#         chunk = text[start:end].strip()
+#         if chunk:
+#             chunks.append(chunk)
+#         start += max(chunk_size - overlap, 1)
+#     return chunks
 
 
 def normalize_text(text: str) -> str:
@@ -242,3 +242,54 @@ def process_documents(raw_dirs: list[str], faq_path: str | None = None) -> list[
     documents.extend(process_faq_workbook(faq_path))
     documents.extend(process_document_directories(raw_dirs))
     return documents
+
+
+def chunk_text(text: str, max_chunk_size: int = 900, overlap: int = 120) -> list[str]:
+    """
+    Divide o texto de forma híbrida: tenta preservar os limites semânticos (parágrafos e títulos)
+    e só aplica o corte estático (sliding window) se uma secção for excessivamente grande.
+    """
+    text = normalize_text(text)
+    
+    # 1. Divisão Semântica: Separar por cabeçalhos Markdown (#, ##, etc.) ou parágrafos (\n\n)
+    # A expressão regular procura quebras naturais na estrutura do documento
+    semantic_splits = re.split(r'(?=\n#{1,4}\s|\n\n)', text)
+    
+    chunks = []
+    current_chunk = ""
+    
+    for section in semantic_splits:
+        section = section.strip()
+        if not section:
+            continue
+            
+        # 2. Agrupamento Semântico
+        # Se o chunk atual + a nova secção couberem no limite, juntamo-los
+        if len(current_chunk) + len(section) <= max_chunk_size:
+            current_chunk += ("\n\n" + section) if current_chunk else section
+        else:
+            # O limite foi atingido. Guardar o chunk consolidado atual
+            if current_chunk:
+                chunks.append(current_chunk.strip())
+            
+            # 3. Fallback Estático
+            # Se a nova secção individual for, por si só, MAIOR que o limite máximo (ex: uma tabela gigante),
+            # aplicamos a sua lógica original de janela deslizante apenas a esta secção.
+            if len(section) > max_chunk_size:
+                start = 0
+                while start < len(section):
+                    end = start + max_chunk_size
+                    chunk_part = section[start:end].strip()
+                    if chunk_part:
+                        chunks.append(chunk_part)
+                    start += max(max_chunk_size - overlap, 1)
+                current_chunk = "" # A secção já foi tratada
+            else:
+                # Começa a acumular um novo chunk semântico
+                current_chunk = section
+                
+    # Adicionar qualquer texto restante
+    if current_chunk:
+        chunks.append(current_chunk.strip())
+        
+    return chunks
