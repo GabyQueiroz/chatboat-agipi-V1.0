@@ -1,0 +1,70 @@
+# Estrutura e Programas da Agência de Desenvolvimento Regional Sustentável (AGEUNI)
+
+Esta base de conhecimento detalha o funcionamento, os programas e a governança da AGEUNI, conforme as diretrizes da Secretaria da Ciência, Tecnologia e Ensino Superior (SETI) do Paraná.
+
+## 1. O que é a AGEUNI
+A Agência de Desenvolvimento Regional Sustentável (AGEUNI) é um programa estratégico do Governo do Estado do Paraná, idealizado pela SETI. Seu foco é o estímulo às ações de integração entre **Universidade, Empresa, Governo e Sociedade** (modelo de Hélice Quádrupla).
+
+**Objetivo Central:** Incentivar o desenvolvimento socioeconômico regional e aumentar a competitividade das empresas paranaenses através da agregação de tecnologia e inovação.
+
+
+## 2. Programas Estratégicos
+
+### 2.1. Projetek (Escritório de Projetos de Engenharia e Arquitetura)
+O Projetek visa suprir a carência de projetos técnicos em municípios de pequeno porte.
+- **Atuação:** Elaboração de projetos executivos de engenharia e arquitetura para obras públicas.
+- **Metodologia:** Uso obrigatório de **BIM (Building Information Modeling)**.
+- **Público:** Municípios localizados nas áreas de abrangência das universidades estaduais do Paraná.
+
+### 2.2. Paraná Empreende Mais (PEM)
+Focado no fortalecimento do ecossistema empresarial local.
+- **Atuação:** Oferta de consultorias especializadas e cursos de capacitação técnica.
+- **Público-alvo:** Micro e pequenas empresas (MPEs), microempreendedores individuais (MEIs) e gestores de negócios.
+- **Operacionalização:** Realizado através das universidades estaduais, conectando o conhecimento acadêmico à prática de mercado.
+
+
+## 3. Estrutura de Governança
+
+A governança da AGEUNI é dividida para garantir tanto o alinhamento estadual quanto a autonomia regional:
+
+### 3.1. Unidade Central (SETI)
+Responsável pela coordenação geral, formulação de diretrizes e repasse de recursos.
+
+### 3.2. Unidades Descentralizadas
+Compostas pelas Universidades Estaduais e suas respectivas Fundações de Apoio. Elas executam as ações na ponta e gerem os projetos regionais. Cada unidade da Ageuni é vinculada a uma universidade estadual paranaense como estratégia de atuação descentralizada e utilizagéo das estruturas académicas das instituices de ensino superior ligadas ao Governo do Estado, a fim de atender demandas locais e regionais. O programa é desenvolvido nas estruturas dos Nucleos de Inovação Tecnoldgica (NITs) e agéncias de inovação das universidades.
+Foram implantadas nove unidades da Ageuni:
+
+- Universidade Estadual de Londrina (UEL) — Londrina
+- Universidade Estadual de Maringa (UEM) — Maringá
+- Universidade Estadual de Ponta Grossa (UEPG) — Ponta Grossa
+- Universidade Estadual do Oeste do Parana (Unioeste) — Cascavel
+- Universidade Estadual do Oeste do Parana (Unioeste) — Francisco Beltrão
+- Universidade Estadual do Centro-Oeste (Unicentro) — Guarapuava
+- Universidade Estadual do Norte do Parana (UENP) — Jacarezinho
+- Universidade Estadual do Parana (Unespar) — Campo Mourão
+- Universidade Estadual do Parana (Unespar) — Paranaguá
+
+Cada unidade da Ageuni é vinculada a uma universidade estadual paranaense como estratégia de atuação descentralizada e utilizagéo das estruturas académicas das instituições de ensino superior ligadas ao Governo do Estado, a fim de atender demandas locais e regionais. O programa é desenvolvido nas estruturas dos Nucleos de Inovação Tecnolégica (NITs) e agéncias de inovação das universidades.
+
+
+## 4. Comitês Regionais
+
+Os Comitês Regionais são as células de gestão local do programa.
+
+### 4.1. Liderança
+- **Presidência:** Exercida pelos reitores das universidades estaduais vinculadas.
+- **Delegação:** Atividades podem ser delegadas, mas a subdelegação é proibida.
+
+### 4.2. Atribuições dos Comitês
+1. **Seleção de Iniciativas:** Definir a metodologia para escolher quais projetos locais receberão fomento.
+2. **Articulação Institucional:** Promover a interação entre municípios, setor produtivo e sociedade civil organizada.
+3. **Transparência:** Publicar as iniciativas realizadas no âmbito do programa em sua região.
+4. **Regimento:** Redigir e aprovar o regimento interno da unidade regional.
+5. **Frequência de Reuniões:** Encontros obrigatórios, no mínimo, semestralmente.
+
+
+## 5. Instituições Parceiras
+O sucesso da AGEUNI depende da articulação com diversos órgãos:
+- SEBRAE/PR (Pequenas Empresas)
+- Fundação Araucária (Fomento à pesquisa)
+- Secretarias Estaduais (Fazenda, Cultura, Inovação, Planejamento)

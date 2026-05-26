@@ -1,0 +1,45 @@
+DOCUMENTO: FICHA DE TRAMITAÇÃO DE PROCESSO - UEPG
+
+Instituição: Universidade Estadual de Ponta Grossa (UEPG).
+
+Órgão Interno: Pró-Reitoria de Planejamento (PROPLAN).
+
+Assunto do Processo: Pedido de Proteção de Propriedade Intelectual - Avaliação Preliminar.
+
+Normativa de Referência: Resolução UNIV nº 31/2011.
+
+Sistema de Tramitação: Sistema Eletrônico de Informações (SEI), Ficha 8.1, Folha 1.
+
+
+1. DADOS IDENTIFICADORES DO PROCESSO
+
+Signatário (Autor): O processo deve ser assinado pelo Pesquisador, Inventor ou Criador.
+
+Destinatário Principal: Agência de Inovação e Propriedade Intelectual (AGIPI).
+
+Conteúdo Essencial: É obrigatório conter o Formulário de Avaliação Preliminar de Pedido de Patente.
+
+Prazo para Entrada no SEI: Pode ser realizado em qualquer tempo.
+
+
+2. ETAPAS PRELIMINARES À AUTUAÇÃO
+
+Ação do Signatário: Antes de autuar no sistema, o Pesquisador/Inventor deve obter orientação técnica junto à AGIPI (Agência de Inovação e Propriedade Intelectual) sobre a Avaliação Preliminar de Pedido de Patente e buscas de anterioridade.
+
+
+3. FLUXO DE TRAMITAÇÃO (PASSO A PASSO)
+Cada processo deve tratar exclusivamente de um único assunto. O fluxo de encaminhamentos e procedimentos é definido conforme abaixo:  
+
+Passo 3.1 - Início (SEI): O procedimento inicial consiste em Iniciar o Processo Eletrônico no sistema SEI.
+
+Passo 3.2 - Avaliação Técnica (AGIPI): A AGIPI deve encaminhar o processo à PROAD. Este processo deve estar instruído com a Avaliação Preliminar de Pedido de Patente, informações sobre custas e análise de patenteabilidade do objeto para posterior deliberação da REITORIA.
+
+Passo 3.3 - Análise Financeira (PROAD): A Pró-Reitoria Administrativa (PROAD) manifesta-se especificamente sobre os aspectos financeiros e orçamentários do pedido de patente.
+
+Passo 3.4 - Encaminhamento Superior (REITORIA): A Reitoria recebe o processo e o encaminha ao Conselho de Administração (CA) para que este possa deliberar.
+
+Passo 3.5 - Deliberação (CA): O Conselho de Administração (CA) realiza a deliberação sobre o processo.
+
+Passo 3.6 - Formalização e Transparência (SEGECON): A Secretaria Geral dos Conselhos Superiores (SEGECON) é responsável por lavrar o Ato Competente conforme o assunto, disponibilizá-lo no Portal da Transparência da UEPG (Item 07. Atos Administrativos) e devolver o processo para a AGIPI.
+
+Passo 3.7 - Finalização e Gestão (AGIPI): A AGIPI dá ciência ao interessado sobre a decisão do Conselho de Administração. Caso haja interesse institucional, inicia-se o processo de depósito da patente e a respectiva gestão da propriedade intelectual.

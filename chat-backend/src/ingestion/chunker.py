@@ -7,6 +7,7 @@ from typing import Any
 import pymupdf4llm
 from docx import Document
 from openpyxl import load_workbook
+from src.ingestion.syntethic_descriptions import DESCRIPTIONS
 
 
 # def chunk_text(text: str, chunk_size: int = 900, overlap: int = 120) -> list[str]:
@@ -152,7 +153,13 @@ def process_document_directories(raw_dirs: list[str]) -> list[dict[str, Any]]:
                 source_label = f"{root.name}/{relative_path}"
                 print(f"[CHUNKER] Processando arquivo: {source_label}")
                 content = normalize_text(read_document_content(file_path))
-                chunks = chunk_text(content)
+
+                description = DESCRIPTIONS.get(file_path.name, "")
+                enriched_content = f"{description}\n\nCONTEÚDO DO DOCUMENTO:\n{content}"
+                if description:
+                    print(f"-*-*-*-*-*-*-*-*-*-*- ENCONTRADO DOCUMENTO ENRIQUECIDO: {file_path.name} -*-*-*-*-*-*-*-*-*-*-")
+
+                chunks = chunk_text(enriched_content)
 
                 for index, chunk in enumerate(chunks):
                     documents.append(

@@ -194,7 +194,7 @@ class RAGPipeline:
         embedding_elapsed = time.perf_counter() - embedding_started_at
 
         retrieval_started_at = time.perf_counter()
-        relevant_docs = self.vector_store.search(question_vector, top_k=10)
+        relevant_docs = self.vector_store.search(question_vector, top_k=15)
         ranked_docs = self._rerank_documents(canonical_question, relevant_docs)
         retrieval_elapsed = time.perf_counter() - retrieval_started_at
 
