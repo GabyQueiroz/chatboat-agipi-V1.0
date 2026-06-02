@@ -37,6 +37,28 @@ Variaveis uteis:
 
 Ao subir, o backend valida se `data/raw` corresponde ao indice em cache. Se não corresponder, ele reprocessa automaticamente.
 
+## Avaliação de Métricas (Retrieval)
+
+O sistema possui um script automatizado para medir a assertividade da busca vetorial utilizando as métricas Precision@K, Recall@K, Hit@K e MRR@K.
+
+Para rodar os testes de avaliação:
+
+```powershell
+cd chat-backend
+.venv\Scripts\activate
+python -m src.evaluation.evaluate_rag
+```
+
+
+### Requisitos da Planilha de Testes
+
+O script lê o arquivo em src/evaluation/PERGUNTAS_TESTE.xlsx. Para que a avaliação funcione corretamente, a Folha 1 (ativa) da planilha deve seguir este padrão:
+1) **Colunas Obrigatórias:** Deve conter exatamente as colunas Pergunta e Base documental na primeira linha (cabeçalho).
+2) **Formato da Base Documental:** Como a validação é por correspondência exata de texto, os documentos esperados devem obedecer às seguintes regras:
+    - Escreva o nome exato do arquivo original (incluindo a extensão, ex: .pdf, .docx).
+    - Respeite letras maiúsculas, minúsculas, acentos e espaços duplos idênticos ao arquivo na pasta *raw*.
+    - Se a pergunta puder ser respondida por mais de um documento, separe-os obrigatoriamente por ponto e vírgula (;).
+
 ## Frontend
 
 ```powershell

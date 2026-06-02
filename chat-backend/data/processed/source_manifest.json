@@ -19,9 +19,27 @@
   },
   {
     "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\Resca315.2013-INCUBADORA.pdf",
+    "size": 67751,
+    "mtime": 1779803976
+  },
+  {
+    "kind": "document",
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\Resolucao-CEPE-020-2016-Regulamento-Geral-dos-PPG-Stricto-Sensu-da-UEPG.pdf",
     "size": 79473,
     "mtime": 1772784196
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\Resolucao_09_2009.pdf",
+    "size": 97471,
+    "mtime": 1779804488
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\RESOLUCAO_CA_310_2025.pdf",
+    "size": 711490,
+    "mtime": 1779823375
   },
   {
     "kind": "document",
@@ -40,6 +58,12 @@
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\Resuniv0311.2011.pdf",
     "size": 55779,
     "mtime": 1772784700
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\TERMO_DE_SIGILO_E_CONFIDENCIALIDADE_PORTUGUES.pdf",
+    "size": 272394,
+    "mtime": 1779810364
   },
   {
     "kind": "document",
@@ -3817,9 +3841,21 @@
   },
   {
     "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\apresentacao_AGIPI.pdf",
+    "size": 759361,
+    "mtime": 1779730467
+  },
+  {
+    "kind": "document",
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\D10886.pdf",
     "size": 427358,
     "mtime": 1773056990
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\D8796.pdf",
+    "size": 271254,
+    "mtime": 1773057040
   },
   {
     "kind": "document",
@@ -3853,6 +3889,18 @@
   },
   {
     "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\L20537.pdf",
+    "size": 288120,
+    "mtime": 1773057032
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\L20541.pdf",
+    "size": 423636,
+    "mtime": 1773057022
+  },
+  {
+    "kind": "document",
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\L9279.pdf",
     "size": 712331,
     "mtime": 1773056978
@@ -3865,27 +3913,15 @@
   },
   {
     "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\legislacao.pr.gov.br_legislacao_pesquisarAto.do_action=exibir&codAto=246927&indice=1&totalRegistros=1&dt=20.11.2022.9.20.15.743.pdf",
-    "size": 288120,
-    "mtime": 1773057032
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\legislacao.pr.gov.br_legislacao_pesquisarAto.do_action=exibir&codAto=246931&indice=1&totalRegistros=1&dt=20.11.2022.9.17.52.639.pdf",
-    "size": 423636,
-    "mtime": 1773057022
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\legislacao.pr.gov.br_legislacao_pesquisarAto.do_action=exibir&codAto=253287&indice=1&totalRegistros=1&dt=20.11.2022.9.21.13.850.pdf",
-    "size": 271254,
-    "mtime": 1773057040
-  },
-  {
-    "kind": "document",
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\Manual - Como Funciona a Incubação INPROTEC.txt",
     "size": 6284,
     "mtime": 1778520335
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\Novo Marco Legal da Ciencia, Tecnologia e Inovação.pdf",
+    "size": 7208111,
+    "mtime": 1779808262
   },
   {
     "kind": "document",
@@ -3904,6 +3940,12 @@
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\diretriz_de_mu_versao_2_original.pdf",
     "size": 129564,
     "mtime": 1779108133
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\escala_trl_mrl_embrapa.txt",
+    "size": 4389,
+    "mtime": 1779810906
   },
   {
     "kind": "document",
@@ -3988,6 +4030,12 @@
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\Seja bem-vindo(a) ao tutorial de depósito de pedidos de patente no INPI! — Instituto Nacional da Propriedade Industrial.pdf",
     "size": 696982,
     "mtime": 1772784864
+  },
+  {
+    "kind": "document",
+    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\TabelaPatentesapsalteraesCGRECincpapelpct1.pdf",
+    "size": 446519,
+    "mtime": 1779803016
   },
   {
     "kind": "document",
