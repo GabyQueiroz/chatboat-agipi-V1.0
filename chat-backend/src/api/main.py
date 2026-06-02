@@ -31,9 +31,9 @@ load_dotenv()
 ROOT_DIR = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT_DIR / "data"
 INDEX_CACHE_PATH = DATA_DIR / "index" / "faiss_index.bin"
-METADATA_CACHE_PATH = DATA_DIR / "processed" / "faiss_metadata.pkl"
-DOCS_CACHE_PATH = DATA_DIR / "processed" / "documents_cache.pkl"
-MANIFEST_CACHE_PATH = DATA_DIR / "processed" / "source_manifest.pkl"
+METADATA_CACHE_PATH = DATA_DIR / "processed" / "faiss_metadata.json"
+DOCS_CACHE_PATH = DATA_DIR / "processed" / "documents_cache.json"
+MANIFEST_CACHE_PATH = DATA_DIR / "processed" / "source_manifest.json"
 
 DEFAULT_RAW_DIRS = [
     str(ROOT_DIR / "data" / "raw"),

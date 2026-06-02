@@ -1,5 +1,5 @@
+import json
 import os
-import pickle
 import re
 from pathlib import Path
 from typing import Any
@@ -7,19 +7,20 @@ from typing import Any
 import pymupdf4llm
 from docx import Document
 from openpyxl import load_workbook
+from src.ingestion.syntethic_descriptions import DESCRIPTIONS
 
 
-def chunk_text(text: str, chunk_size: int = 900, overlap: int = 120) -> list[str]:
-    chunks = []
-    start = 0
-    text = normalize_text(text)
-    while start < len(text):
-        end = start + chunk_size
-        chunk = text[start:end].strip()
-        if chunk:
-            chunks.append(chunk)
-        start += max(chunk_size - overlap, 1)
-    return chunks
+# def chunk_text(text: str, chunk_size: int = 900, overlap: int = 120) -> list[str]:
+#     chunks = []
+#     start = 0
+#     text = normalize_text(text)
+#     while start < len(text):
+#         end = start + chunk_size
+#         chunk = text[start:end].strip()
+#         if chunk:
+#             chunks.append(chunk)
+#         start += max(chunk_size - overlap, 1)
+#     return chunks
 
 
 def normalize_text(text: str) -> str:
@@ -34,8 +35,8 @@ def normalize_text(text: str) -> str:
 
 def save_documents(documents: list[dict[str, Any]], cache_path: str) -> None:
     os.makedirs(os.path.dirname(cache_path), exist_ok=True)
-    with open(cache_path, "wb") as file:
-        pickle.dump(documents, file)
+    with open(cache_path, "w", encoding="utf-8") as file:
+        json.dump(documents, file, ensure_ascii=False, indent=2)
     print(f"[CHUNKER] Documentos salvos em cache: {cache_path}")
 
 
@@ -43,8 +44,8 @@ def load_documents(cache_path: str) -> list[dict[str, Any]] | None:
     if not os.path.exists(cache_path):
         return None
     try:
-        with open(cache_path, "rb") as file:
-            documents = pickle.load(file)
+        with open(cache_path, "r", encoding="utf-8") as file:
+            documents = json.load(file)
         print(f"[CHUNKER] Documentos carregados do cache: {cache_path}")
         return documents
     except Exception as exc:
@@ -54,8 +55,8 @@ def load_documents(cache_path: str) -> list[dict[str, Any]] | None:
 
 def save_source_manifest(manifest: list[dict[str, Any]], manifest_path: str) -> None:
     os.makedirs(os.path.dirname(manifest_path), exist_ok=True)
-    with open(manifest_path, "wb") as file:
-        pickle.dump(manifest, file)
+    with open(manifest_path, "w", encoding="utf-8") as file:
+        json.dump(manifest, file, ensure_ascii=False, indent=2)
     print(f"[CHUNKER] Manifest salvo em: {manifest_path}")
 
 
@@ -63,8 +64,8 @@ def load_source_manifest(manifest_path: str) -> list[dict[str, Any]] | None:
     if not os.path.exists(manifest_path):
         return None
     try:
-        with open(manifest_path, "rb") as file:
-            manifest = pickle.load(file)
+        with open(manifest_path, "r", encoding="utf-8") as file:
+            manifest = json.load(file)
         print(f"[CHUNKER] Manifest carregado de: {manifest_path}")
         return manifest
     except Exception as exc:
@@ -152,7 +153,13 @@ def process_document_directories(raw_dirs: list[str]) -> list[dict[str, Any]]:
                 source_label = f"{root.name}/{relative_path}"
                 print(f"[CHUNKER] Processando arquivo: {source_label}")
                 content = normalize_text(read_document_content(file_path))
-                chunks = chunk_text(content)
+
+                description = DESCRIPTIONS.get(file_path.name, "")
+                enriched_content = f"{description}\n\nCONTEÚDO DO DOCUMENTO:\n{content}"
+                if description:
+                    print(f"-*-*-*-*-*-*-*-*-*-*- ENCONTRADO DOCUMENTO ENRIQUECIDO: {file_path.name} -*-*-*-*-*-*-*-*-*-*-")
+
+                chunks = chunk_text(enriched_content)
 
                 for index, chunk in enumerate(chunks):
                     documents.append(
@@ -242,3 +249,54 @@ def process_documents(raw_dirs: list[str], faq_path: str | None = None) -> list[
     documents.extend(process_faq_workbook(faq_path))
     documents.extend(process_document_directories(raw_dirs))
     return documents
+
+
+def chunk_text(text: str, max_chunk_size: int = 900, overlap: int = 120) -> list[str]:
+    """
+    Divide o texto de forma híbrida: tenta preservar os limites semânticos (parágrafos e títulos)
+    e só aplica o corte estático (sliding window) se uma secção for excessivamente grande.
+    """
+    text = normalize_text(text)
+    
+    # 1. Divisão Semântica: Separar por cabeçalhos Markdown (#, ##, etc.) ou parágrafos (\n\n)
+    # A expressão regular procura quebras naturais na estrutura do documento
+    semantic_splits = re.split(r'(?=\n#{1,4}\s|\n\n)', text)
+    
+    chunks = []
+    current_chunk = ""
+    
+    for section in semantic_splits:
+        section = section.strip()
+        if not section:
+            continue
+            
+        # 2. Agrupamento Semântico
+        # Se o chunk atual + a nova secção couberem no limite, juntamo-los
+        if len(current_chunk) + len(section) <= max_chunk_size:
+            current_chunk += ("\n\n" + section) if current_chunk else section
+        else:
+            # O limite foi atingido. Guardar o chunk consolidado atual
+            if current_chunk:
+                chunks.append(current_chunk.strip())
+            
+            # 3. Fallback Estático
+            # Se a nova secção individual for, por si só, MAIOR que o limite máximo (ex: uma tabela gigante),
+            # aplicamos a sua lógica original de janela deslizante apenas a esta secção.
+            if len(section) > max_chunk_size:
+                start = 0
+                while start < len(section):
+                    end = start + max_chunk_size
+                    chunk_part = section[start:end].strip()
+                    if chunk_part:
+                        chunks.append(chunk_part)
+                    start += max(max_chunk_size - overlap, 1)
+                current_chunk = "" # A secção já foi tratada
+            else:
+                # Começa a acumular um novo chunk semântico
+                current_chunk = section
+                
+    # Adicionar qualquer texto restante
+    if current_chunk:
+        chunks.append(current_chunk.strip())
+        
+    return chunks
