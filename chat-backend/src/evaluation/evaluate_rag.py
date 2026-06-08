@@ -105,6 +105,8 @@ def run_evaluation():
     DATA_DIR = ROOT_DIR / "data"
     INDEX_CACHE_PATH = DATA_DIR / "index" / "faiss_index.bin"
     METADATA_CACHE_PATH = DATA_DIR / "processed" / "faiss_metadata.json"
+    CACHE_THRESHOLD = 0.75
+
     vector_store.load(str(INDEX_CACHE_PATH), str(METADATA_CACHE_PATH))
     
     dataset = load_golden_dataset(DATASET_PATH)
@@ -114,6 +116,7 @@ def run_evaluation():
     total_recall = 0.0
     total_hit = 0.0
     total_mrr = 0.0
+    total_cache_hits = 0.0
     
     print(f"Iniciando avaliação de {len(dataset)} perguntas...") 
     
@@ -123,18 +126,28 @@ def run_evaluation():
         expected_docs = item['expected_docs']
         print(f"EXPECTED DOCS: {expected_docs}")
         
-        # 1. Recupera os documentos do banco vetorial
+        # Recupera os documentos do banco vetorial
         query_embedding = embedder.embed_texts([question])
         search_results = vector_store.search(np.array(query_embedding), top_k=K)
+
+
+        is_cache_hit = 0.0
+        if search_results:
+            top_result = search_results[0]
+            # Conta como cache hit se o Top 1 for FAQ e tiver score acima do threshold
+            if top_result.get("doc_type") == "faq" and top_result.get("score", 0.0) >= CACHE_THRESHOLD:
+                is_cache_hit = 1.0
+        
+        total_cache_hits += is_cache_hit
 
         filtered_results = [res for res in search_results if res.get("doc_type") != "faq"]
         # print(f"FILTERED SEARCH RESULTS: {filtered_results[:1]}")
         
-        # 2. Extrai os nomes dos documentos recuperados
+        # Extrai os nomes dos documentos recuperados
         retrieved_docs = [os.path.basename(res.get("source", "")) for res in filtered_results[:K]]
         print(f"RETRIEVED DOCS: {retrieved_docs}")
         
-        # 3. Calcula a métrica para esta pergunta
+        # Calcula as métricas para esta pergunta
         precision = calculate_precision_at_k(retrieved_docs, expected_docs, K)
         recall = calculate_recall_at_k(retrieved_docs, expected_docs, K)
         hit = calculate_hit_at_k(retrieved_docs, expected_docs, K)
@@ -147,14 +160,16 @@ def run_evaluation():
         
         print(f"Q: {question[:40]}... | P@{K}: {precision:.2f} | R@{K}: {recall:.2f} | Hit@{K}: {hit:.2f} | MRR@{K}: {mrr:.2f}")
 
-    # 4. Média final do sistema
+    # Média final do sistema
     num_queries = len(dataset)
     mean_precision = total_precision / num_queries if num_queries > 0 else 0
     mean_recall = total_recall / num_queries if num_queries > 0 else 0
     mean_hit = total_hit / num_queries if num_queries > 0 else 0
     mean_mrr = total_mrr / num_queries if num_queries > 0 else 0
+    mean_cache_hit_rate = total_cache_hits / num_queries if num_queries > 0 else 0
     
     print(f"\n[RESULTADO FINAL]")
+    print(f"-> Cache Hit Rate (FAQ): {mean_cache_hit_rate:.2%}")
     print(f"-> Precision@{K} Médio do Sistema: {mean_precision:.2f}")
     print(f"-> Recall@{K} Médio do Sistema: {mean_recall:.2f}")
     print(f"-> Hit@{K} (Hit Rate) Médio do Sistema: {mean_hit:.2f}")
