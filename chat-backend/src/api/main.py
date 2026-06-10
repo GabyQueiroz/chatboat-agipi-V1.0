@@ -97,6 +97,7 @@ class AppState:
             vector_store=self.vector_store,
             llm=self.llm,
             response_mode=RESPONSE_MODE,
+            min_score=0.60
         )
         self.index_ready = False
         self.last_index_build: dict[str, Any] = {}

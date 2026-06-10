@@ -6,6 +6,7 @@ from typing import Any
 from src.llm.llm_client import LLMClient
 from src.retrieval.embeddings import Embedder
 from src.retrieval.vector_db import VectorStore
+from src.retrieval.bge_reranker import BGEReranker
 
 
 STOPWORDS = {
@@ -69,12 +70,14 @@ class RAGPipeline:
         embedder: Embedder,
         vector_store: VectorStore,
         llm: LLMClient | None,
+        reranker: BGEReranker | None = None,
         response_mode: str = "extractive",
-        min_score: float = 0.25,
+        min_score: float = 0.60,
     ):
         self.embedder = embedder
         self.vector_store = vector_store
         self.llm = llm
+        self.reranker = reranker
         self.response_mode = response_mode
         self.min_score = min_score
         self.out_of_scope_message = (
@@ -194,7 +197,7 @@ class RAGPipeline:
         embedding_elapsed = time.perf_counter() - embedding_started_at
 
         retrieval_started_at = time.perf_counter()
-        relevant_docs = self.vector_store.search(question_vector, top_k=15)
+        relevant_docs = self.vector_store.search(question_vector, top_k=45)
         ranked_docs = self._rerank_documents(canonical_question, relevant_docs)
         retrieval_elapsed = time.perf_counter() - retrieval_started_at
 
@@ -669,11 +672,12 @@ class RAGPipeline:
         return keywords[0] if keywords else ""
 
     def _rerank_documents(self, question: str, docs: list[dict[str, Any]]) -> list[dict[str, Any]]:
-        keywords = self._extract_keywords(question)
-        ranked = []
+        if not docs or not self.reranker:
+            return docs
 
+        pairs = []
         for doc in docs:
-            text = " ".join(
+            text_blob = " ".join(
                 str(value)
                 for value in [
                     doc.get("title", ""),
@@ -683,10 +687,13 @@ class RAGPipeline:
                     doc.get("category", ""),
                 ]
             ).lower()
-            keyword_hits = sum(1 for keyword in keywords if keyword in text)
-            document_boost = 0.12 if doc.get("doc_type") == "document" else 0.0
-            exact_question_boost = 0.45 if self._normalize_text(doc.get("faq_question", "")) == self._normalize_text(question) else 0.0
-            doc["score"] = float(doc.get("score", 0.0)) + keyword_hits * 0.08 + document_boost + exact_question_boost
+            pairs.append([question, text_blob])
+
+        rerank_scores = self.reranker.compute_scores(pairs)
+
+        ranked = []
+        for doc, score in zip(docs, rerank_scores):
+            doc["score"] = score
             ranked.append(doc)
 
         ranked.sort(key=lambda item: item.get("score", 0.0), reverse=True)
