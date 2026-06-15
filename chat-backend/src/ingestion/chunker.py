@@ -9,6 +9,10 @@ from docx import Document
 from openpyxl import load_workbook
 
 
+ALLOWED_SUFFIXES = {".txt", ".md", ".docx"}
+# ALLOWED_SUFFIXES = {".pdf", ".txt", ".md", ".docx"}
+
+
 def chunk_text(text: str, chunk_size: int = 900, overlap: int = 120) -> list[str]:
     chunks = []
     start = 0
@@ -28,7 +32,12 @@ def normalize_text(text: str) -> str:
     text = re.sub(r"-{3,}\s*Start of picture text\s*-{3,}", " ", text, flags=re.IGNORECASE)
     text = re.sub(r"-{3,}\s*End of picture text\s*-{3,}", " ", text, flags=re.IGNORECASE)
     text = re.sub(r"\b[pP]icture\b", " ", text)
-    text = re.sub(r"\s+", " ", text)
+
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
+    text = re.sub(r"[ \t]+", " ", text)
+    text = re.sub(r"\n{2,}", "\n", text)
+    text = text.strip()
+
     return text.strip()
 
 
@@ -82,7 +91,7 @@ def build_source_manifest(raw_dirs: list[str], faq_path: str | None = None) -> l
         for path in sorted(root.rglob("*")):
             if not path.is_file():
                 continue
-            if path.suffix.lower() not in {".pdf", ".txt", ".docx"}:
+            if path.suffix.lower() not in ALLOWED_SUFFIXES:
                 continue
             stat = path.stat()
             manifest.append(
@@ -135,7 +144,7 @@ def read_document_content(path: Path) -> str:
 
 def process_document_directories(raw_dirs: list[str]) -> list[dict[str, Any]]:
     documents: list[dict[str, Any]] = []
-    allowed_suffixes = {".pdf", ".txt", ".docx"}
+    allowed_suffixes = ALLOWED_SUFFIXES
 
     for raw_dir in raw_dirs:
         root = Path(raw_dir)

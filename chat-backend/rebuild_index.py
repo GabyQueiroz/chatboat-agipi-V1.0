@@ -19,6 +19,7 @@ MANIFEST_CACHE_PATH = DATA_DIR / "processed" / "source_manifest.pkl"
 
 RAW_SOURCE_DIRS = [
     str(ROOT_DIR / "data" / "raw"),
+    str(ROOT_DIR / "data" / "md"),
     r"C:\Users\gabri\OneDrive\Documentos\UEPG\IA_AGIPI\DOCUMENTOS EPITEC PROF. LIVIO-20260409T232820Z-3-001",
 ]
 FAQ_XLSX_PATH = r"C:\Users\gabri\OneDrive\Documentos\UEPG\IA_AGIPI\faq_agipi_ageuni_documentos.xlsx"
