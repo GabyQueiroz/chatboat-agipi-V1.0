@@ -7,6 +7,7 @@ from src.llm.llm_client import LLMClient
 from src.retrieval.embeddings import Embedder
 from src.retrieval.vector_db import VectorStore
 from src.retrieval.bge_reranker import BGEReranker
+from src.retrieval.query_rewriter import QueryRewriter
 
 
 STOPWORDS = {
@@ -71,13 +72,15 @@ class RAGPipeline:
         vector_store: VectorStore,
         llm: LLMClient | None,
         reranker: BGEReranker | None = None,
-        response_mode: str = "extractive",
+        query_rewriter: QueryRewriter | None = None,
+        response_mode: str = "extractive",      # extractive | generative | hybrid
         min_score: float = 0.60,
     ):
         self.embedder = embedder
         self.vector_store = vector_store
         self.llm = llm
         self.reranker = reranker
+        self.query_rewriter = query_rewriter
         self.response_mode = response_mode
         self.min_score = min_score
         self.out_of_scope_message = (
@@ -88,7 +91,10 @@ class RAGPipeline:
 
     def ask(self, user_question: str, history: list[dict[str, str]] | None = None) -> dict[str, Any]:
         history = history or []
+        print("RESPONSE MODE: " + self.response_mode)
+
         resolved_question, topic = self._resolve_follow_up_question(user_question, history)
+
         canonical_question = self._canonicalize_question(resolved_question)
         normalized_question = self._normalize_text(canonical_question.lower().strip())
 
@@ -149,7 +155,7 @@ class RAGPipeline:
             }
 
         direct_document_match = self._find_direct_document_match(canonical_question)
-        if direct_document_match is not None:
+        if direct_document_match is not None and self.response_mode != "generative":
             answer_started_at = time.perf_counter()
             answer = self._build_extractive_answer(resolved_question, [direct_document_match])
             answer = re.sub(r"^No entanto,\s*", "", answer, flags=re.IGNORECASE)
@@ -191,13 +197,40 @@ class RAGPipeline:
                 },
                 "warnings": [],
             }
+        
+        queries_to_embed = [canonical_question]
+
+        if self.query_rewriter and history:
+            query_plan = self.query_rewriter.generate_query_plan(user_question, history)
+            print(f"[RAG] Query Plan gerado: {query_plan}")
+            
+            canonical_question = self._canonicalize_question(query_plan["standalone"])
+            queries_to_embed[0] = canonical_question
+
+            if query_plan.get("step_back"):
+                queries_to_embed.append(self._canonicalize_question(query_plan["step_back"]))
+
+            for sub_q in query_plan.get("sub_queries", []):
+                queries_to_embed.append(self._canonicalize_question(sub_q))
+
+        queries_to_embed = list(dict.fromkeys(queries_to_embed))
 
         embedding_started_at = time.perf_counter()
-        question_vector = self.embedder.embed_texts([canonical_question])
+        question_vectors = self.embedder.embed_texts(queries_to_embed)
         embedding_elapsed = time.perf_counter() - embedding_started_at
 
         retrieval_started_at = time.perf_counter()
-        relevant_docs = self.vector_store.search(question_vector, top_k=45)
+
+        all_relevant_docs_dict = {}
+        individual_top_k = max(15, 45 // len(question_vectors))
+
+        for vec in question_vectors:
+            docs = self.vector_store.search(vec, top_k=individual_top_k)
+            for d in docs:
+                if d["id"] not in all_relevant_docs_dict:
+                    all_relevant_docs_dict[d["id"]] = d
+
+        relevant_docs = list(all_relevant_docs_dict.values())
         ranked_docs = self._rerank_documents(canonical_question, relevant_docs)
         retrieval_elapsed = time.perf_counter() - retrieval_started_at
 
@@ -226,7 +259,20 @@ class RAGPipeline:
         faq_docs = [doc for doc in docs_for_answer if doc.get("doc_type") == "faq"]
         faq_match = self._select_faq_match(canonical_question, faq_docs)
 
-        if document_docs:
+        if self.response_mode == "generative" and faq_match is None:
+            if self.llm is None:
+                answer = "Erro: O modelo de linguagem (LLM) não foi configurado."
+                mode = "error"
+                warnings.append("LLM is None.")
+            else:
+                try:
+                    answer = self._build_llm_answer(canonical_question, docs_for_answer, "")
+                    mode = "generative"
+                except Exception as exc:
+                    answer = f"Erro ao gerar a resposta com a inteligência artificial (ex: falta de créditos ou falha na API). Detalhes: {str(exc)}"
+                    mode = "error"
+                    warnings.append(str(exc))
+        elif document_docs:
             answer = self._build_extractive_answer(canonical_question, document_docs[:5])
             mode = "extractive"
         elif faq_match is not None:

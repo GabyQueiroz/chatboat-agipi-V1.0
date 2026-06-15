@@ -24,6 +24,7 @@ from src.llm.ollama_client import OllamaClient
 from src.llm.groq_client import GroqClient
 from src.retrieval.embeddings import Embedder
 from src.retrieval.vector_db import VectorStore
+from src.retrieval.query_rewriter import QueryRewriter
 from src.api.store import save_session_log, update_interaction_feedback, save_general_feedback
 
 load_dotenv()
@@ -92,10 +93,12 @@ class AppState:
             model=GROQ_MODEL,
             timeout=GROQ_TIMEOUT,
         )
+        self.query_rewriter = QueryRewriter(self.llm)
         self.pipeline = RAGPipeline(
             embedder=self.embedder,
             vector_store=self.vector_store,
             llm=self.llm,
+            query_rewriter=self.query_rewriter,
             response_mode=RESPONSE_MODE,
             min_score=0.60
         )
@@ -130,6 +133,7 @@ class AppState:
                 embedder=self.embedder,
                 vector_store=self.vector_store,
                 llm=self.llm,
+                query_rewriter=self.query_rewriter,
                 response_mode=RESPONSE_MODE,
             )
 
