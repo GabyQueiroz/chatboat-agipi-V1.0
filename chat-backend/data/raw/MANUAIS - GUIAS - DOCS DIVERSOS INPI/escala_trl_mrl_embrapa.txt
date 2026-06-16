@@ -1,0 +1,28 @@
+# EMBRAPA - Escala de maturidade tecnológica TRL/MRL - O que é?
+
+A escala TRL/MRL (Technology Readiness Levels/Manufacturing Readiness Levels) é utilizada para a avaliação de uma tecnologia de acordo com seu grau de desenvolvimento e seu enquadramento em Níveis de Maturidade Tecnológica.  TRLs referem-se aos níveis de maturidade de um produto (ativo tangível), enquanto MRLs são adotados para designar os níveis de maturidade de um processo de produção (ativo intangível). Assim, as TRLs e MRLs indicam o quão pronto se encontra um produto ou um processo, respectivamente,  em sua escala de desenvolvimento.
+
+O uso da escala TRL/MRL permite o acompanhamento de ativos tecnológicos durante os processos de pesquisa, desenvolvimento e validação, bem como possibilita comparação direta entre ativos. Por possuir uma linguagem universal, a correta aplicação desta escala facilita o entendimento de gestores, equipes internas e parceiros externos sobre a real fase de desenvolvimento de cada ativo, bem como os esforços necessários para a sua finalização e disponibilização aos públicos-alvo. Nesse contexto, viabiliza a gestão dos resultados da pesquisa e do pipeline de ativos da Empresa, assim como potencializa oportunidades de negócio e a transferência de tecnologias. 
+
+Em 2018, a Embrapa institucionalizou a aplicação da escala TRL/MRL para os ativos tecnológicos gerados em seus projetos de PD&I, com a subdivisão em 9 níveis de maturidade, conforme ilustrado a seguir.
+
+Nível: 1. Definição síntese: Ideação. TRL - Tecnologia: Princípios básicos observados e reportados. MRL - Processo: Princípios básicos observados e reportados.
+
+Nível: 2. Definição síntese: Concepção. TRL - Tecnologia: Concepção tecnológica e/ou aplicação formulada. MRL - Processo: Conceito de manufatura definido.
+
+Nível: 3. Definição síntese: Prova de conceito. TRL - Tecnologia: Prova de conceitos das funções críticas de forma analítica ou experimental. MRL - Processo: Processo de manufatura demonstrado (fazer funcionar).
+
+Nível: 4. Definição síntese: Otimização. TRL - Tecnologia: Validação em ambiente de laboratório de componentes ou arranjos experimentais básicos de laboratório. MRL - Processo: Capacidade de produzir a tecnologia em ambiente laboratorial (fazer funcionar apropriadamente).
+
+Nível: 5. Definição síntese: Prototipagem. TRL - Tecnologia: Validação em ambiente relevante de componentes ou arranjos experimentais com configurações físicas finais. MRL - Processo: Capacidade de produzir protótipo do componente do produto em ambiente relevante de produção.
+
+Nível: 6. Definição síntese: Escalonamento. TRL - Tecnologia: Modelo do sistema/subsistema protótipo de demonstrador em ambiente relevante. MRL - Processo: Capacidade de produzir o produto ou seus subconjuntos em ambiente relevante de produção. A tecnologia está em fase de testes sem alcançar a escala final.
+
+Nível: 7. Definição síntese: Demonstração em ambiente operacional. TRL - Tecnologia: Protótipo do demonstrador do sistema em ambiente operacional. MRL - Processo: Capacidade de produzir o produto ou seus subconjuntos em ambiente representativo de produção. Pode incluir testes operacionais e testes de fabricação, mas é testado usando modelos/simuladores inativos compatíveis com o produto final.
+
+Nível: 8. Definição síntese: Production. TRL - Tecnologia: Sistema completo, testado, qualificado e demonstrado. MRL - Processo: Implementação da produção e minimização dos custos.
+
+Nível: 9. Definição síntese: Produção continuada. TRL - Tecnologia: Sistema já foi operado em todas as condições, extensão e alcance. MRL - Processo: Uso do produto em todo seu alcance e quantidade. Produção estabelecida.
+
+
+A recomendação da AGIPI é que durante uma pesquisa científica que apresente um produto ou processo inovador que seja patenteável, o melhor momento para o início do processo de depósito da patente seja feito quando a tecnologia ou processo sendo desenvolvido esteja em níveis mais avançados na escala TRL/MRL, como o nível 5 (Prototipagem) ou, idealmente, a partir do nível 7 (Demonstração em ambiente operacional). Em todo caso, recomenda-se entrar em contato com a equipe da AGIPI para receber orientações sobre o processo de patenteamento.
