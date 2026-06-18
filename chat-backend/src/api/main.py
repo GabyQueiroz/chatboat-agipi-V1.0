@@ -7,9 +7,13 @@ from pathlib import Path
 from typing import Any
 from dotenv import load_dotenv
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
+
+from sqlalchemy.ext.asyncio import AsyncSession
+from src.api.deps import get_db
+from src.db import crud
 
 from src.core.rag_pipeline import RAGPipeline
 from src.ingestion.chunker import (
@@ -25,7 +29,6 @@ from src.llm.groq_client import GroqClient
 from src.retrieval.embeddings import Embedder
 from src.retrieval.vector_db import VectorStore
 from src.retrieval.query_rewriter import QueryRewriter
-from src.api.store import save_session_log, update_interaction_feedback, save_general_feedback
 
 load_dotenv()
 
@@ -202,7 +205,7 @@ async def health() -> dict[str, Any]:
 
 
 @app.post("/chat")
-async def chat_endpoint(request: QuestionRequest) -> dict[str, Any]:
+async def chat_endpoint(request: QuestionRequest, db: AsyncSession = Depends(get_db)) -> dict[str, Any]:
     started_at = time.perf_counter()
     request_ts = datetime.now(timezone.utc).isoformat()
 
@@ -216,8 +219,8 @@ async def chat_endpoint(request: QuestionRequest) -> dict[str, Any]:
         print(f"[CHAT] Resposta gerada em {elapsed:.2f}s")
 
         response_ts = datetime.now(timezone.utc).isoformat()
-        await asyncio.to_thread(
-            save_session_log,
+        await crud.save_session_log(
+            db=db,
             session_id=session_id,
             user_name=user_name,
             interaction_id=request.interaction_id,
@@ -236,8 +239,8 @@ async def chat_endpoint(request: QuestionRequest) -> dict[str, Any]:
         error_detail = traceback.format_exc()
         print(f"[CHAT] Falha apos {elapsed:.2f}s: {exc}")
 
-        await asyncio.to_thread(
-            save_session_log,
+        await crud.save_session_log(
+            db=db,
             session_id=session_id,
             user_name=user_name,
             interaction_id=request.interaction_id,
@@ -256,6 +259,7 @@ async def update_feedback_endpoint(
     session_id: str,
     interaction_id: str,
     request: FeedbackRequest,
+    db: AsyncSession = Depends(get_db)
 ) -> dict[str, Any]:
     """Update feedback (relevance and comment) for an interaction.
     
@@ -268,18 +272,10 @@ async def update_feedback_endpoint(
         Updated feedback object
     """
     try:
-        # Validate relevance value
-        if request.relevance not in (-1, 0, 1):
-            raise HTTPException(
-                status_code=400,
-                detail="Relevance must be -1 (dislike), 0 (neutral), or 1 (like)"
-            )
-        
         print(f"[FEEDBACK] Updating interaction {interaction_id} in session {session_id}")
-        
-        # Call update function from store
-        feedback = await asyncio.to_thread(
-            update_interaction_feedback,
+
+        feedback = await crud.update_interaction_feedback(
+            db=db,
             session_id=session_id,
             interaction_id=interaction_id,
             relevance=request.relevance,
@@ -292,13 +288,6 @@ async def update_feedback_endpoint(
             "success": True,
             "feedback": feedback,
         }
-    
-    except FileNotFoundError as exc:
-        print(f"[FEEDBACK] Session not found: {session_id}")
-        raise HTTPException(
-            status_code=404,
-            detail=f"Session {session_id} not found"
-        )
     
     except ValueError as exc:
         print(f"[FEEDBACK] Validation error: {exc}")
@@ -316,12 +305,12 @@ async def update_feedback_endpoint(
 
 
 @app.post("/chat/{session_id}/feedback")
-async def create_general_feedback(session_id: str, request: GeneralFeedbackRequest):
+async def create_general_feedback(session_id: str, request: GeneralFeedbackRequest, db: AsyncSession = Depends(get_db)):
     try:
         feedback_data = request.model_dump()
         feedback_data["timestamp"] = datetime.now(timezone.utc).isoformat()
         
-        await asyncio.to_thread(save_general_feedback, session_id, feedback_data)
+        await crud.save_general_feedback(db=db, session_id=session_id, feedback_data=feedback_data, timestamp=datetime.now(timezone.utc))
         
         print(f"[FEEDBACK GERAL] Sessão {session_id} recebeu feedback.")
         return {"success": True, "message": "Feedback enviado com sucesso!"}

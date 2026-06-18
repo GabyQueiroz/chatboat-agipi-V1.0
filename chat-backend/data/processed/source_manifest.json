@@ -1,69 +1,9 @@
 [
   {
     "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\Artigos\\UM_FIM_DOIS_MEIOS_ACELERADORAS_E_INCUBADORAS_NO_BRASIL.pdf",
-    "size": 795822,
-    "mtime": 1779111467
-  },
-  {
-    "kind": "document",
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\FICHA DE TRAMITAÇÃO EPITEC.txt",
     "size": 2719,
-    "mtime": 1778593481
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\REGULAMENTO AGIPI..pdf",
-    "size": 55779,
-    "mtime": 1770967466
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\Resca315.2013-INCUBADORA.pdf",
-    "size": 67751,
-    "mtime": 1779803976
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\Resolucao-CEPE-020-2016-Regulamento-Geral-dos-PPG-Stricto-Sensu-da-UEPG.pdf",
-    "size": 79473,
-    "mtime": 1772784196
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\Resolucao_09_2009.pdf",
-    "size": 97471,
-    "mtime": 1779804488
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\RESOLUCAO_CA_310_2025.pdf",
-    "size": 711490,
-    "mtime": 1779823375
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\RESOLUÇÃO C.A 2021.239.pdf",
-    "size": 220503,
-    "mtime": 1772784704
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\RESOLUÇÃO UNIV. 36 DE 2008..pdf",
-    "size": 48044,
-    "mtime": 1772784194
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\Resuniv0311.2011.pdf",
-    "size": 55779,
-    "mtime": 1772784700
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS AGIPI P.I\\TERMO_DE_SIGILO_E_CONFIDENCIALIDADE_PORTUGUES.pdf",
-    "size": 272394,
-    "mtime": 1779810364
+    "mtime": 1781611804
   },
   {
     "kind": "document",
@@ -97,12 +37,6 @@
   },
   {
     "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\DOCUMENTOS PARA PEDIDOS DE PATENTE\\SITES BUSCAS DE ANTERIORIDADES.pdf",
-    "size": 47266,
-    "mtime": 1773069956
-  },
-  {
-    "kind": "document",
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\FORMULÁRIOS P.I AGIPI\\Formulario-de-Avaliacao-Preliminar-de-solicitacao-de-pedido-de-patente.docx",
     "size": 396218,
     "mtime": 1772783868
@@ -127,338 +61,80 @@
   },
   {
     "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\apresentacao_AGIPI.pdf",
-    "size": 759361,
-    "mtime": 1779730467
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\D10886.pdf",
-    "size": 427358,
-    "mtime": 1773056990
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\D8796.pdf",
-    "size": 271254,
-    "mtime": 1773057040
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\D9283.pdf",
-    "size": 605786,
-    "mtime": 1773057014
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\decreto-10769-EX_2022-04-12.pdf",
-    "size": 331248,
-    "mtime": 1773068758
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\Edital de Fluxo Continuo 2024 - Incubacao.pdf",
-    "size": 554486,
-    "mtime": 1774442866
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\L10973compilado.pdf",
-    "size": 468398,
-    "mtime": 1773057006
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\L13243.pdf",
-    "size": 371442,
-    "mtime": 1773056998
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\L20537.pdf",
-    "size": 288120,
-    "mtime": 1773057032
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\L20541.pdf",
-    "size": 423636,
-    "mtime": 1773057022
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\L9279.pdf",
-    "size": 712331,
-    "mtime": 1773056978
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\L9609.pdf",
-    "size": 264368,
-    "mtime": 1778764637
-  },
-  {
-    "kind": "document",
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\Manual - Como Funciona a Incubação INPROTEC.txt",
     "size": 6284,
-    "mtime": 1778520335
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\LEGISLAÇÃO SITE AGIPI\\Novo Marco Legal da Ciencia, Tecnologia e Inovação.pdf",
-    "size": 7208111,
-    "mtime": 1779808262
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\apresentacao_ageuni_seti_ocr.pdf",
-    "size": 1981560,
-    "mtime": 1774345024
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\Classificação de patentes — Instituto Nacional da Propriedade Industrial.pdf",
-    "size": 174060,
-    "mtime": 1772784904
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\diretriz_de_mu_versao_2_original.pdf",
-    "size": 129564,
-    "mtime": 1779108133
+    "mtime": 1781611804
   },
   {
     "kind": "document",
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\escala_trl_mrl_embrapa.txt",
     "size": 4389,
-    "mtime": 1779810906
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\Esclaredimentossobreanuidades2106.pdf",
-    "size": 889547,
-    "mtime": 1772784810
+    "mtime": 1781611804
   },
   {
     "kind": "document",
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\ESTRUTURA_AGEUNI.txt",
-    "size": 4637,
-    "mtime": 1779108429
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\Guia Prático para Buscas de Patentes — Instituto Nacional da Propriedade Industrial.pdf",
-    "size": 293036,
-    "mtime": 1772784886
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\Guia_basico_de_transferencia_de_tecnologia_ocr.pdf",
-    "size": 970947,
-    "mtime": 1774345178
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\guia_usuario__opiniao_preliminar_sobre_a_patenteabilidade__divulgacao__dezembro_2013_1.pdf",
-    "size": 45769,
-    "mtime": 1772784852
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\Manual de Desenhos Industriais - Manual de Desenhos Industriais.pdf",
-    "size": 354509,
-    "mtime": 1772783976
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\Manual de Marcas - Manual de Marcas.pdf",
-    "size": 354283,
-    "mtime": 1772783950
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\manual-e-software-2022.pdf",
-    "size": 1245497,
-    "mtime": 1774341310
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\ManualdePatentes20210706.pdf",
-    "size": 3835594,
-    "mtime": 1772784804
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\ManualPesquisaWebVerso22019.pdf",
-    "size": 5801196,
-    "mtime": 1774340890
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\Opinião Preliminar — Instituto Nacional da Propriedade Industrial.pdf",
-    "size": 142436,
-    "mtime": 1772784846
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\Programa de computador - Manuais e Vídeo — Instituto Nacional da Propriedade Industrial.pdf",
-    "size": 143272,
-    "mtime": 1772783986
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\RelatorioExecutivo_Classificao2024.pdf",
-    "size": 936225,
-    "mtime": 1772784912
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\Seja bem-vindo(a) ao tutorial de depósito de pedidos de patente no INPI! — Instituto Nacional da Propriedade Industrial.pdf",
-    "size": 696982,
-    "mtime": 1772784864
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\TabelaPatentesapsalteraesCGRECincpapelpct1.pdf",
-    "size": 446519,
-    "mtime": 1779803016
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\MANUAIS - GUIAS - DOCS DIVERSOS INPI\\Trâmite prioritário — Instituto Nacional da Propriedade Industrial.pdf",
-    "size": 155996,
-    "mtime": 1772784818
+    "size": 4707,
+    "mtime": 1781611804
   },
   {
     "kind": "document",
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\modelos_e_formularios\\DESENHOS.docx",
     "size": 12332,
-    "mtime": 1772784082
+    "mtime": 1781611804
   },
   {
     "kind": "document",
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\modelos_e_formularios\\Estrutura do Pedido de Patente.docx",
     "size": 10901,
-    "mtime": 1772784084
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\modelos_e_formularios\\Formulario - edital fluxo continuo.pdf",
-    "size": 309194,
-    "mtime": 1774442896
+    "mtime": 1781611804
   },
   {
     "kind": "document",
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\modelos_e_formularios\\Formulario-de-Avaliacao-Preliminar-de-solicitacao-de-pedido-de-patente.docx",
     "size": 396218,
-    "mtime": 1772783868
+    "mtime": 1781611804
   },
   {
     "kind": "document",
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\modelos_e_formularios\\Formulario-de-Avaliacao-Preliminar-de-solicitacao-de-Registro-de-Software.docx",
     "size": 79445,
-    "mtime": 1772783872
+    "mtime": 1781611804
   },
   {
     "kind": "document",
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\modelos_e_formularios\\FORMULÁRIO DE PEDIDO DE REGISTRO DE DESENHO INDUSTRIAL..docx",
     "size": 229481,
-    "mtime": 1772783902
+    "mtime": 1781611804
   },
   {
     "kind": "document",
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\modelos_e_formularios\\Marca-Formulario-de-solicitacao-de-registro.docx",
     "size": 96467,
-    "mtime": 1772783874
+    "mtime": 1781611804
   },
   {
     "kind": "document",
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\modelos_e_formularios\\REIVINDICAÇÕES.docx",
     "size": 13521,
-    "mtime": 1772784084
+    "mtime": 1781611804
   },
   {
     "kind": "document",
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\modelos_e_formularios\\RELÁTORIO DESCRITIVO.docx",
     "size": 14732,
-    "mtime": 1772784124
+    "mtime": 1781611804
   },
   {
     "kind": "document",
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\modelos_e_formularios\\RESUMO.docx",
     "size": 10723,
-    "mtime": 1772784080
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\PROCESSOS SEI P.I\\PARECERES SOBRE P.I\\SEI_25.000071178_0.pdf",
-    "size": 9588288,
-    "mtime": 1773055940
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\PROCESSOS SEI P.I\\REGISTRO DE DESENHO INDUSTRIAL\\SEI_24.000066486_5.pdf",
-    "size": 7827355,
-    "mtime": 1773055814
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\PROCESSOS SEI P.I\\REGISTRO DE MARCA\\SEI_25.000003248_3.pdf",
-    "size": 9171462,
-    "mtime": 1773055738
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\PROCESSOS SEI P.I\\REGISTRO DE PATENTE\\SEI_24.000062120_1.pdf",
-    "size": 1926250,
-    "mtime": 1773055664
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\PROCESSOS SEI P.I\\REGISTRO DE SOFTWARE\\SEI_25.000009937_5.pdf",
-    "size": 1091868,
-    "mtime": 1773055426
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\PROCESSOS SEI P.I\\REGISTRO DE SOFTWARE\\SEI_25.000084491_7.pdf",
-    "size": 3185540,
-    "mtime": 1773055396
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\RELATÓRIOS ANUAIS AGIPI\\Relatorio-Anual-AGIPI-2022.pdf",
-    "size": 7794415,
-    "mtime": 1772784522
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\RELATÓRIOS ANUAIS AGIPI\\Relatorio-Anual-AGIPI-2023.pdf",
-    "size": 5990874,
-    "mtime": 1772784528
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\RELATÓRIOS ANUAIS AGIPI\\Relatorio-atualizado-2025-Agipi.pdf",
-    "size": 13885761,
-    "mtime": 1772784552
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\RELATÓRIOS ANUAIS AGIPI\\Relatório Anual - Agência de Inovação e Propriedade Intelectual da UEPG -  Agipi 2024.pdf",
-    "size": 12623345,
-    "mtime": 1772784542
-  },
-  {
-    "kind": "document",
-    "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\raw\\TCC ALINE DEFESA INOVAÇÃO\\ALINE_STAUT_CARNEIRO_PFC-0.pdf",
-    "size": 7396637,
-    "mtime": 1772783284
+    "mtime": 1781611804
   },
   {
     "kind": "faq",
     "path": "C:\\Users\\Gustavo VIRTWELL\\Documents\\projetos\\chatboat-agipi-V1.0\\chat-backend\\data\\processed\\faq_agipi_ageuni_documentos.xlsx",
     "size": 62087,
-    "mtime": 1778605465
+    "mtime": 1781611804
   }
 ]
