@@ -15,7 +15,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 load_dotenv()
 
 from src.db.database import Base
-from src.db.models import ChatSession, Interaction, GeneralFeedback
+from src.db.models import *
 
 config = context.config
 
