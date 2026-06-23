@@ -9,12 +9,12 @@ const SUGGESTION_POOL = [
     {
         title: "AGEUNI",
         description: "Entenda o programa e seus objetivos.",
-        prompt: "O que e o programa AGEUNI?",
+        prompt: "O que é o programa AGEUNI?",
     },
     {
         title: "AGIPI",
-        description: "Veja o papel da agencia dentro da UEPG.",
-        prompt: "O que e AGIPI?",
+        description: "Veja o papel da agência dentro da UEPG.",
+        prompt: "O que é a AGIPI?",
     },
     {
         title: "Registro de software",
@@ -23,38 +23,38 @@ const SUGGESTION_POOL = [
     },
     {
         title: "Incubadora",
-        description: "Descubra como a incubacao funciona.",
-        prompt: "Qual o papel da incubadora da AGIPI?",
+        description: "Descubra como a incubação funciona.",
+        prompt: "Qual é o papel da incubadora da AGIPI?",
     },
     {
         title: "NITs",
-        description: "Entenda o papel dos nucleos de inovacao.",
-        prompt: "O que sao NITs nas universidades?",
+        description: "Entenda o papel dos núcleos de inovação.",
+        prompt: "O que são NITs nas universidades?",
     },
     {
-        title: "Lei de Inovacao",
+        title: "Lei de Inovação",
         description: "Veja como ela se aplica nas universidades.",
-        prompt: "O que diz a Lei de Inovacao sobre NITs?",
+        prompt: "O que diz a Lei de Inovação sobre NITs?",
     },
     {
         title: "Universidade e empresa",
-        description: "Explore a cooperacao com o setor produtivo.",
+        description: "Explore a cooperação com o setor produtivo.",
         prompt: "Como universidades interagem com empresas?",
     },
     {
         title: "INPROTEC",
-        description: "Conheca a incubadora vinculada a AGIPI.",
-        prompt: "O que e o INPROTEC?",
+        description: "Conheça a incubadora vinculada à AGIPI.",
+        prompt: "O que é o INPROTEC?",
     },
     {
         title: "Startups",
-        description: "Veja como a universidade apoia novos negocios.",
-        prompt: "Como funciona o processo de incubacao?",
+        description: "Veja como a universidade apoia novos negócios.",
+        prompt: "Como funciona o processo de incubação?",
     },
     {
-        title: "Servicos da AGIPI",
+        title: "Serviços da AGIPI",
         description: "Confira os principais apoios oferecidos.",
-        prompt: "Quais sao os principais servicos oferecidos pela AGIPI?",
+        prompt: "Quais são os principais serviços oferecidos pela AGIPI?",
     },
 ];
 
@@ -83,19 +83,20 @@ function SourceCard({ source }) {
 function AssistantMessage({ message, view, sessionData }) {
     const isError = message.role === "error";
     const statusClass = isError
-        ? "border-rose-200 bg-rose-50 text-rose-700"
+        ? "border-rose-200 text-rose-700"
         : "border-slate-200 bg-white text-slate-800";
 
     return (
-        <div className="flex max-w-3xl gap-3">
-            <div className={`mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl text-xs font-bold ${isError ? "bg-rose-600 text-white" : "bg-slate-900 text-white"}`}>
-                {isError ? "!" : "AI"}
-            </div>
-            <div className="flex-1 space-y-3">
-                <div className="flex items-center gap-3 text-xs uppercase tracking-[0.18em] text-slate-400">
-                    <span>{isError ? "Falha" : "Assistente"}</span>
-                    <span>{message.timestamp}</span>
+        <div className="justify-start flex w-fit gap-3">
+            {isError &&
+                <div className={`mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl text-xs font-bold ${isError ? "bg-rose-600 text-white" : "bg-slate-900 text-white"}`}>
+                    !
                 </div>
+            }
+            <div className="flex-1 space-y-1">
+                {/* <div className="flex items-center gap-3 text-xs uppercase tracking-[0.18em] text-slate-400">
+                    
+                </div> */}
                 {view === "sources" && message.sources?.length > 0 && !isError ? (
                     <div className="grid gap-3 md:grid-cols-2">
                         {message.sources.map((source) => (
@@ -103,8 +104,8 @@ function AssistantMessage({ message, view, sessionData }) {
                         ))}
                     </div>
                 ) : (
-                    <div className={`rounded-[1.75rem] rounded-tl-sm border p-5 shadow-sm ${statusClass}`}>
-                        <p className="whitespace-pre-wrap text-sm leading-7">{message.text}</p>
+                    <div className={`${statusClass}`}>
+                        <p className="whitespace-pre-wrap justify-center flex align-middle items-center text-sm leading-7">{message.text}</p>
                         {message.warnings?.length ? (
                             <div className="mt-4 space-y-1 text-xs text-amber-700">
                                 {message.warnings.map((warning) => (
@@ -116,6 +117,7 @@ function AssistantMessage({ message, view, sessionData }) {
                 )}
                 {!isError && sessionData && (
                     <FeedbackBar
+                        timestamp={message.timestamp}
                         interactionId={message.interactionId}
                         sessionId={sessionData.sessionId}
                         onFeedbackUpdate={() => {
@@ -130,16 +132,16 @@ function AssistantMessage({ message, view, sessionData }) {
 
 function UserMessage({ message }) {
     return (
-        <div className="flex justify-end">
+        <div className="w-full flex justify-end">
             <div className="max-w-2xl rounded-[1.75rem] rounded-tr-sm border border-sky-100 bg-sky-50 px-5 py-4 shadow-sm">
-                <p className="text-sm leading-7 text-slate-800">{message.content}</p>
-                <p className="mt-2 text-right text-xs uppercase tracking-[0.18em] text-slate-400">{message.timestamp}</p>
+                <p className="text-sm wrap-break-word leading-7 text-slate-800">{message.content}</p>
+                {/* <p className="mt-2 text-right text-xs uppercase tracking-[0.18em] text-slate-400">{message.timestamp}</p> */}
             </div>
         </div>
     );
 }
 
-function getRandomSuggestions(count = 5) {
+function getRandomSuggestions(count = 4) {
     const pool = [...SUGGESTION_POOL];
     const selected = [];
 
@@ -182,6 +184,12 @@ export default function App() {
     useEffect(() => {
         bottomRef.current?.scrollIntoView({ behavior: "smooth" });
     }, [messages, isSending, view]);
+    
+    useEffect(() => {
+        if (!isSending) {
+            textareaRef.current?.focus();
+        }
+    }, [isSending]);
 
     function resizeTextarea() {
         const element = textareaRef.current;
@@ -264,6 +272,7 @@ export default function App() {
             };
 
             setMessages((current) => [...current, assistantMessage]);
+
         } catch (error) {
             setMessages((current) => [
                 ...current,
@@ -291,43 +300,27 @@ export default function App() {
     }
 
     return (
-        <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.14),_transparent_28%),linear-gradient(180deg,_#f8fafc_0%,_#eef2ff_100%)] text-slate-900">
-            <div className="mx-auto min-h-screen max-w-6xl px-4 py-6 lg:px-8">
+        <div className="min-h-screen text-slate-900">
+            <div className="mx-auto min-h-screen">
                 {!sessionData && (
                     <UserCard onLogin={handleLogin} />
                 )}
 
-                <main className="flex min-h-[88vh] flex-col overflow-hidden rounded-[2rem] border border-white/60 bg-white/70 shadow-[0_24px_80px_rgba(15,23,42,0.08)] backdrop-blur">
-                    <header className="border-b border-slate-200/80 px-6 py-5">
+                <main className="flex flex-col h-screen overflow-hidden border border-white/60 bg-white/70 backdrop-blur">
+
+                    <header className="absolute top-0 z-10 border-b w-full bg-white border-slate-200/80 px-6 py-2">
                         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-                            <div>
-                                <p className="text-xs uppercase tracking-[0.26em] text-sky-600">AGIPI knowledge assistant</p>
-                                <h1 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">Assistente documental rapido e pronto para publicacao</h1>
-                            </div>
-                            <div className="flex rounded-full border border-slate-200 bg-slate-100 p-1 text-sm">
-                                <button
-                                    className={`rounded-full px-4 py-2 transition ${view === "answer" ? "bg-white text-slate-900 shadow-sm" : "text-slate-500"}`}
-                                    onClick={() => setView("answer")}
-                                >
-                                    Resposta
-                                </button>
-                                <button
-                                    className={`rounded-full px-4 py-2 transition ${view === "sources" ? "bg-white text-slate-900 shadow-sm" : "text-slate-500"}`}
-                                    onClick={() => setView("sources")}
-                                >
-                                    Fontes
-                                </button>
+                            <div className="flex items-center gap-3">
+                                <img src="src/assets/agipi-logo.jpg" alt="Logo" width={16} />
+                                <h1 className="text-xl font-semibold tracking-tight text-slate-950">Assistente documental da AGIPI</h1>
                             </div>
                         </div>
                     </header>
 
-                    <section className="flex-1 space-y-6 overflow-y-auto px-6 py-6">
+                    <section className="flex-1 overflow-y-auto pt-16 pb-4 px-6 flex flex-col">
                         {messages.length === 0 ? (
-                            <div className="flex h-full flex-col items-center justify-center text-center">
-                                <div className="inline-flex rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-sky-700">
-                                    consulta guiada
-                                </div>
-                                <h2 className="mt-6 text-3xl font-semibold tracking-tight text-slate-950">Pergunte com base na sua base documental</h2>
+                            <div className="flex-1 flex flex-col items-center justify-center text-center">
+                                <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950">Bem vindo!</h2>
                                 <p className="mt-4 max-w-xl text-sm leading-7 text-slate-500">
                                     Pergunte sobre AGEUNI, AGIPI, EPITEC, inovacao universitaria, incubacao, NITs e documentos institucionais da UEPG.
                                 </p>
@@ -346,31 +339,33 @@ export default function App() {
                                 </div>
                             </div>
                         ) : (
-                            messages.map((message) => (
-                                message.role === "user"
-                                    ? <UserMessage key={message.id} message={message} />
-                                    : <AssistantMessage key={message.id} message={message} view={view} sessionData={sessionData} />
-                            ))
+                            <div className="w-full max-w-4xl mx-auto flex flex-col gap-4">
+                                {messages.map((message) => (
+                                    message.role === "user"
+                                        ? <UserMessage key={message.id} message={message} />
+                                        : <AssistantMessage key={message.id} message={message} view={view} sessionData={sessionData} />
+                                ))}
+
+                                {!isSending ? (
+                                    <div className="flex max-w-3xl gap-3">
+                                        <div>
+                                            <div className="flex gap-2">
+                                                <span className="h-2.5 w-2.5 animate-bounce rounded-full bg-sky-500 [animation-delay:-0.2s]" />
+                                                <span className="h-2.5 w-2.5 animate-bounce rounded-full bg-sky-500 [animation-delay:-0.1s]" />
+                                                <span className="h-2.5 w-2.5 animate-bounce rounded-full bg-sky-500" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                ) : null}
+                            </div>
                         )}
 
-                        {isSending ? (
-                            <div className="flex max-w-3xl gap-3">
-                                <div className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl bg-slate-900 text-xs font-bold text-white">AI</div>
-                                <div className="rounded-[1.75rem] rounded-tl-sm border border-slate-200 bg-white px-5 py-4 shadow-sm">
-                                    <div className="flex gap-2">
-                                        <span className="h-2.5 w-2.5 animate-bounce rounded-full bg-sky-500 [animation-delay:-0.2s]" />
-                                        <span className="h-2.5 w-2.5 animate-bounce rounded-full bg-sky-500 [animation-delay:-0.1s]" />
-                                        <span className="h-2.5 w-2.5 animate-bounce rounded-full bg-sky-500" />
-                                    </div>
-                                </div>
-                            </div>
-                        ) : null}
 
                         <div ref={bottomRef} />
                     </section>
 
-                    <section className="border-t border-slate-200/80 px-6 py-5">
-                        <div className="rounded-[1.75rem] border border-slate-200 bg-white p-3 shadow-sm">
+                    <section className="flex justify-center border-t border-slate-200/80 px-6 py-5">
+                        <div className="w-4xl rounded-[1.75rem] border border-slate-200 bg-white p-3 shadow-sm">
                             <div className="flex items-end gap-3">
                                 <textarea
                                     ref={textareaRef}
