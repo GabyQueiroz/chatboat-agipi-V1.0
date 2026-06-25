@@ -8,6 +8,7 @@ import pymupdf4llm
 from docx import Document
 from openpyxl import load_workbook
 
+from src.ingestion.syntethic_descriptions import DESCRIPTIONS
 
 ALLOWED_SUFFIXES = {".txt", ".md", ".docx"}
 # ALLOWED_SUFFIXES = {".pdf", ".txt", ".md", ".docx"}
