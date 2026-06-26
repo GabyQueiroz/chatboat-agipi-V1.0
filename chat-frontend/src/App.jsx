@@ -351,10 +351,10 @@ export default function App() {
                     <header className="border-b border-slate-200/80 px-6 py-5">
                         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                             <div>
-                                <p className="text-xs uppercase tracking-[0.26em] text-sky-600">AGIPI knowledge assistant</p>
-                                <h1 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">Assistente documental rapido e pronto para publicacao</h1>
+                                <p className="text-xs uppercase tracking-[0.26em] text-sky-600">Agência de Inovação e Propriedade Intelectual da UEPG</p>
+                                <h1 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950">Assistente de Inteligência Artificial da AGIPI</h1>
                             </div>
-                            <div className="flex rounded-full border border-slate-200 bg-slate-100 p-1 text-sm">
+                            {/* <div className="flex rounded-full border border-slate-200 bg-slate-100 p-1 text-sm">
                                 <button
                                     className={`rounded-full px-4 py-2 transition ${view === "answer" ? "bg-white text-slate-900 shadow-sm" : "text-slate-500"}`}
                                     onClick={() => setView("answer")}
@@ -367,7 +367,7 @@ export default function App() {
                                 >
                                     Fontes
                                 </button>
-                            </div>
+                            </div> */}
                             
                             {messages.length > 0 && (
                                 <button
@@ -387,15 +387,15 @@ export default function App() {
                     <section className="flex-1 space-y-6 overflow-y-auto px-6 py-6">
                         {messages.length === 0 ? (
                             <div className="flex h-full flex-col items-center justify-center text-center">
-                                <div className="inline-flex rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-sky-700">
+                                {/* <div className="inline-flex rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-sky-700">
                                     consulta guiada
-                                </div>
-                                <h2 className="mt-6 text-3xl font-semibold tracking-tight text-slate-950">Pergunte com base na sua base documental</h2>
+                                </div> */}
+                                <h2 className="mt-6 text-3xl font-semibold tracking-tight text-slate-950">Converse com a IA</h2>
                                 <p className="mt-4 max-w-xl text-sm leading-7 text-slate-500">
-                                    Pergunte sobre AGEUNI, AGIPI, EPITEC, inovacao universitaria, incubacao, NITs e documentos institucionais da UEPG.
+                                    Pergunte sobre AGEUNI, AGIPI, EPITEC, inovação universitária, incubação, NITs e UEPG.
                                 </p>
                                 <div className="mt-8 grid w-full max-w-4xl gap-3 md:grid-cols-2">
-                                    {suggestions.map((suggestion) => (
+                                    {suggestions.slice(0, 4).map((suggestion) => (
                                         <button
                                             key={suggestion.prompt}
                                             className="rounded-[1.5rem] border border-slate-200 bg-white p-4 text-left shadow-sm transition hover:border-sky-300 hover:shadow-md"
@@ -465,12 +465,12 @@ export default function App() {
                 </main>
             </div>
 
-            {sessionData && (
+            {/* {sessionData && (
                 <GeneralFeedback
                     sessionId={sessionData.sessionId}
                     API_BASE_URL={API_BASE_URL}
                 />
-            )}
+            )} */}
         </div>
     );
 }
