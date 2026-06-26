@@ -1,5 +1,5 @@
+import json
 import os
-import pickle
 
 import faiss
 import numpy as np
@@ -54,8 +54,8 @@ class VectorStore:
     def save(self, index_path: str, metadata_path: str) -> None:
         os.makedirs(os.path.dirname(index_path), exist_ok=True)
         faiss.write_index(self.index, index_path)
-        with open(metadata_path, "wb") as file:
-            pickle.dump(self.metadata, file)
+        with open(metadata_path, "w", encoding="utf-8") as file:
+            json.dump(self.metadata, file, ensure_ascii=False, indent=2)
         print(f"[VECTORSTORE] Indice salvo em {index_path}")
         print(f"[VECTORSTORE] Metadados salvos em {metadata_path}")
 
@@ -65,8 +65,8 @@ class VectorStore:
 
         try:
             self.index = faiss.read_index(index_path)
-            with open(metadata_path, "rb") as file:
-                self.metadata = pickle.load(file)
+            with open(metadata_path, "r", encoding="utf-8") as file:
+                self.metadata = json.load(file)
             print(f"[VECTORSTORE] Indice carregado de {index_path}")
             print(f"[VECTORSTORE] Metadados carregados de {metadata_path}")
             return True

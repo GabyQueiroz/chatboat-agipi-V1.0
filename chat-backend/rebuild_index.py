@@ -13,12 +13,13 @@ from src.retrieval.vector_db import VectorStore
 ROOT_DIR = Path(__file__).resolve().parent
 DATA_DIR = ROOT_DIR / "data"
 INDEX_CACHE_PATH = DATA_DIR / "index" / "faiss_index.bin"
-METADATA_CACHE_PATH = DATA_DIR / "processed" / "faiss_metadata.pkl"
-DOCS_CACHE_PATH = DATA_DIR / "processed" / "documents_cache.pkl"
-MANIFEST_CACHE_PATH = DATA_DIR / "processed" / "source_manifest.pkl"
+METADATA_CACHE_PATH = DATA_DIR / "processed" / "faiss_metadata.json"
+DOCS_CACHE_PATH = DATA_DIR / "processed" / "documents_cache.json"
+MANIFEST_CACHE_PATH = DATA_DIR / "processed" / "source_manifest.json"
 
 RAW_SOURCE_DIRS = [
     str(ROOT_DIR / "data" / "raw"),
+    str(ROOT_DIR / "data" / "md"),
     r"C:\Users\gabri\OneDrive\Documentos\UEPG\IA_AGIPI\DOCUMENTOS EPITEC PROF. LIVIO-20260409T232820Z-3-001",
 ]
 FAQ_XLSX_PATH = r"C:\Users\gabri\OneDrive\Documentos\UEPG\IA_AGIPI\faq_agipi_ageuni_documentos.xlsx"

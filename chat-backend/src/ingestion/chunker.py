@@ -1,5 +1,5 @@
+import json
 import os
-import pickle
 import re
 from pathlib import Path
 from typing import Any
@@ -7,6 +7,11 @@ from typing import Any
 import pymupdf4llm
 from docx import Document
 from openpyxl import load_workbook
+from src.ingestion.syntethic_descriptions import DESCRIPTIONS
+
+
+ALLOWED_SUFFIXES = {".txt", ".md", ".docx"}
+# ALLOWED_SUFFIXES = {".pdf", ".txt", ".md", ".docx"}
 
 
 def chunk_text(text: str, chunk_size: int = 900, overlap: int = 120) -> list[str]:
@@ -28,14 +33,19 @@ def normalize_text(text: str) -> str:
     text = re.sub(r"-{3,}\s*Start of picture text\s*-{3,}", " ", text, flags=re.IGNORECASE)
     text = re.sub(r"-{3,}\s*End of picture text\s*-{3,}", " ", text, flags=re.IGNORECASE)
     text = re.sub(r"\b[pP]icture\b", " ", text)
-    text = re.sub(r"\s+", " ", text)
+
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
+    text = re.sub(r"[ \t]+", " ", text)
+    text = re.sub(r"\n{2,}", "\n", text)
+    text = text.strip()
+
     return text.strip()
 
 
 def save_documents(documents: list[dict[str, Any]], cache_path: str) -> None:
     os.makedirs(os.path.dirname(cache_path), exist_ok=True)
-    with open(cache_path, "wb") as file:
-        pickle.dump(documents, file)
+    with open(cache_path, "w", encoding="utf-8") as file:
+        json.dump(documents, file, ensure_ascii=False, indent=2)
     print(f"[CHUNKER] Documentos salvos em cache: {cache_path}")
 
 
@@ -43,8 +53,8 @@ def load_documents(cache_path: str) -> list[dict[str, Any]] | None:
     if not os.path.exists(cache_path):
         return None
     try:
-        with open(cache_path, "rb") as file:
-            documents = pickle.load(file)
+        with open(cache_path, "r", encoding="utf-8") as file:
+            documents = json.load(file)
         print(f"[CHUNKER] Documentos carregados do cache: {cache_path}")
         return documents
     except Exception as exc:
@@ -54,8 +64,8 @@ def load_documents(cache_path: str) -> list[dict[str, Any]] | None:
 
 def save_source_manifest(manifest: list[dict[str, Any]], manifest_path: str) -> None:
     os.makedirs(os.path.dirname(manifest_path), exist_ok=True)
-    with open(manifest_path, "wb") as file:
-        pickle.dump(manifest, file)
+    with open(manifest_path, "w", encoding="utf-8") as file:
+        json.dump(manifest, file, ensure_ascii=False, indent=2)
     print(f"[CHUNKER] Manifest salvo em: {manifest_path}")
 
 
@@ -63,8 +73,8 @@ def load_source_manifest(manifest_path: str) -> list[dict[str, Any]] | None:
     if not os.path.exists(manifest_path):
         return None
     try:
-        with open(manifest_path, "rb") as file:
-            manifest = pickle.load(file)
+        with open(manifest_path, "r", encoding="utf-8") as file:
+            manifest = json.load(file)
         print(f"[CHUNKER] Manifest carregado de: {manifest_path}")
         return manifest
     except Exception as exc:
@@ -82,7 +92,7 @@ def build_source_manifest(raw_dirs: list[str], faq_path: str | None = None) -> l
         for path in sorted(root.rglob("*")):
             if not path.is_file():
                 continue
-            if path.suffix.lower() not in {".pdf", ".txt", ".docx"}:
+            if path.suffix.lower() not in ALLOWED_SUFFIXES:
                 continue
             stat = path.stat()
             manifest.append(
@@ -135,7 +145,7 @@ def read_document_content(path: Path) -> str:
 
 def process_document_directories(raw_dirs: list[str]) -> list[dict[str, Any]]:
     documents: list[dict[str, Any]] = []
-    allowed_suffixes = {".pdf", ".txt", ".docx"}
+    allowed_suffixes = ALLOWED_SUFFIXES
 
     for raw_dir in raw_dirs:
         root = Path(raw_dir)
@@ -152,7 +162,13 @@ def process_document_directories(raw_dirs: list[str]) -> list[dict[str, Any]]:
                 source_label = f"{root.name}/{relative_path}"
                 print(f"[CHUNKER] Processando arquivo: {source_label}")
                 content = normalize_text(read_document_content(file_path))
-                chunks = chunk_text(content)
+
+                description = DESCRIPTIONS.get(file_path.name, "")
+                enriched_content = f"{description}\n\nCONTEÚDO DO DOCUMENTO:\n{content}"
+                if description:
+                    print(f"-*-*-*-*-*-*-*-*-*-*- ENCONTRADO DOCUMENTO ENRIQUECIDO: {file_path.name} -*-*-*-*-*-*-*-*-*-*-")
+
+                chunks = chunk_text(enriched_content)
 
                 for index, chunk in enumerate(chunks):
                     documents.append(
@@ -242,3 +258,4 @@ def process_documents(raw_dirs: list[str], faq_path: str | None = None) -> list[
     documents.extend(process_faq_workbook(faq_path))
     documents.extend(process_document_directories(raw_dirs))
     return documents
+

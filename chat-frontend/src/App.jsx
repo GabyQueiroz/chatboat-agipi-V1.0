@@ -290,6 +290,56 @@ export default function App() {
         }
     }
 
+    function exportChatForEvaluation() {
+        // 1. Agrupar as mensagens por interactionId
+        const pairs = {};
+
+        messages.forEach(msg => {
+            if (!msg.interactionId) return;
+            if (!pairs[msg.interactionId]) {
+                pairs[msg.interactionId] = {
+                    id: msg.interactionId,
+                    timestamp: msg.timestamp,
+                    question: "",
+                    answer: ""
+                };
+            }
+            if (msg.role === "user") {
+                pairs[msg.interactionId].question = msg.content;
+            } else if (msg.role === "assistant") {
+                pairs[msg.interactionId].answer = msg.text;
+            } else if (msg.role === "error") {
+                pairs[msg.interactionId].answer = `[ERRO] ${msg.text}`;
+            }
+        });
+
+        // 2. Montar o cabeçalho do CSV
+        let csvContent = "ID da Interacao,Horario,Pergunta do Usuario,Resposta da IA,Avaliacao (1: Relevante; 0: Neutro; -1: Irrelevante),Comentario Opcional\n";
+
+        // Função auxiliar para escapar textos no CSV (lidar com quebras de linha e aspas)
+        const escapeCSV = (str) => `"${(str || "").replace(/"/g, '""')}"`;
+
+        // 3. Preencher as linhas
+        Object.values(pairs).forEach(pair => {
+            // Só exporta se tiver a pergunta e a resposta
+            if (pair.question && pair.answer) {
+                csvContent += `${pair.id},${escapeCSV(pair.timestamp)},${escapeCSV(pair.question)},${escapeCSV(pair.answer)},,\n`;
+            }
+        });
+
+        // 4. Forçar o download do arquivo com encoding BOM para o Excel ler acentuação corretamente
+        const blob = new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
+        const link = document.createElement("a");
+        const url = URL.createObjectURL(blob);
+
+        const dateStr = new Date().toISOString().split('T')[0];
+        link.setAttribute("href", url);
+        link.setAttribute("download", `avaliacao_especialista_${dateStr}.csv`);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
     return (
         <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.14),_transparent_28%),linear-gradient(180deg,_#f8fafc_0%,_#eef2ff_100%)] text-slate-900">
             <div className="mx-auto min-h-screen max-w-6xl px-4 py-6 lg:px-8">
@@ -318,6 +368,19 @@ export default function App() {
                                     Fontes
                                 </button>
                             </div>
+                            
+                            {messages.length > 0 && (
+                                <button
+                                    onClick={exportChatForEvaluation}
+                                    title="Exportar chat para avaliação"
+                                    className="flex h-9 items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-4 text-sm font-medium text-sky-700 transition hover:bg-sky-100"
+                                >
+                                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                    </svg>
+                                    Exportar Avaliação
+                                </button>
+                            )}
                         </div>
                     </header>
 
@@ -403,9 +466,9 @@ export default function App() {
             </div>
 
             {sessionData && (
-                <GeneralFeedback 
-                    sessionId={sessionData.sessionId} 
-                    API_BASE_URL={API_BASE_URL} 
+                <GeneralFeedback
+                    sessionId={sessionData.sessionId}
+                    API_BASE_URL={API_BASE_URL}
                 />
             )}
         </div>
