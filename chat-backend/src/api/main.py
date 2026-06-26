@@ -7,9 +7,15 @@ from pathlib import Path
 from typing import Any
 from dotenv import load_dotenv
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
+from contextlib import asynccontextmanager
 from pydantic import BaseModel, Field
+
+from sqlalchemy.ext.asyncio import AsyncSession
+from src.db.database import AsyncSessionLocal
+from src.api.deps import get_db
+from src.db import crud
 
 from src.core.rag_pipeline import RAGPipeline
 from src.ingestion.chunker import (
@@ -25,7 +31,6 @@ from src.llm.groq_client import GroqClient
 from src.retrieval.embeddings import Embedder
 from src.retrieval.vector_db import VectorStore
 from src.retrieval.query_rewriter import QueryRewriter
-from src.api.store import save_session_log, update_interaction_feedback, save_general_feedback
 
 load_dotenv()
 
@@ -106,7 +111,7 @@ class AppState:
         self.index_ready = False
         self.last_index_build: dict[str, Any] = {}
 
-    def initialize(self) -> None:
+    def build_index(self) -> None:
         print("[BOOT] Inicializando sistema...")
         print(f"[BOOT] FAQ: {FAQ_XLSX_PATH}")
         print(f"[BOOT] Pastas fonte: {RAW_SOURCE_DIRS}")
@@ -137,8 +142,10 @@ class AppState:
                 query_rewriter=self.query_rewriter,
                 response_mode=RESPONSE_MODE,
             )
+        else:
+            docs = load_documents(str(DOCS_CACHE_PATH))
 
-        self.index_ready = True
+        # self.index_ready = True
         documents = self.vector_store.metadata
         self.last_index_build = {
             "documents": self.vector_store.document_count,
@@ -148,10 +155,8 @@ class AppState:
             "faq_entries": sum(1 for doc in documents if doc.get("doc_type") == "faq"),
             "document_chunks": sum(1 for doc in documents if doc.get("doc_type") == "document"),
         }
-        print(
-            f"[BOOT] Sistema pronto com {self.vector_store.document_count} chunks "
-            f"({self.last_index_build['faq_entries']} FAQ + {self.last_index_build['document_chunks']} documentos)."
-        )
+
+        return docs
 
     def health(self) -> dict[str, Any]:
         return {
@@ -173,9 +178,27 @@ class AppState:
 
 
 state = AppState()
-state.initialize()
 
-app = FastAPI(title="Chatbot API", version="0.3.0")
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    docs = await asyncio.to_thread(state.build_index)
+
+    if docs:
+        async with AsyncSessionLocal() as session:
+            await crud.sync_database_with_chunks(session, docs)
+
+    state.index_ready = True
+    print(
+        f"[BOOT] Sistema pronto com {state.vector_store.document_count} chunks "
+        f"({state.last_index_build['faq_entries']} FAQ + {state.last_index_build['document_chunks']} documentos)."
+    )
+
+    # Execução da aplicação 
+    yield
+
+    print("[SHUTDOWN] Encerrando recursos...")
+
+app = FastAPI(title="Chatbot API", version="0.3.0", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
@@ -202,9 +225,9 @@ async def health() -> dict[str, Any]:
 
 
 @app.post("/chat")
-async def chat_endpoint(request: QuestionRequest) -> dict[str, Any]:
+async def chat_endpoint(request: QuestionRequest, db: AsyncSession = Depends(get_db)) -> dict[str, Any]:
     started_at = time.perf_counter()
-    request_ts = datetime.now(timezone.utc).isoformat()
+    requested_at = datetime.now(timezone.utc)
 
     user_name = request.user_name
     session_id = request.session_id
@@ -215,15 +238,15 @@ async def chat_endpoint(request: QuestionRequest) -> dict[str, Any]:
         elapsed = time.perf_counter() - started_at
         print(f"[CHAT] Resposta gerada em {elapsed:.2f}s")
 
-        response_ts = datetime.now(timezone.utc).isoformat()
-        await asyncio.to_thread(
-            save_session_log,
+        responded_at = datetime.now(timezone.utc)
+        await crud.save_session_log(
+            db=db,
             session_id=session_id,
-            user_name=user_name,
+            username=user_name,
             interaction_id=request.interaction_id,
-            request_ts=request_ts,
             question=request.question,
-            response_ts=response_ts,
+            requested_at=requested_at,
+            responded_at=responded_at,
             response=response,
             error=None
         )
@@ -232,18 +255,18 @@ async def chat_endpoint(request: QuestionRequest) -> dict[str, Any]:
         return response
     except Exception as exc:
         elapsed = time.perf_counter() - started_at
-        response_ts = datetime.now(timezone.utc).isoformat()
+        responded_at = datetime.now(timezone.utc)
         error_detail = traceback.format_exc()
         print(f"[CHAT] Falha apos {elapsed:.2f}s: {exc}")
 
-        await asyncio.to_thread(
-            save_session_log,
+        await crud.save_session_log(
+            db=db,
             session_id=session_id,
-            user_name=user_name,
+            username=user_name,
             interaction_id=request.interaction_id,
-            request_ts=request_ts,
             question=request.question,
-            response_ts=response_ts,
+            requested_at=requested_at,
+            responded_at=responded_at,
             response=None,
             error=error_detail
         )
@@ -251,11 +274,12 @@ async def chat_endpoint(request: QuestionRequest) -> dict[str, Any]:
         raise HTTPException(status_code=500, detail=str(exc))
 
 
-@app.patch("/chat/{session_id}/{interaction_id}/feedback")
+@app.patch("/chat/{session_id}/{interaction_id}/feedback")      
 async def update_feedback_endpoint(
     session_id: str,
     interaction_id: str,
     request: FeedbackRequest,
+    db: AsyncSession = Depends(get_db)
 ) -> dict[str, Any]:
     """Update feedback (relevance and comment) for an interaction.
     
@@ -268,18 +292,10 @@ async def update_feedback_endpoint(
         Updated feedback object
     """
     try:
-        # Validate relevance value
-        if request.relevance not in (-1, 0, 1):
-            raise HTTPException(
-                status_code=400,
-                detail="Relevance must be -1 (dislike), 0 (neutral), or 1 (like)"
-            )
-        
         print(f"[FEEDBACK] Updating interaction {interaction_id} in session {session_id}")
-        
-        # Call update function from store
-        feedback = await asyncio.to_thread(
-            update_interaction_feedback,
+
+        feedback = await crud.update_interaction_feedback(
+            db=db,
             session_id=session_id,
             interaction_id=interaction_id,
             relevance=request.relevance,
@@ -292,13 +308,6 @@ async def update_feedback_endpoint(
             "success": True,
             "feedback": feedback,
         }
-    
-    except FileNotFoundError as exc:
-        print(f"[FEEDBACK] Session not found: {session_id}")
-        raise HTTPException(
-            status_code=404,
-            detail=f"Session {session_id} not found"
-        )
     
     except ValueError as exc:
         print(f"[FEEDBACK] Validation error: {exc}")
@@ -316,12 +325,12 @@ async def update_feedback_endpoint(
 
 
 @app.post("/chat/{session_id}/feedback")
-async def create_general_feedback(session_id: str, request: GeneralFeedbackRequest):
+async def create_general_feedback(session_id: str, request: GeneralFeedbackRequest, db: AsyncSession = Depends(get_db)):
     try:
         feedback_data = request.model_dump()
         feedback_data["timestamp"] = datetime.now(timezone.utc).isoformat()
         
-        await asyncio.to_thread(save_general_feedback, session_id, feedback_data)
+        await crud.save_general_feedback(db=db, session_id=session_id, feedback_data=feedback_data)
         
         print(f"[FEEDBACK GERAL] Sessão {session_id} recebeu feedback.")
         return {"success": True, "message": "Feedback enviado com sucesso!"}
