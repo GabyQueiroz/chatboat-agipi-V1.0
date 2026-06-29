@@ -1,6 +1,7 @@
 import json
 import os
 import re
+import hashlib
 from pathlib import Path
 from typing import Any
 
@@ -11,7 +12,6 @@ from src.ingestion.syntethic_descriptions import DESCRIPTIONS
 
 
 ALLOWED_SUFFIXES = {".txt", ".md", ".docx"}
-# ALLOWED_SUFFIXES = {".pdf", ".txt", ".md", ".docx"}
 
 
 def chunk_text(text: str, chunk_size: int = 900, overlap: int = 120) -> list[str]:
@@ -82,6 +82,14 @@ def load_source_manifest(manifest_path: str) -> list[dict[str, Any]] | None:
         return None
 
 
+def _file_hash(path: Path, chunk_size: int = 65536) -> str:
+    hash = hashlib.sha256()
+    with open(path, "rb") as f:
+        while data := f.read(chunk_size):
+            hash.update(data)
+
+    return hash.hexdigest()[:16]
+
 def build_source_manifest(raw_dirs: list[str], faq_path: str | None = None) -> list[dict[str, Any]]:
     manifest: list[dict[str, Any]] = []
 
@@ -100,7 +108,7 @@ def build_source_manifest(raw_dirs: list[str], faq_path: str | None = None) -> l
                     "kind": "document",
                     "path": str(path.resolve()),
                     "size": stat.st_size,
-                    "mtime": int(stat.st_mtime),
+                    "hash": _file_hash(path),
                 }
             )
 
@@ -113,7 +121,7 @@ def build_source_manifest(raw_dirs: list[str], faq_path: str | None = None) -> l
                     "kind": "faq",
                     "path": str(faq_file.resolve()),
                     "size": stat.st_size,
-                    "mtime": int(stat.st_mtime),
+                    "hash": _file_hash(faq_file),
                 }
             )
 

@@ -44,9 +44,9 @@ MANIFEST_CACHE_PATH = DATA_DIR / "processed" / "source_manifest.json"
 DEFAULT_RAW_DIRS = [
     str(ROOT_DIR / "data" / "raw"),
     str(ROOT_DIR / "data" / "md"),
-    os.getenv('RAW_SOURCE_DIRS') or r"C:\Users\gabri\OneDrive\Documentos\UEPG\IA_AGIPI\DOCUMENTOS EPITEC PROF. LIVIO-20260409T232820Z-3-001",
+    os.getenv('RAW_SOURCE_DIRS')
 ]
-DEFAULT_FAQ_PATH = os.getenv('FAQ_XLSX_PATH') or r"C:\Users\gabri\OneDrive\Documentos\UEPG\IA_AGIPI\faq_agipi_ageuni_documentos.xlsx"
+DEFAULT_FAQ_PATH = os.getenv('FAQ_XLSX_PATH')
 
 RESPONSE_MODE = os.getenv("RAG_RESPONSE_MODE", "extractive").lower()
 EMBED_MODEL = os.getenv("EMBED_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
