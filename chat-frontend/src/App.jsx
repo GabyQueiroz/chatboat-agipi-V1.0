@@ -3,6 +3,8 @@ import UserCard from "./components/UserCard"
 import FeedbackBar from "./components/FeedbackBar"
 import GeneralFeedback from "./components/GeneralFeedback";
 
+import { FiHome, FiMenu } from "react-icons/fi";
+
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000";
 const REQUEST_TIMEOUT_MS = 25000;
 const SUGGESTION_POOL = [
@@ -84,7 +86,7 @@ function AssistantMessage({ message, view, sessionData }) {
     const isError = message.role === "error";
     const statusClass = isError
         ? "border-rose-200 text-rose-700"
-        : "border-slate-200 bg-white text-slate-800";
+        : "border-slate-200 text-slate-800";
 
     return (
         <div className="justify-start flex w-fit gap-3">
@@ -153,6 +155,57 @@ function getRandomSuggestions(count = 4) {
     return selected;
 }
 
+
+function Sidebar({ isOpen, onToggle, onHome, sessionData }) {
+    return (
+        <aside
+            className={`
+                max-sm:hidden
+                flex flex-col
+                border-r border-slate-200
+                bg-white
+                transition-[width] duration-300
+                ${isOpen ? "w-64" : "w-auto"}
+            `}
+        >
+            <button
+                onClick={onToggle}
+                className={`
+                    flex items-center gap-3
+                    px-2 py-1 h-12
+                    focus:outline-none focus:ring-0
+                `}
+            >
+                <span className="p-1 hover:bg-slate-100 rounded-md">
+                    <FiMenu className="shrink-0" size={24} />
+                </span>
+            </button>
+
+            
+            <nav className="flex flex-col justify-between h-full mb-2">
+                <ul className="flex flex-col">
+                    <li>
+                        <a
+                            onClick={onHome}
+                            href="#"
+                            className="inline-flex items-center hover:bg-slate-100 w-full gap-3 px-3 py-2 whitespace-nowrap"
+                        >
+                            <FiHome className="shrink-0" size={24} />
+                            {isOpen && "Voltar para o Início"}
+                        </a>
+                    </li>
+                </ul>
+
+                <ul className="flex flex-col">
+                    <li>
+                        <GeneralFeedback isSidebarOpen={isOpen} sessionId={sessionData?.sessionId} API_BASE_URL={API_BASE_URL} />
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    );
+}
+
 export default function App() {
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState("");
@@ -160,6 +213,7 @@ export default function App() {
     const [isSending, setIsSending] = useState(false);
     const [suggestions] = useState(() => getRandomSuggestions());
     const [sessionData, setSessionData] = useState(null);
+    const [sidebarOpen, setSidebarOpen] = useState(false);
 
     const textareaRef = useRef(null);
     const bottomRef = useRef(null);
@@ -299,23 +353,43 @@ export default function App() {
         }
     }
 
+    function handleGoHome(e) {
+        e.preventDefault();
+        setMessages([]);
+        setInput("");
+        setView("answer");
+        setIsSending(false);
+
+        if (textareaRef.current) {
+            textareaRef.current.value = "";
+            textareaRef.current.focus();
+        }
+    }
+
     return (
-        <div className="min-h-screen text-slate-900 bg-slate-100">
-            <div className="mx-auto min-h-screen">
+            <div className="h-screen w-screen flex text-slate-900 bg-slate-100">
                 {!sessionData && (
                     <UserCard onLogin={handleLogin} />
                 )}
 
-                <main className="flex flex-col h-screen overflow-hidden border border-white/60 bg-white/70 backdrop-blur">
+                <Sidebar
+                    isOpen={sidebarOpen}
+                    onToggle={() => setSidebarOpen(!sidebarOpen)}
+                    onHome={handleGoHome}
+                    sessionData={sessionData}
+                />
 
-                    <header className="absolute top-0 z-10 border-b w-full bg-white border-slate-200/80 px-6 py-2">
+                <main className="flex flex-col w-full h-screen overflow-hidden border border-white/60 bg-white/70 backdrop-blur">
+
+                    <header className="absolute flex gap-12 top-0 z-10 border-b w-full bg-white border-slate-200/80 px-6 py-2">
                         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                             <div className="flex items-center gap-3">
-                                <img src="src/assets/agipi-logo.jpg" alt="Logo" width={16} />
+                                <img src="/agipi-ai.png" alt="Logo" width={24} />
                                 <h1 className="text-xl font-semibold tracking-tight text-slate-950">Assistente da AGIPI</h1>
                             </div>
                         </div>
                     </header>
+
 
                     <section className="flex-1 overflow-y-auto pt-16 pb-4 px-6 flex flex-col">
                         {messages.length === 0 ? (
@@ -367,10 +441,10 @@ export default function App() {
                     <section className="flex justify-center border-t border-slate-300/80 px-6 py-5">
                         <div className="flex w-full max-w-4xl flex-col gap-2">
                             <div className="max-w-4xl rounded-[1.75rem] border border-slate-400 bg-white p-3 shadow-sm">
-                                <div className="flex items-end gap-3">
+                                <div className="flex items-center gap-3">
                                     <textarea
                                         ref={textareaRef}
-                                        className="min-h-[52px] flex-1 resize-none border-0 bg-transparent px-2 py-2 text-sm leading-6 text-slate-800 outline-none placeholder:text-slate-500"
+                                        className=" flex-1 resize-none border-0 bg-transparent px-4 py-2 text-sm leading-6 text-slate-800 outline-none placeholder:text-slate-500"
                                         placeholder="Digite sua pergunta"
                                         rows={1}
                                         value={input}
@@ -396,16 +470,15 @@ export default function App() {
                             <p className="max-sm:hidden mt-2 px-2 text-xs uppercase tracking-[0.18em] text-slate-500">Enter envia. Shift + Enter cria nova linha.</p>
                             
                         </div>
-                        {sessionData && (
+                        {/* {sessionData && (
                             <GeneralFeedback
                                 sessionId={sessionData.sessionId}
                                 API_BASE_URL={API_BASE_URL}
                             />
-                        )}
+                        )} */}
                     </section>
                 </main>
             </div>
 
-        </div>
     );
 }
