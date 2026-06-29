@@ -39,7 +39,15 @@ export default function GeneralFeedback({ sessionId, API_BASE_URL }) {
             {!submitted && (
                 <button 
                     onClick={() => setIsOpen(true)}
-                    className="fixed bottom-6 right-6 bg-slate-900 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform z-40 flex items-center gap-2 cursor-pointer"
+                    className="
+                        self-center ml-2 max-h-18
+                        bg-slate-900 text-white p-4 rounded-full shadow-2xl
+                        hover:scale-110 transition-transform z-40
+                        flex items-center gap-2 cursor-pointer
+                        xl:fixed lg:bottom-6 xl:right-6
+                        xl:self-auto xl:ml-0
+                        max-sm:hidden
+                    "
                     title="Dar feedback geral"
                 >
                     <MessageSquarePlus size={24} />
