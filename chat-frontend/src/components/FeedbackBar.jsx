@@ -42,7 +42,7 @@ function FeedbackModal({ isOpen, comment, onCommentChange, onSubmit, onClose, is
     );
 }
 
-export default function FeedbackBar({ interactionId, sessionId, onFeedbackUpdate }) {
+export default function FeedbackBar({ timestamp, interactionId, sessionId, onFeedbackUpdate }) {
     const [relevance, setRelevance] = useState(0);
     const [comment, setComment] = useState("");
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -101,8 +101,8 @@ export default function FeedbackBar({ interactionId, sessionId, onFeedbackUpdate
 
     return (
         <>
-            <div className="flex items-center gap-2 mt-3 pt-3 border-t border-slate-200">
-                <div className="ml-auto">
+            <div className="flex items-center gap-2 border-slate-200">
+                <div className="flex items-center">
                     {!error && relevance !== 0 && (
                         <span className="text-xs text-slate-400 me-2">
                             Esta resposta foi útil?
@@ -143,6 +143,10 @@ export default function FeedbackBar({ interactionId, sessionId, onFeedbackUpdate
 
                     {error && (
                         <span className="text-xs text-rose-600 ml-auto">{error}</span>
+                    )}
+
+                    {timestamp && (
+                        <span className="text-xs px-1.5 text-slate-400 my-auto">{timestamp}</span>
                     )}
                 </div>
             </div>

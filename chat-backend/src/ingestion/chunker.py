@@ -8,8 +8,8 @@ from typing import Any
 import pymupdf4llm
 from docx import Document
 from openpyxl import load_workbook
-from src.ingestion.syntethic_descriptions import DESCRIPTIONS
 
+from src.ingestion.syntethic_descriptions import DESCRIPTIONS
 
 ALLOWED_SUFFIXES = {".txt", ".md", ".docx"}
 
