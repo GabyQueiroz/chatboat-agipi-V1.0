@@ -1,0 +1,133 @@
+version: '3.8'
+
+services:
+  # ==========================================
+  # BANCO DE DADOS: PostgreSQL
+  # ==========================================
+  postgres:
+    image: postgres:15-alpine
+    container_name: chatbot-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - backend-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ==========================================
+  # BUCKET S3: MinIO
+  # ==========================================
+  minio:
+    image: minio/minio:latest
+    container_name: chatbot-minio
+    restart: unless-stopped
+    ports:
+      - "9000:9000" # API do S3
+      - "9001:9001" # Painel Web
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+      MINIO_SITE_NAME: chatbot-dev
+      MINIO_UPDATE: "off"
+    volumes:
+      - minio_data:/data
+    command: server /data --console-address ":9001"
+    networks:
+      - backend-net
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ==========================================
+  # INICIALIZAÇÃO DO BUCKET (executado uma única vez no boot)
+  # ==========================================
+  minio-init:
+    image: minio/mc:latest
+    container_name: chatbot-minio-init
+    depends_on:
+      minio:
+        condition: service_healthy
+    networks:
+      - backend-net
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+      MINIO_BUCKET: ${S3_BUCKET_NAME
+    entrypoint: >
+      /bin/sh -c "
+      echo '[MINIO-INIT] Configurando alias...';
+      mc alias set local http://minio:9000 $${MINIO_ROOT_USER} $${MINIO_ROOT_PASSWORD};
+      
+      echo '[MINIO-INIT] Criando bucket $${MINIO_BUCKET} (se não existir)...';
+      mc mb --ignore-existing local/$${MINIO_BUCKET};
+      
+      echo '[MINIO-INIT] Criando estrutura de prefixos...';
+      echo '' | mc pipe local/$${MINIO_BUCKET}/raw/.keep;
+      echo '' | mc pipe local/$${MINIO_BUCKET}/md/.keep;
+      echo '' | mc pipe local/$${MINIO_BUCKET}/faq/.keep;
+      echo '' | mc pipe local/$${MINIO_BUCKET}/index/.keep;
+
+      echo '[MINIO-INIT] Bucket pronto. Politica: privado (sem acesso publico).';
+      mc ls local/$${MINIO_BUCKET};
+      "
+
+  # ==========================================
+  # APLICAÇÃO: Backend FastAPI
+  # ==========================================
+  backend:
+    build:
+      context: ./chat-backend
+      dockerfile: Dockerfile
+    container_name: chatbot-backend
+    restart: unless-stopped
+    networks:
+      - backend-net
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+      minio-create-bucket:
+        condition: service_completed_successfully
+    environment:
+      PORT=8000
+      RAG_RESPONSE_MODE: ${RAG_RESPONSE_MODE:-extractive}
+      EMBED_MODEL: ${EMBED_MODEL:-sentence-transformers/all-MiniLM-L6-v2}
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://localhost:5173,http://127.0.0.1:5173}
+      
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+      
+      S3_BUCKET_NAME: ${S3_BUCKET_NAME}
+      S3_ENDPOINT_URL: http://minio:9000
+      AWS_ACCESS_KEY_ID: ${MINIO_ROOT_USER}
+      AWS_SECRET_ACCESS_KEY: ${MINIO_ROOT_PASSWORD}
+      AWS_REGION: ${AWS_REGION:-us-east-1}
+
+      GROQ_API_KEY: ${GROQ_API_KEY}
+      GROQ_MODEL: ${GROQ_MODEL:-llama-3.1-8b-instant}
+
+      # Ollama (opcional)
+      # OLLAMA_BASE_URL: http://host.docker.internal:11434
+      # OLLAMA_MODEL: phi3:mini
+
+networks:
+  backend-net:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  minio_data:

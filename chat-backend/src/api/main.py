@@ -14,8 +14,9 @@ from pydantic import BaseModel, Field
 
 from sqlalchemy.ext.asyncio import AsyncSession
 from src.db.database import AsyncSessionLocal
-from src.api.deps import get_db
+from src.api.deps import get_db, get_bucket_client
 from src.db import crud
+from src.ingestion.bucket_client import BucketClient
 
 from src.core.rag_pipeline import RAGPipeline
 from src.ingestion.chunker import (
@@ -93,6 +94,7 @@ class GeneralFeedbackRequest(BaseModel):
 
 class AppState:
     def __init__(self) -> None:
+        self.bucket = get_bucket_client()
         self.embedder = Embedder(model_name=EMBED_MODEL)
         self.vector_store = VectorStore(dimension=self.embedder.dimension)
         self.llm = GroqClient(
@@ -116,7 +118,7 @@ class AppState:
         print(f"[BOOT] FAQ: {FAQ_XLSX_PATH}")
         print(f"[BOOT] Pastas fonte: {RAW_SOURCE_DIRS}")
 
-        manifest = build_source_manifest(RAW_SOURCE_DIRS, FAQ_XLSX_PATH)
+        manifest = build_source_manifest(self.bucket)
         cached_manifest = load_source_manifest(str(MANIFEST_CACHE_PATH))
         cache_is_valid = manifest == cached_manifest and self.vector_store.load(
             str(INDEX_CACHE_PATH),

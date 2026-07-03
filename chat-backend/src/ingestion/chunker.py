@@ -10,8 +10,11 @@ from docx import Document
 from openpyxl import load_workbook
 
 from src.ingestion.syntethic_descriptions import DESCRIPTIONS
+from src.ingestion.bucket_client import BucketClient
 
 ALLOWED_SUFFIXES = {".txt", ".md", ".docx"}
+DOCUMENT_PREFIXES = ["raw/", "md/"]
+FAQ_PREFIX = "faq/"
 
 
 def chunk_text(text: str, chunk_size: int = 900, overlap: int = 120) -> list[str]:
@@ -90,40 +93,25 @@ def _file_hash(path: Path, chunk_size: int = 65536) -> str:
 
     return hash.hexdigest()[:16]
 
-def build_source_manifest(raw_dirs: list[str], faq_path: str | None = None) -> list[dict[str, Any]]:
+def build_source_manifest(bucket: BucketClient) -> list[dict[str, Any]]:
     manifest: list[dict[str, Any]] = []
 
-    for raw_dir in raw_dirs:
-        root = Path(raw_dir)
-        if not root.exists():
-            continue
-        for path in sorted(root.rglob("*")):
-            if not path.is_file():
-                continue
-            if path.suffix.lower() not in ALLOWED_SUFFIXES:
-                continue
-            stat = path.stat()
-            manifest.append(
-                {
-                    "kind": "document",
-                    "path": str(path.resolve()),
-                    "size": stat.st_size,
-                    "hash": _file_hash(path),
-                }
-            )
+    for prefix in DOCUMENT_PREFIXES:
+        for obj in bucket.list_objects(prefix=prefix):
+            manifest.append({
+                "kind": "document",
+                "key": obj["key"],
+                "size": obj["size"],
+                "etag": obj["etag"],
+            })
 
-    if faq_path:
-        faq_file = Path(faq_path)
-        if faq_file.exists():
-            stat = faq_file.stat()
-            manifest.append(
-                {
-                    "kind": "faq",
-                    "path": str(faq_file.resolve()),
-                    "size": stat.st_size,
-                    "hash": _file_hash(faq_file),
-                }
-            )
+    for obj in bucket.list_objects(prefix=FAQ_PREFIX):
+        manifest.append({
+            "kind": "faq",
+            "key": obj["key"],
+            "size": obj["size"],
+            "etag": obj["etag"],
+        })
 
     return manifest
 
