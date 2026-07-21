@@ -33,6 +33,8 @@ from src.retrieval.embeddings import Embedder
 from src.retrieval.vector_db import VectorStore
 from src.retrieval.query_rewriter import QueryRewriter
 
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
 load_dotenv()
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
@@ -133,10 +135,15 @@ class AppState:
                 save_documents(docs, str(DOCS_CACHE_PATH))
                 save_source_manifest(manifest, str(MANIFEST_CACHE_PATH))
 
+            print(f"[BOOT] Gerando embeddings para {len(docs)} chunks... (pode levar alguns minutos)")
             embeddings = self.embedder.embed_texts([doc["text"] for doc in docs])
+            print(f"[BOOT] Embeddings concluídos.")
+
             self.vector_store = VectorStore(dimension=self.embedder.dimension)
             self.vector_store.add_documents(embeddings, docs)
             self.vector_store.save(str(INDEX_CACHE_PATH), str(METADATA_CACHE_PATH))
+            print(f"[BOOT] Índice FAISS salvo.")
+
             self.pipeline = RAGPipeline(
                 embedder=self.embedder,
                 vector_store=self.vector_store,
@@ -145,6 +152,7 @@ class AppState:
                 response_mode=RESPONSE_MODE,
             )
         else:
+            print("[BOOT] Cache válido. Carregando índice existente...")
             docs = load_documents(str(DOCS_CACHE_PATH))
 
         # self.index_ready = True
@@ -183,7 +191,7 @@ state = AppState()
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    docs = await asyncio.to_thread(state.build_index)
+    docs = state.build_index()
 
     if docs:
         async with AsyncSessionLocal() as session:

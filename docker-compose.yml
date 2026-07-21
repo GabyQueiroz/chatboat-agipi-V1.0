@@ -7,11 +7,9 @@ services:
   postgres:
     image: postgres:15-alpine
     container_name: chatbot-postgres
+    env_file:
+      - ./chat-backend/.env
     restart: unless-stopped
-    environment:
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      POSTGRES_DB: ${POSTGRES_DB}
     ports:
       - "5432:5432"
     volumes:
@@ -30,13 +28,13 @@ services:
   minio:
     image: minio/minio:latest
     container_name: chatbot-minio
+    env_file:
+      - ./chat-backend/.env
     restart: unless-stopped
     ports:
       - "9000:9000" # API do S3
       - "9001:9001" # Painel Web
     environment:
-      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
-      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
       MINIO_SITE_NAME: chatbot-dev
       MINIO_UPDATE: "off"
     volumes:
@@ -51,36 +49,29 @@ services:
       retries: 5
 
   # ==========================================
-  # INICIALIZAÇÃO DO BUCKET (executado uma única vez no boot)
+  # INICIALIZAÇÃO DO BUCKET
   # ==========================================
   minio-init:
     image: minio/mc:latest
     container_name: chatbot-minio-init
+    env_file:
+      - ./chat-backend/.env
     depends_on:
       minio:
         condition: service_healthy
     networks:
       - backend-net
     environment:
-      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
-      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
-      MINIO_BUCKET: ${S3_BUCKET_NAME
+      MINIO_BUCKET: ${S3_BUCKET_NAME}
     entrypoint: >
       /bin/sh -c "
-      echo '[MINIO-INIT] Configurando alias...';
       mc alias set local http://minio:9000 $${MINIO_ROOT_USER} $${MINIO_ROOT_PASSWORD};
-      
-      echo '[MINIO-INIT] Criando bucket $${MINIO_BUCKET} (se não existir)...';
-      mc mb --ignore-existing local/$${MINIO_BUCKET};
-      
-      echo '[MINIO-INIT] Criando estrutura de prefixos...';
-      echo '' | mc pipe local/$${MINIO_BUCKET}/raw/.keep;
-      echo '' | mc pipe local/$${MINIO_BUCKET}/md/.keep;
-      echo '' | mc pipe local/$${MINIO_BUCKET}/faq/.keep;
-      echo '' | mc pipe local/$${MINIO_BUCKET}/index/.keep;
-
-      echo '[MINIO-INIT] Bucket pronto. Politica: privado (sem acesso publico).';
-      mc ls local/$${MINIO_BUCKET};
+      mc mb --ignore-existing local/$${S3_BUCKET_NAME};
+      echo '' | mc pipe local/$${S3_BUCKET_NAME}/raw/.keep;
+      echo '' | mc pipe local/$${S3_BUCKET_NAME}/md/.keep;
+      echo '' | mc pipe local/$${S3_BUCKET_NAME}/faq/.keep;
+      echo '' | mc pipe local/$${S3_BUCKET_NAME}/index/.keep;
+      mc ls local/$${S3_BUCKET_NAME};
       "
 
   # ==========================================
@@ -101,10 +92,12 @@ services:
         condition: service_healthy
       minio:
         condition: service_healthy
-      minio-create-bucket:
+      minio-init:
         condition: service_completed_successfully
+    env_file:
+      - ./chat-backend/.env
     environment:
-      PORT=8000
+      PORT: 8000
       RAG_RESPONSE_MODE: ${RAG_RESPONSE_MODE:-extractive}
       EMBED_MODEL: ${EMBED_MODEL:-sentence-transformers/all-MiniLM-L6-v2}
       ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://localhost:5173,http://127.0.0.1:5173}
@@ -123,6 +116,25 @@ services:
       # Ollama (opcional)
       # OLLAMA_BASE_URL: http://host.docker.internal:11434
       # OLLAMA_MODEL: phi3:mini
+
+  # ==========================================
+  # APLICAÇÃO: Frontend React/Vite
+  # ==========================================
+  frontend:
+    build:
+      context: ./chat-frontend
+      dockerfile: Dockerfile
+    container_name: chatbot-frontend
+    restart: unless-stopped
+    networks:
+      - backend-net
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./chat-frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
 
 networks:
   backend-net:
