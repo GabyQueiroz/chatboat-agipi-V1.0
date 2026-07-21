@@ -14,8 +14,9 @@ from pydantic import BaseModel, Field
 
 from sqlalchemy.ext.asyncio import AsyncSession
 from src.db.database import AsyncSessionLocal
-from src.api.deps import get_db
+from src.api.deps import get_db, get_bucket_client
 from src.db import crud
+from src.ingestion.bucket_client import BucketClient
 
 from src.core.rag_pipeline import RAGPipeline
 from src.ingestion.chunker import (
@@ -32,6 +33,8 @@ from src.retrieval.embeddings import Embedder
 from src.retrieval.vector_db import VectorStore
 from src.retrieval.query_rewriter import QueryRewriter
 
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
 load_dotenv()
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
@@ -44,9 +47,9 @@ MANIFEST_CACHE_PATH = DATA_DIR / "processed" / "source_manifest.json"
 DEFAULT_RAW_DIRS = [
     str(ROOT_DIR / "data" / "raw"),
     str(ROOT_DIR / "data" / "md"),
-    os.getenv('RAW_SOURCE_DIRS') or r"C:\Users\gabri\OneDrive\Documentos\UEPG\IA_AGIPI\DOCUMENTOS EPITEC PROF. LIVIO-20260409T232820Z-3-001",
+    os.getenv('RAW_SOURCE_DIRS')
 ]
-DEFAULT_FAQ_PATH = os.getenv('FAQ_XLSX_PATH') or r"C:\Users\gabri\OneDrive\Documentos\UEPG\IA_AGIPI\faq_agipi_ageuni_documentos.xlsx"
+DEFAULT_FAQ_PATH = os.getenv('FAQ_XLSX_PATH')
 
 RESPONSE_MODE = os.getenv("RAG_RESPONSE_MODE", "extractive").lower()
 EMBED_MODEL = os.getenv("EMBED_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
@@ -93,6 +96,7 @@ class GeneralFeedbackRequest(BaseModel):
 
 class AppState:
     def __init__(self) -> None:
+        self.bucket = get_bucket_client()
         self.embedder = Embedder(model_name=EMBED_MODEL)
         self.vector_store = VectorStore(dimension=self.embedder.dimension)
         self.llm = GroqClient(
@@ -116,7 +120,7 @@ class AppState:
         print(f"[BOOT] FAQ: {FAQ_XLSX_PATH}")
         print(f"[BOOT] Pastas fonte: {RAW_SOURCE_DIRS}")
 
-        manifest = build_source_manifest(RAW_SOURCE_DIRS, FAQ_XLSX_PATH)
+        manifest = build_source_manifest(self.bucket)
         cached_manifest = load_source_manifest(str(MANIFEST_CACHE_PATH))
         cache_is_valid = manifest == cached_manifest and self.vector_store.load(
             str(INDEX_CACHE_PATH),
@@ -131,10 +135,15 @@ class AppState:
                 save_documents(docs, str(DOCS_CACHE_PATH))
                 save_source_manifest(manifest, str(MANIFEST_CACHE_PATH))
 
+            print(f"[BOOT] Gerando embeddings para {len(docs)} chunks... (pode levar alguns minutos)")
             embeddings = self.embedder.embed_texts([doc["text"] for doc in docs])
+            print(f"[BOOT] Embeddings concluídos.")
+
             self.vector_store = VectorStore(dimension=self.embedder.dimension)
             self.vector_store.add_documents(embeddings, docs)
             self.vector_store.save(str(INDEX_CACHE_PATH), str(METADATA_CACHE_PATH))
+            print(f"[BOOT] Índice FAISS salvo.")
+
             self.pipeline = RAGPipeline(
                 embedder=self.embedder,
                 vector_store=self.vector_store,
@@ -143,6 +152,7 @@ class AppState:
                 response_mode=RESPONSE_MODE,
             )
         else:
+            print("[BOOT] Cache válido. Carregando índice existente...")
             docs = load_documents(str(DOCS_CACHE_PATH))
 
         # self.index_ready = True
@@ -181,7 +191,7 @@ state = AppState()
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    docs = await asyncio.to_thread(state.build_index)
+    docs = state.build_index()
 
     if docs:
         async with AsyncSessionLocal() as session:
