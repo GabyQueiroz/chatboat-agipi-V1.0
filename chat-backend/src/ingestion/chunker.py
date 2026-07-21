@@ -1,17 +1,20 @@
 import json
 import os
 import re
+import hashlib
 from pathlib import Path
 from typing import Any
 
 import pymupdf4llm
 from docx import Document
 from openpyxl import load_workbook
-from src.ingestion.syntethic_descriptions import DESCRIPTIONS
 
+from src.ingestion.syntethic_descriptions import DESCRIPTIONS
+from src.ingestion.bucket_client import BucketClient
 
 ALLOWED_SUFFIXES = {".txt", ".md", ".docx"}
-# ALLOWED_SUFFIXES = {".pdf", ".txt", ".md", ".docx"}
+DOCUMENT_PREFIXES = ["raw/", "md/"]
+FAQ_PREFIX = "faq/"
 
 
 def chunk_text(text: str, chunk_size: int = 900, overlap: int = 120) -> list[str]:
@@ -82,40 +85,33 @@ def load_source_manifest(manifest_path: str) -> list[dict[str, Any]] | None:
         return None
 
 
-def build_source_manifest(raw_dirs: list[str], faq_path: str | None = None) -> list[dict[str, Any]]:
+def _file_hash(path: Path, chunk_size: int = 65536) -> str:
+    hash = hashlib.sha256()
+    with open(path, "rb") as f:
+        while data := f.read(chunk_size):
+            hash.update(data)
+
+    return hash.hexdigest()[:16]
+
+def build_source_manifest(bucket: BucketClient) -> list[dict[str, Any]]:
     manifest: list[dict[str, Any]] = []
 
-    for raw_dir in raw_dirs:
-        root = Path(raw_dir)
-        if not root.exists():
-            continue
-        for path in sorted(root.rglob("*")):
-            if not path.is_file():
-                continue
-            if path.suffix.lower() not in ALLOWED_SUFFIXES:
-                continue
-            stat = path.stat()
-            manifest.append(
-                {
-                    "kind": "document",
-                    "path": str(path.resolve()),
-                    "size": stat.st_size,
-                    "mtime": int(stat.st_mtime),
-                }
-            )
+    for prefix in DOCUMENT_PREFIXES:
+        for obj in bucket.list_objects(prefix=prefix):
+            manifest.append({
+                "kind": "document",
+                "key": obj["key"],
+                "size": obj["size"],
+                "etag": obj["etag"],
+            })
 
-    if faq_path:
-        faq_file = Path(faq_path)
-        if faq_file.exists():
-            stat = faq_file.stat()
-            manifest.append(
-                {
-                    "kind": "faq",
-                    "path": str(faq_file.resolve()),
-                    "size": stat.st_size,
-                    "mtime": int(stat.st_mtime),
-                }
-            )
+    for obj in bucket.list_objects(prefix=FAQ_PREFIX):
+        manifest.append({
+            "kind": "faq",
+            "key": obj["key"],
+            "size": obj["size"],
+            "etag": obj["etag"],
+        })
 
     return manifest
 
