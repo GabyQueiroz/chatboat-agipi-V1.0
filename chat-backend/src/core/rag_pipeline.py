@@ -91,6 +91,9 @@ class RAGPipeline:
 
     def ask(self, user_question: str, history: list[dict[str, str]] | None = None) -> dict[str, Any]:
         history = history or []
+        rewriting_tokens = 0
+        tokens_used = 0
+
         print("RESPONSE MODE: " + self.response_mode)
 
         resolved_question, topic = self._resolve_follow_up_question(user_question, history)
@@ -213,6 +216,8 @@ class RAGPipeline:
             for sub_q in query_plan.get("sub_queries", []):
                 queries_to_embed.append(self._canonicalize_question(sub_q))
 
+            rewriting_tokens = query_plan.get("tokens")
+
         queries_to_embed = list(dict.fromkeys(queries_to_embed))
 
         embedding_started_at = time.perf_counter()
@@ -245,6 +250,7 @@ class RAGPipeline:
                 "sources": [],
                 "mode": "out_of_scope",
                 "resolved_question": canonical_question,
+                "tokens_used": rewriting_tokens or 0,
                 "timings": {
                     "embedding_ms": round(embedding_elapsed * 1000, 1),
                     "retrieval_ms": round(retrieval_elapsed * 1000, 1),
@@ -266,7 +272,7 @@ class RAGPipeline:
                 warnings.append("LLM is None.")
             else:
                 try:
-                    answer = self._build_llm_answer(canonical_question, docs_for_answer, "")
+                    answer, tokens_used = self._build_llm_answer(canonical_question, docs_for_answer, "")
                     mode = "generative"
                 except Exception as exc:
                     answer = f"Erro ao gerar a resposta com a inteligência artificial (ex: falta de créditos ou falha na API). Detalhes: {str(exc)}"
@@ -288,7 +294,7 @@ class RAGPipeline:
 
         if self.response_mode == "hybrid" and self.llm is not None and docs_for_answer:
             try:
-                answer = self._build_llm_answer(canonical_question, docs_for_answer, answer)
+                answer, tokens_used = self._build_llm_answer(canonical_question, docs_for_answer, answer)
                 mode = "hybrid" if mode != "faq" else "faq+hybrid"
             except Exception as exc:
                 warnings.append(str(exc))
@@ -304,11 +310,14 @@ class RAGPipeline:
             f"mode={mode}"
         )
 
+        total_tokens = (tokens_used or 0) + (rewriting_tokens or 0)
+
         return {
             "answer": answer,
             "sources": sources,
             "mode": mode,
                 "resolved_question": canonical_question,
+            "tokens_used": total_tokens,
             "timings": {
                 "embedding_ms": round(embedding_elapsed * 1000, 1),
                 "retrieval_ms": round(retrieval_elapsed * 1000, 1),
@@ -788,7 +797,7 @@ Trechos:
 {snippets}
 
 Resposta final:"""
-        return self.llm.generate_response(prompt).strip()
+        return self.llm.generate_response(prompt)
 
     def _build_extractive_answer(self, question: str, docs: list[dict[str, Any]]) -> str:
         if not docs:

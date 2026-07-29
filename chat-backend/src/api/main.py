@@ -249,6 +249,7 @@ async def chat_endpoint(request: QuestionRequest, db: AsyncSession = Depends(get
         print(f"[CHAT] Resposta gerada em {elapsed:.2f}s")
 
         responded_at = datetime.now(timezone.utc)
+        print("[CHAT] Iniciando registro de interação")
         await crud.save_session_log(
             db=db,
             session_id=session_id,

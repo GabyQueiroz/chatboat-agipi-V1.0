@@ -73,7 +73,8 @@ Nova Pergunta do Usuário:
 Pergunta Reformulada:"""
         
         try:
-            rewritten_question = self.llm.generate_response(prompt=prompt).strip()
+            response, _ = self.llm.generate_response(prompt=prompt)
+            rewritten_question = response.strip()
             if rewritten_question:
                 return rewritten_question
         except Exception as exc:
@@ -88,11 +89,12 @@ Pergunta Reformulada:"""
         """
         question_cleaned = user_question.strip()
         
-        # Estrutura base de fallback
+        tokens_used = 0
         base_plan = {
             "standalone": question_cleaned,
             "step_back": None,
-            "sub_queries": []
+            "sub_queries": [],
+            "total_tokens": 0
         }
 
         if not history and not self._needs_rewrite(question_cleaned):
@@ -121,7 +123,7 @@ Nova Pergunta do Usuário:
 Retorne APENAS o JSON válido, sem markdown extra ou explicações."""
         
         try:
-            response = self.llm.generate_response(prompt=prompt).strip()
+            response, tokens_used = self.llm.generate_response(prompt=prompt)
             # Limpa caso a LLM retorne blocos de código Markdown
             response = re.sub(r"^```json\n|```$", "", response, flags=re.MULTILINE).strip()
             
@@ -131,10 +133,12 @@ Retorne APENAS o JSON válido, sem markdown extra ou explicações."""
             return {
                 "standalone": plan.get("standalone", question_cleaned) or question_cleaned,
                 "step_back": plan.get("step_back"),
-                "sub_queries": plan.get("sub_queries", [])
+                "sub_queries": plan.get("sub_queries", []),
+                "tokens": tokens_used
             }
         except Exception as exc:
             logger.error(f"[QueryRewriter] Erro ao gerar plano de queries com LLM: {exc}")
-        
+
+        base_plan["tokens"] = tokens_used
         return base_plan
 

@@ -94,10 +94,14 @@ async def save_session_log(
         response: dict | None = None,
         error: str | None = None,
 ):
-    # Gera o usuário com base no nome
-    user_obj = User(username=username)
-    db.add(user_obj)
-    await db.flush()
+    print("[CRUD] Salvando dados...", end=" ")
+    user_result = await db.execute(select(User).where(User.username == username))
+    user_obj = user_result.scalar_one_or_none()
+
+    if not user_obj:
+        user_obj = User(username=username)
+        db.add(user_obj)
+        await db.flush()
 
     # Garante a existência da Sessão
     session_obj = await db.scalar(select(Session).where(Session.id == session_id))
@@ -116,7 +120,7 @@ async def save_session_log(
         answer = response.get("answer")
         mode = response.get("mode", "unknown")
         resolved_q = response.get("resolved_question")
-        
+        total_tokens = response.get("tokens_used")
         timings = response.get("timings", {})
         t_embed = timings.get("embedding_ms")
         t_retrieve = timings.get("retrieval_ms")
@@ -125,6 +129,7 @@ async def save_session_log(
         if response.get("warnings"):
             warnings.extend(response.get("warnings"))
 
+
     interaction = Interaction(
         id=interaction_id,
         session_id=session_id,
@@ -132,6 +137,7 @@ async def save_session_log(
         answer=answer,
         mode=mode,
         resolved_question=resolved_q,
+        total_tokens=total_tokens,
         embedding_time_ms=t_embed,
         retrieval_time_ms=t_retrieve,
         answer_time_ms=t_answer,
@@ -179,6 +185,8 @@ async def save_session_log(
             db.add(interaction_source)
 
     await db.commit()
+
+    print("Salvo")
 
 
 async def update_interaction_feedback(db: AsyncSession, session_id: str, interaction_id: str, relevance: int, comment: str) -> dict:

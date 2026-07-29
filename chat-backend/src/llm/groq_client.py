@@ -46,7 +46,10 @@ class GroqClient(LLMClient):
         try:
             response = requests.post(url, headers=headers, json=payload, timeout=self.timeout)
             response.raise_for_status()
-            return response.json()["choices"][0]["message"]["content"].strip()
+            message = response.json()["choices"][0]["message"]["content"].strip()
+            tokens = response.json()["usage"]["total_tokens"]
+
+            return [message, tokens]
             
         except requests.exceptions.ConnectionError as exc:
             raise RuntimeError(

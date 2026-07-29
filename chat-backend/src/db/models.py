@@ -36,6 +36,7 @@ class Interaction(Base):
     session_id: Mapped[str] = mapped_column(ForeignKey("sessions.id"))
     question: Mapped[str] = mapped_column(Text)
     answer: Mapped[str | None] = mapped_column(Text)
+    total_tokens: Mapped[int | None] = mapped_column(Integer)
     mode: Mapped[str] = mapped_column(String)
     resolved_question: Mapped[str | None] = mapped_column(Text)
     embedding_time_ms: Mapped[float | None] = mapped_column(Float)
