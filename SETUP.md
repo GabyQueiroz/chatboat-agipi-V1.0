@@ -8,12 +8,11 @@ Documento de referência para configuração de ambiente de **desenvolvimento** 
 
 1. [Visão geral da arquitetura](#1-visão-geral-da-arquitetura)
 2. [Pré-requisitos](#2-pré-requisitos)
-3. [Estrutura do repositório](#3-estrutura-do-repositório)
-4. [Ambiente de desenvolvimento](#4-ambiente-de-desenvolvimento)
-5. [Referência completa de variáveis de ambiente](#5-referência-completa-de-variáveis-de-ambiente)
-6. [Gestão da base de conhecimento](#6-gestão-da-base-de-conhecimento)
-7. [Ambiente de produção (Railway)](#7-ambiente-de-produção-railway)
-8. [Operação e manutenção](#8-operação-e-manutenção)
+3. [Ambiente de desenvolvimento](#3-ambiente-de-desenvolvimento)
+4. [Referência completa de variáveis de ambiente](#4-referência-completa-de-variáveis-de-ambiente)
+5. [Gestão da base de conhecimento](#5-gestão-da-base-de-conhecimento)
+6. [Ambiente de produção (Railway)](#6-ambiente-de-produção-railway)
+7. [Operação e manutenção](#7-operação-e-manutenção)
 
 ---
 
@@ -423,7 +422,7 @@ Resposta esperada quando o sistema está pronto:
 
 ---
 
-## 8. Operação e manutenção
+## 7. Operação e manutenção
 
 ### Atualizar a base de conhecimento
 
